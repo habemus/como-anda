@@ -16,3 +16,30 @@
   width: 200px;
   height: auto;
 }
+
+/**
+ * States
+ */
+.menu.menu--isClosed {
+  display: none;
+}
+
+/**
+ * Animation
+ */
+.menu {
+  &.menu--a-leave-active,
+  &.menu--a-enter-active {
+    transition: opacity 0.4s;
+  }
+  &.menu--a-enter,
+  &.menu--a-leave.menu--a-leave-active {
+    display: flex;
+    opacity: 0.0;
+  }
+  &.menu--a-leave,
+  &.menu--a-enter.menu--a-enter-active {
+    display: flex;
+    opacity: 1.0;
+  }
+}

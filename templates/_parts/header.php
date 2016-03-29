@@ -23,6 +23,8 @@
     </ul>
   </nav>
 
-  <button type='button' alt='close menu' class='menu-close'></button>
+  <button type='button' alt='close menu' class='menu-close' onclick='App.menu.close()'></button>
 
 </article>
+
+<button type='button' alt='close menu' class='menu-close' onclick='App.menu.open()'></button>
