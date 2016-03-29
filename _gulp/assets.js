@@ -4,8 +4,8 @@ const gulp = require('gulp');
 const path = require('path');
 const clean = require('gulp-clean');
 
-const fontsSrc = './assets/fonts/*.*';
-const imagesSrc = './assets/images/*.*';
+const fontsSrc = './assets/fonts/**/*.*';
+const imagesSrc = './assets/images/**/*.*';
 
 module.exports = function (prodDir) {
 

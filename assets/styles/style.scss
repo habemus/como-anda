@@ -7,6 +7,7 @@
 // _config
 // variables and mixins
 @import '_config/type';
+@import '_config/colors';
 
 // components
 // theme bem components
@@ -15,3 +16,4 @@
 //   units (e.g. .button, .link)
 @import 'components/units/logo';
 //   modules (e.g. .post, .gallery)
+@import 'components/modules/menu';
