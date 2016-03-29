@@ -1,0 +1,74 @@
+
+$logo-ratio: 3.6;
+$logo-h: 40px;
+$logo-l-h: 100px;
+$logo-w: $logo-h * $logo-ratio;
+$logo-l-w: $logo-l-h * $logo-ratio;
+
+$logo-v-ratio: 1.2;
+$logo-v-h: 85px;
+$logo-v-l-h: 204px;
+$logo-v-w: $logo-v-h * $logo-v-ratio;
+$logo-v-l-w: $logo-v-l-h * $logo-v-ratio;
+
+.logo {
+  display: inline-block;
+  color: transparent;
+  word-wrap: break-word;
+
+  background-position: left center;
+  background-repeat: no-repeat;
+
+  height: $logo-h;
+  width:  $logo-w;
+  background-image: url('./assets/images/logo-comoanda-horizontal.png');
+  background-size: auto 100px;
+}
+
+/**
+ * Sizes
+ */
+.logo.logo--size-large {
+  display: block;
+  height: $logo-l-h;
+  width:  $logo-l-w;
+  background-size: auto 100px;
+}
+
+/**
+ * Styles
+ */
+.logo.logo--style-vertical {
+  height: $logo-v-w;
+  width:  $logo-v-h;
+  background-image: url('./assets/images/logo-comoanda-vertical.png');
+  background-size: auto 100px;
+  &.logo--size-large {
+    height: $logo-v-l-w;
+    width:  $logo-v-l-h;
+    background-size: auto 240px;
+  }
+}
+
+/**
+ * Tagline
+ */
+.logo-tagline {
+  display: inline-block;
+  width: $logo-w;
+
+  word-wrap: break;
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+.logo--size-large + .logo-tagline {
+  width: $logo-l-w;
+}
+.logo--style-vertical + .logo-tagline {
+  display: block;
+  width: $logo-v-w;
+}
+.logo--style-vertical.logo--size-large + .logo-tagline {
+  width: $logo-v-l-w;
+}

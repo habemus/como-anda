@@ -20,10 +20,10 @@ module.exports = function (prodDir) {
       .pipe(gulp.dest(path.join(prodDir, 'assets', 'scripts')));
   });
 
-  gulp.task('scripts:watch', function () {
+  gulp.task('scripts:watch', ['scripts'], function () {
     return gulp.watch(src, ['scripts']);
   });
 
-  return ['scripts', 'scripts:watch'];
+  return ['scripts:watch'];
   
 };

@@ -6,12 +6,12 @@
 
 // _config
 // variables and mixins
+@import '_config/type';
 
 // components
 // theme bem components
 //   globals (e.g. body, p)
-
+@import 'components/globals/body';
 //   units (e.g. .button, .link)
-
+@import 'components/units/logo';
 //   modules (e.g. .post, .gallery)
-

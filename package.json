@@ -1,5 +1,5 @@
 {
-  "name": "wp-starter-theme",
+  "name": "oed-como-anda",
   "version": "1.0.0",
   "scripts": {
     "start": "gulp"
@@ -9,6 +9,7 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
+    "gulp-header": "^1.7.1",
     "gulp-sass": "^2.2.0",
     "gulp-uglify": "^1.5.3"
   }
