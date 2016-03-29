@@ -11,9 +11,6 @@ $logo-v-l-h: 240px;
 $logo-v-w: floor($logo-v-h * $logo-v-ratio);
 $logo-v-l-w: floor($logo-v-l-h * $logo-v-ratio);
 
-$logo-chars-h: 60px;
-$logo-chars-h-l: 120px;
-
 .logo-title {
   display: block;
   color: transparent;
@@ -27,15 +24,6 @@ $logo-chars-h-l: 120px;
   background-image: url('./assets/images/logo-comoanda-horizontal.png');
   background-size: auto $logo-h;
 }
-.logo-characters {
-  height: $logo-chars-h;
-  width: $logo-w;
-  background-image: url('./assets/images/characters/char1.jpg');
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: $logo-w auto;
-  border-bottom: 1px solid $color-darkgrey;
-}
 .logo-tagline {
   display: block;
   width: $logo-w;
@@ -43,11 +31,8 @@ $logo-chars-h-l: 120px;
   word-wrap: break;
   text-align: right;
   text-transform: uppercase;
-  letter-spacing: 0.075em;
+  letter-spacing: 0.05em;
   font-size: 0.735em;
-}
-.logo-title + .logo-characters {
-  margin-top: 0.4em;
 }
 
 /**
@@ -59,21 +44,10 @@ $logo-chars-h-l: 120px;
     width:  $logo-l-w;
     background-size: auto $logo-l-h;
   }
-  .logo-characters {
-    width:  $logo-l-w;
-    height: $logo-chars-h-l;
-    background-size: $logo-l-w auto;
-    border-bottom: 2px solid $color-darkgrey;
-  }
   .logo-tagline {
     width: $logo-l-w;
-    font-size: 1.72em;
-  }
-  .logo-title + .logo-characters {
-    margin-top: 0.8em;
-  }
-  .logo-title + .logo-tagline {
     margin-top: 0.5em;
+    font-size: 1.72em;
   }
 }
 
@@ -87,21 +61,11 @@ $logo-chars-h-l: 120px;
     background-image: url('./assets/images/logo-comoanda-vertical.png');
     background-size: auto $logo-v-h;
   }
-  .logo-characters {
-    width: $logo-v-w;
-    height: $logo-chars-h;
-    background-size: $logo-v-w auto;
-  }
   .logo-tagline {
     width: $logo-v-w;
+    margin-top: 1em;
     font-size: 0.9em;
     line-height: 1.1em;
-  }
-  .logo-title + .logo-characters {
-    margin-top: 0.4em;
-  }
-  .logo-title + .logo-tagline {
-    margin-top: 1em;
   }
 }
 .logo.logo--style-vertical.logo--size-large {
@@ -110,22 +74,10 @@ $logo-chars-h-l: 120px;
     width:  $logo-v-l-w;
     background-size: auto $logo-v-l-h;
   }
-  .logo-characters {
-    width: $logo-v-l-w;
-    height: $logo-chars-h-l;
-    background-size: $logo-v-l-w auto;
-  }
   .logo-tagline {
     width: $logo-v-l-w;
-    font-size: 2.2em;
-  }
-  .logo-title + .logo-characters {
-    margin-top: 0.8em;
-  }
-  .logo-title + .logo-characters + .logo-tagline {
-    margin-top: 0.4em;
-  }
-  .logo-title + .logo-tagline {
-    margin-top: 1em;
+    margin-top: 1.6em;
+    font-size: 1.8em;
+    line-height: 1.4em;
   }
 }

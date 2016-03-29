@@ -12,8 +12,11 @@
 // components
 // theme bem components
 //   globals (e.g. body, p)
+@import 'components/globals/a';
 @import 'components/globals/body';
 //   units (e.g. .button, .link)
+@import 'components/units/hamburger';
 @import 'components/units/logo';
+@import 'components/units/oitentaedois';
 //   modules (e.g. .post, .gallery)
 @import 'components/modules/menu';

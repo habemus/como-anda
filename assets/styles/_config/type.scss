@@ -11,45 +11,4 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Franklin Gothic';
-  src: url('./assets/fonts/ITCFranklinGothicStd-BkXCp/ITCFranklinGothicStd-BkXCp.woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Franklin Gothic';
-  src: url('./assets/fonts/ITCFranklinGothicStd-BkCpIt/ITCFranklinGothicStd-BkCpIt.woff');
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Franklin Gothic';
-  src: url('./assets/fonts/ITCFranklinGothicStd-DmXCp/ITCFranklinGothicStd-DmXCp.woff');
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Franklin Gothic';
-  src: url('./assets/fonts/ITCFranklinGothicStd-DmCpIt/ITCFranklinGothicStd-DmCpIt.woff');
-  font-weight: 600;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Franklin Gothic';
-  src: url('./assets/fonts/ITCFranklinGothicStd-MdCd/ITCFranklinGothicStd-MdCd.woff');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Franklin Gothic';
-  src: url('./assets/fonts/ITCFranklinGothicStd-MdCdIt/ITCFranklinGothicStd-MdCdIt.woff');
-  font-weight: bold;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Franklin Gothic';
-  src: url('./assets/fonts/ITCFranklinGothicStd-Hvy/ITCFranklinGothicStd-Hvy.woff');
-  font-weight: 900;
-  font-style: normal;
-}
+@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
