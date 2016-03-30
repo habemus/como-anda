@@ -103,6 +103,20 @@
 }
 
 /**
+ * Animations
+ */
+.hero {
+  transition: opacity 1.2s ease-in;
+}
+.hero,
+.hero-title span {
+  opacity: 0.0;
+  &.is-visible {
+    opacity: 1.0;
+  }
+}
+
+/**
  * Responsive
  */
 @media all and (max-width: 960px) {

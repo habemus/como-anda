@@ -1,6 +1,7 @@
 'use strict';
 
 const gulp = require('gulp');
+const gulpUtil = require('gulp-util');
 const path = require('path');
 const clean = require('gulp-clean');
 const uglify = require('gulp-uglify');
@@ -20,7 +21,7 @@ module.exports = function (prodDir) {
       .pipe(lint())
       .pipe(lint.format())
       .pipe(lint.failAfterError())
-      .pipe(uglify())
+      .pipe(uglify().on('error', gulpUtil.log))
       .pipe(gulp.dest(path.join(prodDir, 'assets', 'scripts')));
   });
 
