@@ -4,6 +4,7 @@ const gulp = require('gulp');
 const path = require('path');
 const clean = require('gulp-clean');
 const uglify = require('gulp-uglify');
+const lint = require('gulp-eslint');
 
 const src = './assets/scripts/**/*.js';
 
@@ -16,6 +17,9 @@ module.exports = function (prodDir) {
 
   gulp.task('scripts', ['scripts:clean'], function () {
     return gulp.src(src)
+      .pipe(lint())
+      .pipe(lint.format())
+      .pipe(lint.failAfterError())
       .pipe(uglify())
       .pipe(gulp.dest(path.join(prodDir, 'assets', 'scripts')));
   });

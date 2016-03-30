@@ -3,10 +3,12 @@
  */
 .menu {
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1000;
   width: 100%;
   height: 100%;
-  background-color: $color-xlightgrey;
+  background-color: $color-white;
 }
 .menu-left,
 .menu-right {
@@ -30,6 +32,25 @@
  */
 .menu-header {
   float: left;
+}
+.menu-logo-title {
+  height: 0;
+  overflow: hidden;
+}
+.menu-logo-image {
+  svg {
+    width: 200px;
+  }
+}
+.menu-logo-tagline {
+  width: 200px;
+  margin-top: 0.5em;
+  word-wrap: break;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 1.82em;
+  line-height: 1.4em;
 }
 .menu-characters {
   position: relative;
@@ -68,6 +89,7 @@
   opacity: 0.4;
   transition: opacity 0.4s;
   text-align: right;
+  font-size: 0.9em;
   &:hover {
     opacity: 1.0;
   }
@@ -90,12 +112,12 @@
   }
   &.menu--a-enter,
   &.menu--a-leave.menu--a-leave-active {
-    display: flex;
+    display: block;
     opacity: 0.0;
   }
   &.menu--a-leave,
   &.menu--a-enter.menu--a-enter-active {
-    display: flex;
+    display: block;
     opacity: 1.0;
   }
 }

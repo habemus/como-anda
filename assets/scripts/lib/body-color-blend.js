@@ -10,16 +10,16 @@
    * <body>
    *   <any
    *     data-color-point='255,0,0'
-   *     data-color-point-name='red'></any>
+   *     data-color-point-classname='red'></any>
    *   <any
    *     data-color-point='0,0,255'
-   *     data-color-point-name='blue'></any>
+   *     data-color-point-classname='blue'></any>
    * </body>
    */
   
   var colorPoints = document.querySelectorAll('[data-color-point]');
   var colorOffsets = [];
-  var colorNames = [];
+  var colorClassNames = [];
   var colors = [];
 
   // there needs to be at least 2 color points.
@@ -29,7 +29,7 @@
   for (var i = 0; i < colorPoints.length; i++) {
     var colorPoint = colorPoints[i];
     colorOffsets.push(_getOffset(colorPoint));
-    colorNames.push(_getColorName(colorPoint));
+    colorClassNames.push(_getColorClassName(colorPoint));
     colors.push(_getColorObj(colorPoint));
   }
 
@@ -39,6 +39,16 @@
   }
 
   function update() {
+
+    /**
+     * This can be REALLY optimized.
+     */
+    colorOffsets = [];
+    for (var i = 0; i < colorPoints.length; i++) {
+      var colorPoint = colorPoints[i];
+      colorOffsets.push(_getOffset(colorPoint));
+    }
+
     var body = document.body;
     var docEl = document.documentElement;
     var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
@@ -58,7 +68,6 @@
     // if between two points, blend them.
     for (var i = 0; i < colorOffsets.length - 1; i++) {
       if (scrollTop < colorOffsets[i + 1]) {
-        console.log(scrollTop, colorOffsets[i], colorOffsets[i + 1]);
         var percentage = (scrollTop - colorOffsets[i]) / (colorOffsets[i + 1] - colorOffsets[i]);
         var blendedColor = _blendColors(colors[i], colors[i + 1], percentage);
         body.style.backgroundColor = _colorToRgb(blendedColor);
@@ -69,6 +78,7 @@
 
   // check for updates
   window.addEventListener('scroll', update);
+  update();
 
   /**
    * Utility functions
@@ -86,8 +96,8 @@
     return Math.round(top);
   }
 
-  function _getColorName(element) {
-    return element.getAttribute('data-color-point-name');
+  function _getColorClassName(element) {
+    return element.getAttribute('data-color-point-classname');
   }
 
   function _getColorObj(element) {

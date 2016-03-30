@@ -1,3 +1,127 @@
 .hero {
+  position: relative;
   min-height: 100vh;
+  padding: 68px 0;
+  &:before {
+    content: ' ';
+    display: block;
+    margin-right: 186px;
+    border-top: 2px solid $color-xdarkgrey;
+  }
+}
+.hero-header {
+  border-bottom: 2px solid $color-xdarkgrey;
+  padding: 40px 0;
+}
+.hero-title {
+  position: relative;
+  max-width: 1040px;
+  font-family: 'Terrorista', sans-serif;
+  font-weight: bold;
+  font-size: 7em;
+  text-transform: uppercase;
+  line-height: 1em;
+  color: $color-white;
+}
+.hero-nav {
+  position: absolute;
+  top: 40px;
+  right: 0;
+}
+.hero-nav-logo,
+.hero-nav-button {
+  float: left;
+  color: $color-xdarkgrey;
+}
+.hero-nav-logo-title {
+  height: 0;
+  overflow: hidden;
+}
+.hero-nav-logo-image {
+  svg {
+    width: 120px;
+    height: 31px;
+  }
+}
+.hero-nav-button {
+  margin-left: 12px;
+}
+.hero-text {
+  margin: 20px 0 0 25%;
+  font-size: 1.6em;
+  line-height: 1.4em;
+}
+
+/**
+ * Colors
+ */
+.hero.hero--color-white {
+  &:before,
+  .hero-header {
+    border-color: $color-xdarkgrey;
+  }
+  .hero-text,
+  .hero-title,
+  .hero-nav-logo,
+  .hero-nav-button {
+    color: $color-xdarkgrey;
+  }
+}
+.hero.hero--color-black {
+  &:before,
+  .hero-header {
+    border-color: $color-white;
+  }
+  .hero-text,
+  .hero-title,
+  .hero-nav-logo,
+  .hero-nav-button {
+    color: $color-white;
+  }
+}
+.hero.hero--color-green {
+  &:before,
+  .hero-header {
+    border-color: darken($color-green, 60%);
+  }
+  .hero-text,
+  .hero-nav-logo,
+  .hero-nav-button {
+    color: darken($color-green, 60%);
+  }
+}
+.hero.hero--color-bluegrey {
+  &:before,
+  .hero-header {
+    border-color: darken($color-bluegrey, 50%);
+  }
+  .hero-text,
+  .hero-nav-logo,
+  .hero-nav-button {
+    color: darken($color-bluegrey, 50%);
+  }
+}
+
+/**
+ * Responsive
+ */
+@media all and (max-width: 960px) {
+  .hero-title {
+    font-size: 6em;
+  }
+}
+@media all and (max-width: 720px) {
+  .hero-title {
+    font-size: 5em;
+  }
+}
+@media all and (max-width: 600px) {
+  .hero-title {
+    font-size: 4em;
+  }
+}
+@media all and (max-width: 480px) {
+  .hero-title {
+    font-size: 3.4em;
+  }
 }

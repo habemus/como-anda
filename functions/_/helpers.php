@@ -9,6 +9,13 @@ class oed_helpers {
     };
   }
 
+  // echo file contents (e.g. inline svgs)
+  public static function echo_file_contents( $path ) {
+    if ($path) {
+      echo file_get_contents( get_template_directory_uri() . $path );
+    }
+  }
+
 }
 
 ?>

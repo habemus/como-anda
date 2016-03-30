@@ -14,8 +14,14 @@
         wp_enqueue_script( 'scroll-trigger' );
         wp_register_script( 'body-color-blend', get_template_directory_uri().'/assets/scripts/lib/body-color-blend.js', array(), '1.0', true );
         wp_enqueue_script( 'body-color-blend' );
+        wp_register_script( 'animate', get_template_directory_uri().'/assets/scripts/lib/animate.js', array(), '1.0', true );
+        wp_enqueue_script( 'animate' );
+        wp_register_script( 'animate-scroll', get_template_directory_uri().'/assets/scripts/lib/animate-scroll.js', array( 'animate' ), '1.0', true );
+        wp_enqueue_script( 'animate-scroll' );
+        wp_register_script( 'anchor-scroll', get_template_directory_uri().'/assets/scripts/lib/anchor-scroll.js', array( 'animate-scroll' ), '1.0', true );
+        wp_enqueue_script( 'anchor-scroll' );
 
-        wp_register_script( 'menu', get_template_directory_uri().'/assets/scripts/menu.js', array( 'animate-classes' ), '1.0', true );
+        wp_register_script( 'menu', get_template_directory_uri().'/assets/scripts/menu.js', array( 'animate-classes', 'animate-scroll' ), '1.0', true );
         wp_enqueue_script( 'menu' );
       }
     }

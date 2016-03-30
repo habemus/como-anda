@@ -1,20 +1,23 @@
 <div class='wrapper'>
 
-  <article class='menu'>
+  <article class='menu menu--isClosed'>
     <div class='wrapper'>
     
     <div class='menu-left'>
+      
       <header class='menu-header'>
-        <div class='logo logo--style-vertical logo--size-large'>
-          <h1 class='logo-title'>como anda</h1>
-          <h2 class='logo-tagline'>quem promove mobilidade a pé?</h2>
+        <div class='menu-logo'>
+          <h1 class='menu-logo-title'>como anda</h1>
+          <p class='menu-logo-image'><?php oed_helpers::echo_file_contents('/assets/svg/logo-comoanda-vertical.svg'); ?></p>
+          <h2 class='menu-logo-tagline'>quem promove mobilidade a pé?</h2>
         </div>
       </header>
+
       <div class='menu-characters'
            data-animate-background-image
            data-animate-background-image-speed='250'
-           data-animate-background-image-frames='10'
-           data-animate-background-image-base-url='<?php echo get_bloginfo('template_directory'); ?>/assets/images/characters/char${frame}.jpg'></div>
+           data-animate-background-image-frames='11'
+           data-animate-background-image-base-url='<?php echo get_bloginfo('template_directory'); ?>/assets/images/characters/char${frame}.png'></div>
     </div>
 
     <div class='menu-right'>
@@ -22,7 +25,7 @@
         <button
           type='button'
           alt='close menu'
-          class='menu-close hamburger'
+          class='menu-close hamburger hamburger--isOpen'
           onclick='App.menu.close()'>
           <span></span>
           <span></span>
@@ -30,7 +33,7 @@
           <span></span>
         </button>
         <ul class='menu-nav-list'>
-          <li class='menu-nav-item'><a href='#'>O que é</a></li>
+          <li class='menu-nav-item'><a href='#teste'>O que é</a></li>
           <li class='menu-nav-item'><a href='#'>Quem faz parte</a></li>
           <li class='menu-nav-item'><a href='#'>Participe</a></li>
           <li class='menu-nav-item'><a href='#'>Últimas notícias</a></li>
@@ -46,5 +49,3 @@
 
     </div>
   </article>
-
-  <button type='button' alt='close menu' class='menu-close' onclick='App.menu.open()'></button>

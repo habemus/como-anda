@@ -1,6 +1,10 @@
 (function () {
   'use strict';
 
+  // get global variables
+  var getAnimateClasses = window.getAnimateClasses;
+  var animateScroll = window.animateScroll;
+
   // get global scope object
   var App = window.App = window.App || {};
 
@@ -15,7 +19,7 @@
   var menuLeave = getAnimateClasses(menuEl, 'menu--a-leave', 400);
 
   // public methods
-  function open() {
+  function open(e) {
     isClosed = false;
     menuEnter(function () { menuEl.classList.remove('menu--isClosed'); });
   }

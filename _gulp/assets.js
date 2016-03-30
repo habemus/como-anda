@@ -6,11 +6,13 @@ const clean = require('gulp-clean');
 
 const fontsSrc = './assets/fonts/**/*.*';
 const imagesSrc = './assets/images/**/*.*';
+const svgSrc = './assets/svg/**/*.*';
 
 module.exports = function (prodDir) {
 
   const fontsProdDir = path.join(prodDir, 'assets', 'fonts');
   const imagesProdDir = path.join(prodDir, 'assets', 'images');
+  const svgProdDir = path.join(prodDir, 'assets', 'svg');
   
   gulp.task('assets:fonts:clean', function () {
     return gulp.src(fontsProdDir)
@@ -36,6 +38,18 @@ module.exports = function (prodDir) {
     return gulp.watch(imagesSrc, ['files']);
   });
 
-  return ['assets:fonts:watch', 'assets:images:watch'];
+  gulp.task('assets:svg:clean', function () {
+    return gulp.src(svgProdDir)
+      .pipe(clean({ read: false, force: true }));
+  });
+  gulp.task('assets:svg', ['assets:svg:clean'], function () {
+    return gulp.src(svgSrc)
+      .pipe(gulp.dest(svgProdDir));
+  });
+  gulp.task('assets:svg:watch', ['assets:svg'], function () {
+    return gulp.watch(svgSrc, ['files']);
+  });
+
+  return ['assets:fonts:watch', 'assets:images:watch', 'assets:svg:watch'];
   
 };
