@@ -1,0 +1,19 @@
+.button {
+  position: relative;
+  display: block;
+  padding: 20px;
+  background-color: $color-white;
+  font-size: 1.4em;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  transition: box-shadow 0.4s;
+  &:hover {
+    font-weight: normal;
+    margin-left: 8px;
+    margin-right: -8px;
+    box-shadow: 1px 2px 40px -8px $color-darkgrey;
+  }
+}
+.button + .button {
+  margin-top: 20px;
+}

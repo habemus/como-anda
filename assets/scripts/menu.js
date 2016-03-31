@@ -19,7 +19,7 @@
   var menuLeave = getAnimateClasses(menuEl, 'menu--a-leave', 400);
 
   // public methods
-  function open(e) {
+  function open() {
     isClosed = false;
     menuEnter(function () { menuEl.classList.remove('menu--isClosed'); });
   }
@@ -33,6 +33,11 @@
     if (isClosed) { open(); }
     else { close(); }
   }
+
+  // close on section click
+  nlForeach(menuEl.querySelectorAll('.menu-nav-item'), function (el) {
+    el.addEventListener('click', close);
+  });
 
   App.menu = {
     open: open,

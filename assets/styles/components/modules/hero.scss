@@ -9,10 +9,11 @@
     border-top: 2px solid $color-xdarkgrey;
   }
 }
+
 .hero-header {
-  border-bottom: 2px solid $color-xdarkgrey;
   padding: 40px 0;
 }
+
 .hero-title {
   position: relative;
   max-width: 1040px;
@@ -23,6 +24,7 @@
   line-height: 1em;
   color: $color-white;
 }
+
 .hero-nav {
   position: absolute;
   top: 40px;
@@ -46,10 +48,19 @@
 .hero-nav-button {
   margin-left: 12px;
 }
+
+.hero-content,
 .hero-text {
-  margin: 20px 0 0 25%;
+  padding-left: 25%;
+}
+.hero-text {
+  padding-top: 20px;
+  border-top: 2px solid $color-xdarkgrey;
   font-size: 1.6em;
   line-height: 1.4em;
+}
+.hero-text + .hero-content {
+  margin-top: 40px;
 }
 
 /**
@@ -57,7 +68,7 @@
  */
 .hero.hero--color-white {
   &:before,
-  .hero-header {
+  .hero-text {
     border-color: $color-xdarkgrey;
   }
   .hero-text,
@@ -69,7 +80,7 @@
 }
 .hero.hero--color-black {
   &:before,
-  .hero-header {
+  .hero-text {
     border-color: $color-white;
   }
   .hero-text,
@@ -81,7 +92,7 @@
 }
 .hero.hero--color-green {
   &:before,
-  .hero-header {
+  .hero-text {
     border-color: darken($color-green, 60%);
   }
   .hero-text,
@@ -92,7 +103,7 @@
 }
 .hero.hero--color-bluegrey {
   &:before,
-  .hero-header {
+  .hero-text {
     border-color: darken($color-bluegrey, 50%);
   }
   .hero-text,
@@ -137,5 +148,8 @@
 @media all and (max-width: 480px) {
   .hero-title {
     font-size: 3.4em;
+  }
+  .hero-content {
+    padding-left: 0;
   }
 }

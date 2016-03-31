@@ -16,10 +16,14 @@
 @import 'components/globals/body';
 @import 'components/globals/svg';
 //   units (e.g. .button, .link)
+@import 'components/units/button';
 @import 'components/units/hamburger';
+@import 'components/units/infoblock';
 @import 'components/units/oitentaedois';
+@import 'components/units/textblock';
 //   modules (e.g. .post, .gallery)
 @import 'components/modules/card';
 @import 'components/modules/hero';
 @import 'components/modules/menu';
+@import 'components/modules/news';
 @import 'components/modules/wrapper';

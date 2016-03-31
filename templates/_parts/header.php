@@ -33,11 +33,11 @@
           <span></span>
         </button>
         <ul class='menu-nav-list'>
-          <li class='menu-nav-item'><a href='#teste'>O que é</a></li>
-          <li class='menu-nav-item'><a href='#'>Quem faz parte</a></li>
-          <li class='menu-nav-item'><a href='#'>Participe</a></li>
-          <li class='menu-nav-item'><a href='#'>Últimas notícias</a></li>
-          <li class='menu-nav-item'><a href='#'>Quem somos</a></li>
+          <li class='menu-nav-item'><a href='#o-projeto'>O que é</a></li>
+          <li class='menu-nav-item'><a href='#quem-faz-parte'>Quem faz parte</a></li>
+          <li class='menu-nav-item'><a href='#participe'>Participe</a></li>
+          <li class='menu-nav-item'><a href='#noticias'>Últimas notícias</a></li>
+          <li class='menu-nav-item'><a href='#quem-somos'>Quem somos</a></li>
         </ul>
       </nav>
     </div>

@@ -9,12 +9,12 @@
   function animateScroll(targetEl, speed, callback) {
     
     var scrollTop = document.body.scrollTop;
-    var targetScrollTop = _getOffset(targetEl);
+    var targetScrollTop = _getOffsetTop(targetEl);
 
     if (scrollTop === targetScrollTop) {
       callback && callback();
     } else {
-      animate(document.body, 'scrollTop', '', scrollTop, _getOffset(targetEl), speed || 400, true);
+      animate(document.body, 'scrollTop', '', scrollTop, targetScrollTop, speed || 400, true);
       callback && setTimeout(callback, speed || 400);
     }
   }

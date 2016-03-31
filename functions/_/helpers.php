@@ -9,6 +9,11 @@ class oed_helpers {
     };
   }
 
+  // require component
+  public static function get_component( $comp, $data ) {
+    // should print a component
+  }
+
   // echo file contents (e.g. inline svgs)
   public static function echo_file_contents( $path ) {
     if ($path) {

@@ -2,9 +2,9 @@
   'use strict';
 
   /**
+   *
    * Triggers functions when the passed element is shown or hidden by scrolling the page.
    * A visibleClass property can be passed so the class is toggled based on the element's visiblity.
-   * Multiple scroll triggers may be added to the same element.
    *
    * ```
    *   scrollTrigger(element, {
@@ -12,82 +12,52 @@
    *     onShow: callback,
    *     onHide: callback,
    *     topOffset: number,
-   *     bottomOffset: number
+   *     bottomOffset: number,
+   *     offset: number
    *   });
    * ```
    */
+
   function ScrollTrigger(element, options) {
 
     if (!element || !options || (!options.onShow && !options.onHide && !options.visibleClass)) {
       return false;
     }
 
-    this.isShowing = false;
-
+    this.visible = false;
     this.element = element;
     this.visibleClass = options.visibleClass;
     this.onShow = options.onShow;
     this.onHide = options.onHide;
-    this.topOffset = options.topOffset || 0;
-    this.bottomOffset = options.bottomOffset || 0;
+    this.topOffset = options.topOffset || options.offset || 0;
+    this.bottomOffset = options.bottomOffset || options.offset || 0;
 
-    this._listener = window.addEventListener('scroll', this._update.bind(this));
-    this._update();
+    this._listener = scrollListener(element, this._update.bind(this));
 
     return this;
-
   };
-  // get element offsets.
-  ScrollTrigger.prototype._getElementOffsets = function () {
-    var box = this.element.getBoundingClientRect();
+  ScrollTrigger.prototype._updateVisibility = function (distances) {
+    var visible = true;
 
-    var body = document.body;
-    var docEl = document.documentElement;
+    if (this.topOffset === 0 && this.bottomOffset === 0 && distances.abs !== 0) {
+      visible = false;
+    } else if (this.topOffset < 0 || this.bottomOffset < 0) {
+      if (this.topOffset < 0 && distances.absTop > this.topOffset) { visible = false; }
+      else if (this.bottomOffset < 0 && distances.absBottom < -this.bottomOffset) { visible = false; }
+    } else if (distances.top > this.topOffset || distances.bottom < -this.bottomOffset) {
+      visible = false;
+    }
 
-    var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
-    var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
-
-    var clientTop = docEl.clientTop || body.clientTop || 0;
-    var clientLeft = docEl.clientLeft || body.clientLeft || 0;
-
-    var top  = box.top +  scrollTop - clientTop;
-    var left = box.left + scrollLeft - clientLeft;
-
-    this.elementOffsetTop = Math.round(top);
-    this.elementOffsetLeft = Math.round(left);
-  };
-  // check if element is visible.
-  ScrollTrigger.prototype._checkPosition = function () {
-
-    var elementHeight = this.element.offsetHeight;
-
-    var body = document.body;
-    var docEl = document.documentElement;
-
-    var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
-    var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
-
-    var windowWidth = window.innerWidth;
-    var windowHeight = window.innerHeight;
-
-    var windowBottomIsAboveTop = scrollTop + windowHeight > this.elementOffsetTop - this.topOffset;
-    var windowTopIsBelowBottom = scrollTop < this.elementOffsetTop + elementHeight + this.bottomOffset;
-
-    this.visible = (windowBottomIsAboveTop && windowTopIsBelowBottom);
-
+    this.visible = visible;
   };
   // check if element is visible and trigger callbacks if provided.
-  ScrollTrigger.prototype._update = function () {
-    
+  ScrollTrigger.prototype._update = function (distances) {
+
     var wasVisible = this.visible;
-
-    this._getElementOffsets();
-    this._checkPosition();
-
-    var isVisible = this.visible;
+    this._updateVisibility(distances);
+    console.log(distances);
 
     if (!wasVisible && this.visible) {
-      console.log('add');
       this.onShow && this.onShow();
       this.visibleClass && this.element.classList.add(this.visibleClass);
     } else if (wasVisible && !this.visible) {
@@ -97,12 +67,13 @@
   };
   // remove listeners.
   ScrollTrigger.prototype.destroy = function () {
-    window.removeEventListener('scroll', this._update.bind(this));
+    this._listener.destroy();
   };
 
   /**
    * API
    */
+  
   window.scrollTrigger = function (element, options) {
     return new ScrollTrigger(element, options);
   };

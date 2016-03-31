@@ -1,6 +1,29 @@
 (function () {
   'use strict';
 
+  // get global scope object
+  var App = window.App = window.App || {};
+
+  /**
+   * Bind open menu events
+   */
+  (function () {
+
+    function openMenu(target) {
+      animateScroll(target, 400, function () {
+        setTimeout(App.menu.open, 200);
+      });
+    }
+
+    nlForeach(document.querySelectorAll('.hero'), function (el) {
+      var navEl = el.querySelector('.hero-nav-button');
+      if (navEl) {
+        navEl.addEventListener('click', function () { openMenu(el); });
+      }
+    });
+
+  })();
+
   /**
    * Grab hero, hero-text and every characters of the hero-title
    * and apply is-visible toggable class.
@@ -39,7 +62,7 @@
           function (element, i) {
             scrollTrigger(element, {
               visibleClass: 'is-visible',
-              topOffset: Math.round(Math.random() * 200) * -1
+              offset: Math.round(Math.random() * -100)
             });
           }
         );

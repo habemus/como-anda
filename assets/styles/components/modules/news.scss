@@ -1,0 +1,54 @@
+.news-item + .news-item {
+  margin-top: 20px;
+}
+
+.news-item-link {
+  position: relative;
+  display: block;
+  padding: 20px 40px 26px;
+  background-color: $color-white;
+  transition: box-shadow 0.4s;
+  ::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 34px;
+    left: 14px;
+    width: 12px;
+    height: 12px;
+    background-color: $color-lightgrey;
+    border-radius: 50%;
+  }
+  &:hover {
+    box-shadow: 1px 2px 20px $color-grey;
+    font-weight: normal;
+  }
+}
+.news-item-title {
+  display: inline;
+  margin-right: 4px;
+  font-family: 'Terrorista';
+  font-size: 3.2em;
+  line-height: 1.2em;
+  text-transform: uppercase;
+}
+.news-item-date {
+  display: inline;
+}
+.news-item-excerpt {
+  font-size: 1.4em;
+}
+
+.news-more {
+  display: block;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid $color-black;
+  text-transform: uppercase;
+  opacity: 0.4;
+  transition: opacity 0.4s;
+  &:hover {
+    opacity: 1.0;
+  }
+}
+
