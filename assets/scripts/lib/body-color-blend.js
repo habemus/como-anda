@@ -16,7 +16,7 @@
    *     data-color-point-classname='blue'></any>
    * </body>
    */
-  
+
   var colorPoints = document.querySelectorAll('[data-color-point]');
   var colorOffsets = [];
   var colorClassNames = [];
@@ -33,6 +33,7 @@
     colors.push(_getColorObj(colorPoint));
   }
 
+  console.log(colors, colorPoints);
   // check if the data is set correctly
   if (colors.indexOf(false) > -1) {
     return false;

@@ -55,7 +55,6 @@
 
     var wasVisible = this.visible;
     this._updateVisibility(distances);
-    console.log(distances);
 
     if (!wasVisible && this.visible) {
       this.onShow && this.onShow();

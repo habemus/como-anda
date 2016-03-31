@@ -22,7 +22,7 @@
   top: 50%;
   right: 50%;
   margin-top: 140px;
-  margin-right: -220px;
+  margin-right: -224px;
   width: 300px;
   text-align: right;
   text-transform: uppercase;
@@ -35,7 +35,7 @@
   left: 50%;
   width: 360px;
   height: 500px;
-  margin-left: -120px;
+  margin-left: -124px;
   margin-bottom: -125px;
   background-position: bottom;
   background-size: 360px auto;
@@ -44,6 +44,7 @@
   &::after {
     position: absolute;
     bottom: -4px;
+    right: 12px;
     content: ' ';
     display: block;
     height: 2px;

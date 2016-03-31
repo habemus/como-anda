@@ -80,19 +80,12 @@
 
     nlForeach(heroEls, function (heroEl) {
 
-      var textEl = heroEl.querySelector('.hero-text');
+      scrollTrigger(heroEl, { visibleClass: 'is-visible' });
+
       var titleEl = heroEl.querySelector('.hero-title');
-      
-      var arr = (textEl) ? [heroEl, textEl] : heroEl;
-      nlForeach(
-        arr,
-        function (element, i) {
-          scrollTrigger(element, { visibleClass: 'is-visible' });
-        }
-      );
+      var titleCharEls = [];
 
       if (titleEl) {
-        var titleCharEls = [];
         var titleCharacters = titleEl.innerHTML.split('');
         titleEl.innerHTML = '';
 
@@ -102,17 +95,26 @@
           titleCharEls.push(charEl);
           titleEl.appendChild(charEl);
         }
-
-        nlForeach(
-          [titleCharEls],
-          function (element, i) {
-            scrollTrigger(element, {
-              visibleClass: 'is-visible',
-              offset: Math.round(Math.random() * -100)
-            });
-          }
-        );
       }
+
+      scrollTrigger(titleEl, {
+        offset: -40,
+        onShow: function () {
+          titleCharEls.forEach(function (charEl) {
+            charEl.classList.add('is-visible-pre');
+            setTimeout(function () {
+              if (charEl.className.indexOf('is-visible-pre') !== -1) {
+                charEl.classList.add('is-visible');
+              }
+            }, Math.round(Math.random() * 600));
+          });
+        },
+        onHide: function () {
+          nlForeach(titleCharEls, function (charEl) {
+            charEl.classList.remove('is-visible', 'is-visible-pre');
+          });
+        }
+      });
 
     });
 

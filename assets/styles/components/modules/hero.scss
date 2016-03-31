@@ -2,7 +2,7 @@
   position: relative;
   min-height: 100vh;
   padding: 68px 0;
-  &:before {
+  &::before {
     content: ' ';
     display: block;
     margin-right: 186px;
@@ -68,10 +68,10 @@
  */
 .hero.hero--style-inset {
   min-height: 90vh;
-  margin: 5vh 0;
+  margin: 5vh 0 15vh;
   padding: 40px;
   background-color: $color-white;
-  &:before {
+  &::before {
     border-top: none;
   }
   .hero-header {
@@ -81,13 +81,30 @@
     color: $color-darkgrey;
     font-size: 5em;
   }
+  &::after {
+    content: '';
+    display: block;
+    height: 100px;
+    width: 200px;
+    position: absolute;
+    bottom: -100px;
+    right: 120px;
+    background-position: bottom;
+    background-size: 200px auto;
+    background-repeat: no-repeat;
+    background-image: url('./assets/images/characters/char1.png');
+  }
+  &.hero--style-inset-2::after {
+    right: 320px;
+    background-image: url('./assets/images/characters/char2.png');
+  }
 }
 
 /**
  * Colors
  */
 .hero.hero--color-white {
-  &:before,
+  &::before,
   .hero-text {
     border-color: $color-xdarkgrey;
   }
@@ -99,7 +116,7 @@
   }
 }
 .hero.hero--color-black {
-  &:before,
+  &::before,
   .hero-text {
     border-color: $color-white;
   }
@@ -111,7 +128,7 @@
   }
 }
 .hero.hero--color-green {
-  &:before,
+  &::before,
   .hero-text {
     border-color: darken($color-green, 60%);
   }
@@ -122,7 +139,7 @@
   }
 }
 .hero.hero--color-bluegrey {
-  &:before,
+  &::before,
   .hero-text {
     border-color: darken($color-bluegrey, 50%);
   }
@@ -137,9 +154,12 @@
  * Animations
  */
 .hero {
+  opacity: 0.0;
   transition: opacity 1.2s ease-in;
+  &.is-visible {
+    opacity: 1.0;
+  }
 }
-.hero,
 .hero-title span {
   opacity: 0.0;
   &.is-visible {
