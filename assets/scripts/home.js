@@ -5,6 +5,52 @@
   var App = window.App = window.App || {};
 
   /**
+   * Do intro animations
+   */
+  (function () {
+
+    var logoEl = document.querySelector('.intro-logo');
+    var taglineEl = document.querySelector('.intro-tagline');
+    var charactersEl = document.querySelector('.intro-characters');
+    var scrollTipEl = document.querySelector('.intro-scrollTip');
+
+    if (logoEl && taglineEl && charactersEl && scrollTipEl) {
+      
+      setTimeout(function () {
+        logoEl.classList.add('is-showing');
+        charactersEl.classList.add('is-showing');
+      }, 400);
+
+      setTimeout(function () {
+        taglineEl.classList.add('is-showing');
+      }, 1000);
+
+      setTimeout(function () {
+        animateBackgroundImage(charactersEl, {
+          speed: 800,
+          framesCount: 11,
+          baseUrl: charactersEl.getAttribute('data-animation-base-url')
+        })
+      }, 1400);
+
+      if (window.pageYOffset === 0) {
+        setTimeout(function () {
+          scrollTipEl.classList.add('is-showing');
+        }, 2400);
+      }
+    }
+
+    // remove scrollTip on first scroll.
+    function removeScrollTip() {
+      scrollTipEl.classList.remove('is-showing');
+      window.removeEventListener('scroll', removeScrollTip);
+    }
+    window.addEventListener('scroll', removeScrollTip);
+
+  })();
+
+
+  /**
    * Bind open menu events
    */
   (function () {

@@ -47,16 +47,17 @@
     }
 
   }
-  AnimateBackgroundImage.prototype.setup = function (options) {
-    this.speed = (options && parseInt(options.speed)) || parseInt(this.element.getAttribute('data-animate-background-image-speed')) || 200;
-    this.baseUrl = (options && options.baseUrl) || this.element.getAttribute('data-animate-background-image-base-url') || false;
-    this.framesCount = (options && parseInt(options.framesCount)) || parseInt(this.element.getAttribute('data-animate-background-image-frames')) || false;
-    this.valid = this.speed && this.baseUrl && this.framesCount && this.speed;
+  AnimateBackgroundImage.prototype.setup = function (_options) {
+    var options = _options || {};
+    this.speed = parseInt(options.speed) || parseInt(this.element.getAttribute('data-animate-background-image-speed')) || 200;
+    this.baseUrl = options.baseUrl || this.element.getAttribute('data-animate-background-image-base-url') || false;
+    this.framesCount = parseInt(options.framesCount) || parseInt(this.element.getAttribute('data-animate-background-image-frames')) || false;
+    this.valid = !!(this.speed && this.baseUrl && this.framesCount);
   };
   AnimateBackgroundImage.prototype._getFrameUrlBuilder = function () {
     var prefix;
     var suffix;
-    var unparsedBaseUrl = this.element.getAttribute('data-animate-background-image-base-url');
+    var unparsedBaseUrl = this.baseUrl;
     if (unparsedBaseUrl && unparsedBaseUrl.length) {
       var indexOfFrame = unparsedBaseUrl.indexOf('${frame}');
       prefix = unparsedBaseUrl.substring(0, indexOfFrame);
@@ -72,7 +73,7 @@
   }
   AnimateBackgroundImage.prototype.getFramesUrls = function () {
     var frameUrlBuilder = this._getFrameUrlBuilder();
-    var numberOfFrames = parseInt(this.element.getAttribute('data-animate-background-image-frames'));
+    var numberOfFrames = this.framesCount;
     for (var i = 0; i < numberOfFrames; i++) {
       this.framesUrls.push(frameUrlBuilder(i));
     }

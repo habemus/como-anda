@@ -25,7 +25,7 @@
         wp_register_script( 'nodelist-foreach', get_template_directory_uri().'/assets/scripts/lib/nodelist-foreach.js', array( 'animate-scroll' ), '1.0', true );
         wp_enqueue_script( 'nodelist-foreach' );
 
-        wp_register_script( 'menu', get_template_directory_uri().'/assets/scripts/menu.js', array( 'animate-classes', 'animate-scroll' ), '1.0', true );
+        wp_register_script( 'menu', get_template_directory_uri().'/assets/scripts/menu.js', array( 'animate-background-image', 'animate-classes', 'animate-scroll' ), '1.0', true );
         wp_enqueue_script( 'menu' );
 
         if (is_home()) {

@@ -8,7 +8,7 @@
       <header class='menu-header'>
         <div class='menu-logo'>
           <h1 class='menu-logo-title'>como anda</h1>
-          <p class='menu-logo-image'><?php oed_helpers::echo_file_contents('/assets/svg/logo-comoanda-vertical.svg'); ?></p>
+          <div class='menu-logo-image'><?php oed_helpers::echo_file_contents('/assets/svg/logo-comoanda-vertical.svg'); ?></div>
           <h2 class='menu-logo-tagline'>quem promove mobilidade a pé?</h2>
         </div>
       </header>

@@ -64,6 +64,26 @@
 }
 
 /**
+ * Styles
+ */
+.hero.hero--style-inset {
+  min-height: 90vh;
+  margin: 5vh 0;
+  padding: 40px;
+  background-color: $color-white;
+  &:before {
+    border-top: none;
+  }
+  .hero-header {
+    padding: 0;
+  }
+  .hero-title {
+    color: $color-darkgrey;
+    font-size: 5em;
+  }
+}
+
+/**
  * Colors
  */
 .hero.hero--color-white {
