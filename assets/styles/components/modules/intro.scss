@@ -2,64 +2,67 @@
   position: relative;
   height: 100vh;
 }
+
+/**
+ * Header
+ */
+.intro-hgroup {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+}
 .intro-title {
   height: 0;
   overflow: hidden;
 }
-.intro-logo {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  margin-top: -180px;
-  margin-left: -250px;
-  svg {
-    width: 500px;
-  }
-}
 .intro-tagline {
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  margin-top: 140px;
-  margin-right: -224px;
-  width: 300px;
+  width: 224px;
+  margin: 60px 0 60px;
   text-align: right;
   text-transform: uppercase;
   font-size: 2em;
-  line-height: 1.2em;
+  line-height: 1.4em;
+}
+
+/**
+ * Illustration
+ */
+.intro-illustration {
+  position: absolute;
+  left: 244px;
+  right: 0;
+  bottom: 40px;
 }
 .intro-characters {
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
   width: 360px;
   height: 500px;
-  margin-left: -124px;
-  margin-bottom: -125px;
   background-position: bottom;
   background-size: 360px auto;
   background-repeat: no-repeat;
   background-image: url('./assets/images/characters/char1.png');
-  &::after {
-    position: absolute;
-    bottom: -4px;
-    right: 12px;
-    content: ' ';
-    display: block;
-    height: 2px;
-    width: 100%;
-    background-color: $color-darkgrey;
-  }
 }
+.intro-floorline {
+  height: 2px;
+  background-color: $color-grey; 
+}
+
+/**
+ * ScrollTip
+ */
 .intro-scrollTip {
   position: absolute;
+  bottom: 0;
   left: 50%;
-  bottom: 20px;
-  margin-left: -20px;
+  margin-left: -10px;
+  cursor: pointer;
   svg {
-    width: 40px;
-    height: auto;
+    width: 20px;
+    height: 32px;
+  }
+  &.is-hidden {
+    z-index: -1;
+    opacity: 0.0;
+    cursor: default;
   }
 }
 
@@ -67,26 +70,35 @@
  * Animations
  */
 .intro-logo,
-.intro-characters {
-  opacity: 0.0;
-  transition: opacity 0.8s ease;
-  &.is-showing {
-    opacity: 1.0;
-  }
-}
-.intro-tagline {
-  opacity: 0.0;
-  transition: 0.8s ease;
-  &.is-showing {
-    opacity: 1.0;
-  }
-}
+.intro-tagline,
+.intro-characters,
 .intro-scrollTip {
   opacity: 0.0;
-  transform: scale(1.2);
-  transition: 1.0s ease;
-  &.is-showing {
+}
+.intro-floorline {
+  max-width: 0;
+}
+.intro.intro--isReady {
+  .intro-logo,
+  .intro-tagline,
+  .intro-characters,
+  .intro-scrollTip {
     opacity: 1.0;
-    transform: scale(1.0);
+  }
+  .intro-logo {
+    transition: opacity 0.8s linear 2.6s;
+  }
+  .intro-tagline {
+    transition: opacity 0.8s linear 4s;
+  }
+  .intro-characters {
+    transition: opacity 0.8s linear 1s, background-image 0.4s;
+  }
+  .intro-floorline {
+    transition: max-width 4s ease;
+    max-width: 9999px;
+  }
+  .intro-scrollTip {
+    transition: opacity 0.8s linear 5s;
   }
 }

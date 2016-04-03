@@ -1,3 +1,18 @@
+/**
+ * TEMP
+ */
+.hero-chart {
+  margin-top: 20px;
+  margin-bottom: -20px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+/**
+ * END TEMP
+ */
+
 .hero {
   position: relative;
   min-height: 100vh;
@@ -68,7 +83,7 @@
  */
 .hero.hero--style-inset {
   min-height: 90vh;
-  margin: 5vh 0 15vh;
+  margin: 5vh 0 180px;
   padding: 40px;
   background-color: $color-white;
   &::before {
@@ -153,13 +168,6 @@
 /**
  * Animations
  */
-.hero {
-  opacity: 0.0;
-  transition: opacity 1.2s ease-in;
-  &.is-visible {
-    opacity: 1.0;
-  }
-}
 .hero-title span {
   opacity: 0.0;
   &.is-visible {

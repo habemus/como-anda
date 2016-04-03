@@ -24,9 +24,15 @@
       wp_enqueue_script( 'anchor-scroll' );
       wp_register_script( 'nodelist-foreach', get_template_directory_uri().'/assets/scripts/lib/nodelist-foreach.js', array( 'animate-scroll' ), '1.0', true );
       wp_enqueue_script( 'nodelist-foreach' );
+      wp_register_script( 'svg-injector', get_template_directory_uri().'/assets/scripts/lib/svg-injector.js', array(), '1.0', true );
+      wp_enqueue_script( 'svg-injector' );
+      wp_register_script( 'scroll-fade', get_template_directory_uri().'/assets/scripts/lib/scroll-fade.js', array(), '1.0', true );
+      wp_enqueue_script( 'scroll-fade' );
 
-      wp_register_script( 'menu', get_template_directory_uri().'/assets/scripts/menu.js', array( 'animate-background-image', 'animate-classes', 'animate-scroll' ), '1.0', true );
+      wp_register_script( 'menu', get_template_directory_uri().'/assets/scripts/menu.js', array( 'animate-background-image', 'animate-classes', 'animate-scroll', 'scroll-fade' ), '1.0', true );
       wp_enqueue_script( 'menu' );
+      wp_register_script( 'svg', get_template_directory_uri().'/assets/scripts/svg.js', array( 'svg-injector' ), '1.0', true );
+      wp_enqueue_script( 'svg' );
 
       if (is_home()) {
           wp_register_script( 'home', get_template_directory_uri().'/assets/scripts/home.js', array( 'animate-classes', 'animate-scroll', 'nodelist-foreach' ), '1.0', true );

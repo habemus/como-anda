@@ -1,4 +1,6 @@
 .footer {
+  z-index: -1;
+  margin-top: -100vh;
   height: 100vh;
   margin-bottom: 40px;
   border-bottom: 2px solid $color-darkgrey;

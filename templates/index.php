@@ -5,11 +5,20 @@
   <header
     class='intro'
     data-color-point='255, 255, 255'>
-    <h1 class='intro-title'>como anda</h1>
-    <div class='intro-logo'><?php oed_helpers::echo_file_contents('/assets/svg/logo-comoanda-horizontal-alt.svg'); ?></div>
-    <div class='intro-characters' data-animation-base-url='<?php echo get_bloginfo('template_directory'); ?>/assets/images/characters/char${frame}.png'></div>
-    <p class='intro-tagline'>quem promove mobilidade a pé?</p>
-    <p class='intro-scrollTip'><?php oed_helpers::echo_file_contents('/assets/svg/arrow-down.svg'); ?></p>
+    <hgroup class='intro-hgroup'>
+      <h1 class='intro-title'>como anda</h1>
+      <div class='intro-logo'>
+        <img class='svgimg' data-src='<?php echo get_bloginfo('template_directory'); ?>/assets/svg/logo-comoanda-vertical.svg' />
+      </div>
+      <h2 class='intro-tagline'>quem promove mobilidade a pé?</h2>
+    </hgroup>
+    <div class='intro-illustration'>
+      <div class='intro-characters' data-animation-base-url='<?php echo get_bloginfo('template_directory'); ?>/assets/images/characters/char${frame}.png'></div>
+      <div class="intro-floorline"></div>
+    </div>
+    <p class='intro-scrollTip'>
+      <img class='svgimg' data-src='<?php echo get_bloginfo('template_directory'); ?>/assets/svg/arrow-down.svg' />
+    </p>
   </header>
 
   <div id='o-projeto'>
@@ -39,7 +48,9 @@
                 <nav class='hero-nav'>
                   <div class='hero-nav-logo logo'>
                     <h1 class='hero-nav-logo-title'>como anda</h1>
-                    <p class='hero-nav-logo-image'><?php oed_helpers::echo_file_contents('/assets/svg/logo-comoanda-horizontal.svg'); ?></p>
+                    <p class='hero-nav-logo-image'>
+                      <img class='svgimg' data-src='<?php echo get_bloginfo('template_directory'); ?>/assets/svg/logo-comoanda-horizontal.svg' />
+                    </p>
                   </div>
                   <button
                     type='button'
@@ -71,6 +82,9 @@
     data-color-point='<?php get_theme_color(get_field('survey_results_background_color', 'options')); ?>'>
     <header class='hero-header'>
       <h1 class='hero-title'>nossos resultados</h1>
+      <div class='hero-chart'>
+        <img src='<?php echo get_bloginfo('template_directory'); ?>/assets/images/comoanda-grafico.jpg' />
+      </div>
     </header>
   </section>
 
@@ -85,7 +99,9 @@
       <nav class='hero-nav'>
         <div class='hero-nav-logo logo'>
           <h1 class='hero-nav-logo-title'>como anda</h1>
-          <p class='hero-nav-logo-image'><?php oed_helpers::echo_file_contents('/assets/svg/logo-comoanda-horizontal.svg'); ?></p>
+          <p class='hero-nav-logo-image'>
+            <img class='svgimg' data-src='<?php echo get_bloginfo('template_directory'); ?>/assets/svg/logo-comoanda-horizontal.svg' />
+          </p>
         </div>
         <button
           type='button'
@@ -122,7 +138,9 @@
         <nav class='hero-nav'>
           <div class='hero-nav-logo logo'>
             <h1 class='hero-nav-logo-title'>como anda</h1>
-            <p class='hero-nav-logo-image'><?php oed_helpers::echo_file_contents('/assets/svg/logo-comoanda-horizontal.svg'); ?></p>
+            <p class='hero-nav-logo-image'>
+              <img class='svgimg' data-src='<?php echo get_bloginfo('template_directory'); ?>/assets/svg/logo-comoanda-horizontal.svg' />
+            </p>
           </div>
           <button
             type='button'
@@ -168,7 +186,9 @@
       <nav class='hero-nav'>
         <div class='hero-nav-logo logo'>
           <h1 class='hero-nav-logo-title'>como anda</h1>
-          <p class='hero-nav-logo-image'><?php oed_helpers::echo_file_contents('/assets/svg/logo-comoanda-horizontal.svg'); ?></p>
+          <p class='hero-nav-logo-image'>
+            <img class='svgimg' data-src='<?php echo get_bloginfo('template_directory'); ?>/assets/svg/logo-comoanda-horizontal.svg' />
+          </p>
         </div>
         <button
           type='button'

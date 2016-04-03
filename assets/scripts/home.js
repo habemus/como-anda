@@ -9,22 +9,15 @@
    */
   (function () {
 
-    var logoEl = document.querySelector('.intro-logo');
-    var taglineEl = document.querySelector('.intro-tagline');
-    var charactersEl = document.querySelector('.intro-characters');
-    var scrollTipEl = document.querySelector('.intro-scrollTip');
-
-    if (logoEl && taglineEl && charactersEl && scrollTipEl) {
-      
+    var introEl = document.querySelector('.intro');
+    if (introEl) {
       setTimeout(function () {
-        logoEl.classList.add('is-showing');
-        charactersEl.classList.add('is-showing');
+        introEl.classList.add('intro--isReady');
       }, 400);
+    }
 
-      setTimeout(function () {
-        taglineEl.classList.add('is-showing');
-      }, 1000);
-
+    var charactersEl = document.querySelector('.intro-characters');
+    if (charactersEl) {
       setTimeout(function () {
         animateBackgroundImage(charactersEl, {
           speed: 800,
@@ -32,20 +25,21 @@
           baseUrl: charactersEl.getAttribute('data-animation-base-url')
         })
       }, 1400);
-
-      if (window.pageYOffset === 0) {
-        setTimeout(function () {
-          scrollTipEl.classList.add('is-showing');
-        }, 2400);
-      }
     }
 
-    // remove scrollTip on first scroll.
-    function removeScrollTip() {
-      scrollTipEl.classList.remove('is-showing');
-      window.removeEventListener('scroll', removeScrollTip);
+  })();
+
+  /**
+   * Bind scrollTip event
+   */
+  (function () {
+
+    var scrollTipEl = document.querySelector('.intro-scrollTip');
+    if (scrollTipEl) {
+      scrollTipEl.addEventListener('click', function () {
+        animateScroll(document.getElementById('o-projeto'), 400);
+      });
     }
-    window.addEventListener('scroll', removeScrollTip);
 
   })();
 
@@ -71,30 +65,35 @@
   })();
 
   /**
-   * Grab hero, hero-text and every characters of the hero-title
-   * and apply is-visible toggable class.
+   * Scroll fade sections
+   */
+  (function () {
+
+    nlForeach(document.querySelectorAll('.hero'), function (heroEl) {
+      scrollFade(heroEl, { offset: window.innerHeight });
+    });
+
+  })();
+
+  /**
+   * Toggle hero-text is-visible class.
    */
   (function () {
 
     var heroEls = document.querySelectorAll('.hero');
 
-    nlForeach(heroEls, function (heroEl) {
+    nlForeach(document.querySelectorAll('.hero-title'), function (titleEl) {
 
-      scrollTrigger(heroEl, { visibleClass: 'is-visible' });
-
-      var titleEl = heroEl.querySelector('.hero-title');
       var titleCharEls = [];
+      var titleCharacters = titleEl.innerHTML.split('');
 
-      if (titleEl) {
-        var titleCharacters = titleEl.innerHTML.split('');
-        titleEl.innerHTML = '';
+      titleEl.innerHTML = '';
 
-        for (var i = 0; i < titleCharacters.length; i++) {
-          var charEl = document.createElement('SPAN');
-          charEl.innerHTML = titleCharacters[i];
-          titleCharEls.push(charEl);
-          titleEl.appendChild(charEl);
-        }
+      for (var i = 0; i < titleCharacters.length; i++) {
+        var charEl = document.createElement('SPAN');
+        charEl.innerHTML = titleCharacters[i];
+        titleCharEls.push(charEl);
+        titleEl.appendChild(charEl);
       }
 
       scrollTrigger(titleEl, {
@@ -106,7 +105,7 @@
               if (charEl.className.indexOf('is-visible-pre') !== -1) {
                 charEl.classList.add('is-visible');
               }
-            }, Math.round(Math.random() * 600));
+            }, Math.round(Math.random() * 1000));
           });
         },
         onHide: function () {
