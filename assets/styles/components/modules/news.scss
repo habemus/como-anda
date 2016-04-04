@@ -1,54 +1,36 @@
-.news-item + .news-item {
-  margin-top: 20px;
+.news .section-character {
+  right: 200px;
 }
-
-.news-item-link {
-  position: relative;
-  display: block;
-  padding: 20px 40px 26px;
-  background-color: $color-white;
-  transition: box-shadow 0.4s;
-  ::before {
-    content: ' ';
-    display: block;
-    position: absolute;
-    top: 34px;
-    left: 14px;
-    width: 12px;
-    height: 12px;
-    background-color: $color-lightgrey;
-    border-radius: 50%;
+.news-item {
+  max-width: 320px;
+  &:hover .news-item-link {
+    color: $color-black;
   }
-  &:hover {
-    box-shadow: 1px 2px 20px $color-grey;
-    font-weight: normal;
+}
+.news-item-picture {
+  margin: 0 -4px 20px;
+  box-shadow: 1px 1px 8px $color-grey;
+  overflow: auto;
+  img {
+    float: left;
+    width: 100%;
+    height: auto;
   }
 }
 .news-item-title {
-  display: inline;
-  margin-right: 4px;
+  margin-bottom: 12px;
   font-family: 'Terrorista';
-  font-size: 3.2em;
-  line-height: 1.2em;
-  text-transform: uppercase;
-}
-.news-item-date {
-  display: inline;
+  font-size: 1.8em;
+  letter-spacing: 0.02em;
 }
 .news-item-excerpt {
-  font-size: 1.4em;
+  font-size: 1.2em;
+  line-height: 1.4em;
 }
-
-.news-more {
-  display: block;
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 2px solid $color-black;
-  text-transform: uppercase;
-  opacity: 0.4;
-  transition: opacity 0.4s;
-  &:hover {
-    opacity: 1.0;
-  }
+.news-item-link {
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 0.9em;
+  color: $color-grey;
+  text-align: right;
 }
-

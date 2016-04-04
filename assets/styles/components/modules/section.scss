@@ -1,0 +1,108 @@
+.section {
+  position: relative;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 84px 40px;
+  color: $color-black;
+  overflow: auto;
+}
+.section-title {
+  position: relative;
+  max-width: 1040px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: 'Terrorista', sans-serif;
+  font-weight: bold;
+  font-size: 7em;
+  line-height: 1em;
+  color: $color-white;
+  strong {
+    color: $color-black;
+  }
+}
+.section-content {
+  border-top: 2px solid $color-darkgrey;
+  padding: 40px 0 40px 25%;
+}
+.section-character {
+  position: absolute;
+  z-index: -1;
+  bottom: 20px;
+  right: 20px;
+  height: 240px;
+  width: 400px;
+  background-repeat: no-repeat;
+  background-size: 260px auto;
+  background-image: url('./assets/images/characters/char4.png');
+  background-position: right bottom;
+  border-bottom: 2px solid $color-darkgrey;
+}
+
+/**
+ * Colors
+ */
+.tmpl--color-red {
+  .section-content {
+    border-color: darken($color-red, 40%);
+    color: darken($color-red, 40%);
+  }
+  .section-character {
+    border-color: darken($color-red, 40%);
+  }
+}
+.tmpl--color-green {
+  .section-content {
+    border-color: darken($color-green, 50%);
+    color: darken($color-green, 50%);
+  }
+  .section-character {
+    border-color: darken($color-green, 50%);
+  }
+}
+.tmpl--color-blue {
+  .section-content {
+    border-color: darken($color-blue, 30%);
+    color: darken($color-blue, 30%);
+  }
+  .section-character {
+    border-color: darken($color-blue, 30%);
+  }
+}
+
+/**
+ * Animations
+ */
+.section-title span > span,
+.section-title strong > span {
+  opacity: 0.0;
+  &.is-visible {
+    opacity: 1.0;
+  }
+}
+
+/**
+ * Responsive
+ */
+@media all and (max-width: 960px) {
+  .section-title {
+    font-size: 6em;
+  }
+}
+@media all and (max-width: 720px) {
+  .section-title {
+    font-size: 5em;
+  }
+}
+@media all and (max-width: 600px) {
+  .section-title {
+    font-size: 4em;
+  }
+}
+@media all and (max-width: 480px) {
+  .section-title {
+    font-size: 3.4em;
+  }
+  .section-content {
+    padding-left: 0;
+  }
+}

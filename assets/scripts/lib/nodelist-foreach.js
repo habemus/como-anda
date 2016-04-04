@@ -13,7 +13,7 @@
     }
     // loop through nodelist
     // or just execute callback if a single element was passed.
-    if (nodelist.length) {
+    if (nodelist.length && nodelist.nodeType !== 3) {
       for (var i = 0; i < nodelist.length; i++) {
         if (nodelist[i] && nodelist[i].length) {
           nlForeach(nodelist[i], fn);

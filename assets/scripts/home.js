@@ -5,7 +5,7 @@
   var App = window.App = window.App || {};
 
   /**
-   * Do intro animations
+   * Intro animations
    */
   (function () {
 
@@ -76,25 +76,45 @@
   })();
 
   /**
-   * Toggle hero-text is-visible class.
+   * Hero-title.
+   * Bind highlight markup.
+   * Bind 'is-visible' class.
    */
   (function () {
 
-    var heroEls = document.querySelectorAll('.hero');
+    var heroTitleEls = document.querySelectorAll('.hero-title');
 
-    nlForeach(document.querySelectorAll('.hero-title'), function (titleEl) {
+    /**
+     * Parse highlight markup.
+     */
+    var highlightRegex = /\*\*(.*)\*\*/;
+    nlForeach(heroTitleEls, function (titleEl) {
+      titleEl.innerHTML = '<span>' + titleEl.innerHTML.trim().replace(highlightRegex, function (match) {
+        return match.replace(/^\*\*/, '</span><strong>').replace(/\*\*$/, '<\/strong><span>');
+      }) + '</span>';
+    });
+
+    /**
+     * Wrap characters in SPAN tags and then toggle their visibility class randomly.
+     */
+    nlForeach(heroTitleEls, function (titleEl) {
+      if (!titleEl.childNodes) { return; }
 
       var titleCharEls = [];
-      var titleCharacters = titleEl.innerHTML.split('');
 
-      titleEl.innerHTML = '';
+      nlForeach(titleEl.childNodes, function (childNode) {
+        
+        var characters = childNode.innerHTML.split('');
+        childNode.innerHTML = '';
 
-      for (var i = 0; i < titleCharacters.length; i++) {
-        var charEl = document.createElement('SPAN');
-        charEl.innerHTML = titleCharacters[i];
-        titleCharEls.push(charEl);
-        titleEl.appendChild(charEl);
-      }
+        for (var i = 0; i < characters.length; i++) {
+          var charEl = document.createElement('SPAN');
+          charEl.innerHTML = characters[i];
+          childNode.appendChild(charEl);
+          titleCharEls.push(charEl);
+        }
+
+      });
 
       scrollTrigger(titleEl, {
         offset: -40,

@@ -2,89 +2,72 @@
   'use strict';
 
   /**
-   * Makes body background color change based on defined colorPoints.
+   * Makes body property specified to change based on defined colorPoints.
    * It also sets the provided classes so other elements may change accordingly.
    *
    * e.g.
    *
-   * <body>
-   *   <any
-   *     data-color-point='255,0,0'
-   *     data-color-point-classname='red'></any>
-   *   <any
-   *     data-color-point='0,0,255'
-   *     data-color-point-classname='blue'></any>
-   * </body>
+   * // index.html
+   * <any id='element'>
+   *   <any id='target'>
+   *     <any
+   *       data-color-point='255,0,0'
+   *       data-color-point-classname='red'></any>
+   *     <any
+   *       data-color-point='0,0,255'
+   *       data-color-point-classname='blue'></any>
+   *   </any>
+   * </any>
+   *
+   * // script.js
+   * colorBlend(
+   *   document.getElementById('element'),
+   *   document.getElementById('target'),
+   *   ['color', 'borderColor']
+   * );
+   * 
    */
 
-  var colorPoints = document.querySelectorAll('[data-color-point]');
-  var colorOffsets = [];
-  var colorClassNames = [];
-  var colors = [];
+  function ColorBlender(element, target, props) {
 
-  // there needs to be at least 2 color points.
-  if (colorPoints.length < 2) { return; }
+    this._element = element || document.body;
+    this._target = target || element || document.body;
+    this._props = props || ['backgroundColor', 'color'];
 
-  // populate main variables
-  for (var i = 0; i < colorPoints.length; i++) {
-    var colorPoint = colorPoints[i];
-    colorOffsets.push(_getOffset(colorPoint));
-    colorClassNames.push(_getColorClassName(colorPoint));
-    colors.push(_getColorObj(colorPoint));
-  }
+    if (typeof this._props === 'string') { this._props = [this._props]; }
 
-  console.log(colors, colorPoints);
-  // check if the data is set correctly
-  if (colors.indexOf(false) > -1) {
-    return false;
-  }
+    this._colorPoints = this._target.querySelectorAll('[data-color-point]');
+    this._colorOffsets = [];
+    this._colorClassNames = [];
+    this._colors = [];
 
-  function update() {
-
-    /**
-     * This can be REALLY optimized.
-     */
-    colorOffsets = [];
-    for (var i = 0; i < colorPoints.length; i++) {
-      var colorPoint = colorPoints[i];
-      colorOffsets.push(_getOffset(colorPoint));
+    // check if there is at least two target color points.
+    if (this._colorPoints.length < 2) {
+      return false;
     }
 
-    var body = document.body;
-    var docEl = document.documentElement;
-    var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
-
-    // if before first color point. make it solid.
-    if (scrollTop <= colorOffsets[0]) {
-      body.style.backgroundColor = _colorToRgb(colors[0]);
-      return;
+    // populate main variables.
+    for (var i = 0; i < this._colorPoints.length; i++) {
+      var colorPoint = this._colorPoints[i];
+      this._colorOffsets.push(this._getOffset(colorPoint));
+      this._colorClassNames.push(this._getColorClassName(colorPoint));
+      this._colors.push(this._getColorObj(colorPoint));
     }
 
-    // if after last color point. make it solid.
-    if (scrollTop >= colorOffsets[colorOffsets.length - 1]) {
-      body.style.backgroundColor = _colorToRgb(colors[colorOffsets.length - 1]);
-      return;
+    // check if all colors are valid.
+    if (this._colors.indexOf(false) > -1) {
+      return false;
     }
 
-    // if between two points, blend them.
-    for (var i = 0; i < colorOffsets.length - 1; i++) {
-      if (scrollTop < colorOffsets[i + 1]) {
-        var percentage = (scrollTop - colorOffsets[i]) / (colorOffsets[i + 1] - colorOffsets[i]);
-        var blendedColor = _blendColors(colors[i], colors[i + 1], percentage);
-        body.style.backgroundColor = _colorToRgb(blendedColor);
-        break;
-      }
-    }
-  }
+    // start listening
+    window.addEventListener('scroll', this._update.bind(this));
+    this._safetyListener = false;
+    this._safetyTimeout = 1000;
+    this._setupSafetyListener();
 
-  // check for updates
-  window.addEventListener('scroll', update);
-  update();
-
-  /**
-   * Utility functions
-   */
-  function _getOffset(element) {
+    return this;
+  };
+  ColorBlender.prototype._getOffset = function (element) {
     var box = element.getBoundingClientRect();
 
     var body = document.body;
@@ -96,13 +79,10 @@
 
     return Math.round(top);
   }
-
-  function _getColorClassName(element) {
+  ColorBlender.prototype._getColorClassName = function (element) {
     return element.getAttribute('data-color-point-classname');
-  }
-
-  function _getColorObj(element) {
-    
+  };
+  ColorBlender.prototype._getColorObj = function (element) {
     var colorStr = element.getAttribute('data-color-point');
     if (!colorStr || !colorStr.length || !colorStr.match(/^\s*\d\d?\d?\s*,\s*\d\d?\d?\s*,\s*\d\d?\d?\s*$/)) {
       return false;
@@ -111,24 +91,97 @@
         return parseInt(c.trim());
       });
     }
-  }
-
-  function _blendColors(color1, color2, _percentage) {
+  };
+  ColorBlender.prototype._blendColors = function (c1, c2, _percentage) {
     var percentage = _percentage || 0.5;
     
-    var rDiff = color1[0] - color2[0];
-    var gDiff = color1[1] - color2[1];
-    var bDiff = color1[2] - color2[2];
+    var rDiff = c1[0] - c2[0];
+    var gDiff = c1[1] - c2[1];
+    var bDiff = c1[2] - c2[2];
     
-    var blendedR = Math.round(color1[0] - rDiff * percentage);
-    var blendedG = Math.round(color1[1] - gDiff * percentage);
-    var blendedB = Math.round(color1[2] - bDiff * percentage);
+    var blendedR = Math.round(c1[0] - rDiff * percentage);
+    var blendedG = Math.round(c1[1] - gDiff * percentage);
+    var blendedB = Math.round(c1[2] - bDiff * percentage);
     
     return [blendedR, blendedG, blendedB];
-  }
-
-  function _colorToRgb(color) {
+  };
+  ColorBlender.prototype._colorToRgb = function (color) {
     return 'rgb(' + color.join(',') + ')';
-  }
+  };
+  ColorBlender.prototype._update = function () {
+
+    /**
+     * This can be REALLY optimized.
+     */
+    this._colorOffsets = [];
+    for (var i = 0; i < this._colorPoints.length; i++) {
+      var colorPoint = this._colorPoints[i];
+      this._colorOffsets.push(this._getOffset(colorPoint));
+    }
+
+    var body = document.body;
+    var docEl = document.documentElement;
+    var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+
+    var blendedColor;
+    var blendedClass;
+
+    // if before first color point. make it solid.
+    if (scrollTop <= this._colorOffsets[0]) {
+      blendedColor = this._colorToRgb(this._colors[0]);
+      blendedClass = this._colorClassNames[0];
+
+    // if after last color point. make it solid.
+    } else if (scrollTop >= this._colorOffsets[this._colorOffsets.length - 1]) {
+      blendedColor = this._colorToRgb(this._colors[this._colorOffsets.length - 1]);
+      blendedClass = this._colorClassNames[this._colorOffsets.length - 1];
+
+    // if between two points, blend them.
+    } else {
+      for (var i = 0; i < this._colorOffsets.length - 1; i++) {
+        if (scrollTop <= this._colorOffsets[i + 1]) {
+          var percentage = (scrollTop - this._colorOffsets[i]) / (this._colorOffsets[i + 1] - this._colorOffsets[i]);
+          var blendedColor = this._blendColors(this._colors[i], this._colors[i + 1], percentage);
+          blendedColor = this._colorToRgb(blendedColor);
+          blendedClass = this._colorClassNames[i];
+          break;
+        }
+      }
+    }
+
+    // set color into element props.
+    for (var i = 0; i < this._props.length; i++) {
+      this._element.style[this._props[i]] = blendedColor;
+    }
+
+    // set element class
+    for (var i = 0; i < this._colorClassNames.length; i++) {
+      if (this._colorClassNames[i]) {
+        if (this._colorClassNames[i] === blendedClass) {
+          this._element.classList.add(blendedClass);
+        } else {
+          this._element.classList.remove(this._colorClassNames[i]);
+        }
+      }
+    }
+
+  };
+  ColorBlender.prototype._setupSafetyListener = function () {
+    this._update();
+    this._safetyListener = setTimeout(this._setupSafetyListener.bind(this), this._safetyTimeout);
+  };
+  ColorBlender.prototype.destroy = function () {
+    window.removeEventListener('scroll', this._update.bind(this));
+    if (this._safetyListener) {
+      clearTimeout(this._safetyListener);
+    }
+  };
+
+  /**
+   * API
+   */
+  window.colorBlend = function (element, target, props) {
+    return new ColorBlender(element, target, props);
+  };
 
 })();

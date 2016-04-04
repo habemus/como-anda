@@ -1,0 +1,42 @@
+.about {
+  font-size: 1.1em;
+  line-height: 1.4em;
+}
+
+.about-picture,
+.about-content {
+  max-width: 45%;
+}
+
+.about-members {
+  float: left;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+.about-members-title {
+  font-family: 'Terrorista';
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+.about-members-item {
+  float: left;
+}
+.about-members-item + .about-members-item {
+  margin-left: 8px;
+}
+
+/**
+ * Responsive
+ */
+@media all and (max-width: 1080px) {
+  .about-picture {
+    float: right;
+    max-width: 60%;
+    margin-right: 20%;
+  }
+  .about-content {
+    clear: both;
+    max-width: 50%;
+  }
+}

@@ -32,7 +32,6 @@
     this._setupSafetyListener();
   }
   ScrollFader.prototype._update = function (distances) {
-    console.log(distances);
     if (distances.absBottom > this.bottomOffset && distances.absTop <= 0) {
       if (distances.absTop > this.topOffset * -1) {
         this.element.style.opacity = (distances.absTop * -1) / this.topOffset;
@@ -47,7 +46,7 @@
   };
   ScrollFader.prototype._setupSafetyListener = function () {
     this._update(this._listener.getDistances());
-    this._lazyListener = setTimeout(this._setupSafetyListener.bind(this), this._safetyTimeout);
+    this._safetyListener = setTimeout(this._setupSafetyListener.bind(this), this._safetyTimeout);
   };
   ScrollFader.prototype.destroy = function () {
     this._listener.destroy();

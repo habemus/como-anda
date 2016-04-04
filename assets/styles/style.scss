@@ -16,6 +16,7 @@
 @import 'components/globals/body';
 @import 'components/globals/svg';
 //   units (e.g. .button, .link)
+@import 'components/units/box';
 @import 'components/units/button';
 @import 'components/units/embed';
 @import 'components/units/hamburger';
@@ -23,10 +24,14 @@
 @import 'components/units/oitentaedois';
 @import 'components/units/textblock';
 //   modules (e.g. .post, .gallery)
-@import 'components/modules/card';
-@import 'components/modules/footer';
-@import 'components/modules/hero';
-@import 'components/modules/intro';
 @import 'components/modules/menu';
+@import 'components/modules/section';
+@import 'components/modules/project';
+@import 'components/modules/survey';
 @import 'components/modules/news';
-@import 'components/modules/wrapper';
+@import 'components/modules/about';
+
+// @import 'components/modules/card';
+// @import 'components/modules/hero';
+// @import 'components/modules/intro';
+// @import 'components/modules/wrapper';
