@@ -1,0 +1,9 @@
+.landing-main {
+  .menu {
+    opacity: 0.0 !important;
+    transition: opacity 0.4s;
+  }
+  &.is-visible .menu {
+    opacity: 1.0 !important;
+  }
+}

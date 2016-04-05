@@ -1,55 +1,23 @@
-.survey-action-wrapper {
-  float: left;
-  width: 40%;
-  padding-right: 28px;
+.survey-action {
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: center;
 }
-.survey-action-text {
+.survey-action-disclaimer {
   margin: 40px 0;
   font-size: 2em;
   line-height: 1.4em;
-  color:  darken($color-bluegrey, 50%);
 }
-.survey-action-button {
-  display: block;
-  width: 100%;
-  padding: 16px 20px;
-  background-color: darken($color-blue, 5%);
-  border: none;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  font-size: 1.6em;
-  font-weight: normal;
-  color: $color-white;
-  text-shadow: 0 0 2px darken($color-blue, 20%);
-  transition: box-shadow 0.4s;
-  &:hover {
-    cursor: pointer;
-    box-shadow: 0 0 8px darken($color-bluegrey, 40%);
-  }
-  &:focus,
-  &:active {
-    outline: none;
-  }
+.survey .survey-action-character-1 {
+  bottom: auto;
+  right: auto;
+  top: 20%;
+  left: 50%;
+  margin-left: -720px;
 }
-.survey-action-button + .survey-action-button {
-  margin-top: 12px;
-}
-
-.box.survey-results {
-  float: right;
-  width: 60%;
-  margin: 0;
-  background-color: $color-white;
-}
-.survey-results-title {
-  margin: 8px 0;
-  font-family: 'Terrorista';
-  text-transform: uppercase;
-  color: darken($color-darkgrey, 15%);
-  font-size: 3.2em;
-}
-.survey-results-chart {
-  margin-top: 20px;
-  height: 400px;
-  background-color: $color-xlightgrey;
+.survey .survey-action-character-2 {
+  bottom: 10%;
+  right: auto;
+  left: 50%;
+  margin-left: 80px;
 }

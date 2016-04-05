@@ -4,7 +4,6 @@
   margin: 0 auto;
   padding: 84px 40px;
   color: $color-black;
-  overflow: auto;
 }
 .section-title {
   position: relative;
@@ -35,39 +34,21 @@
   background-size: 260px auto;
   background-image: url('./assets/images/characters/char4.png');
   background-position: right bottom;
-  border-bottom: 2px solid $color-darkgrey;
+}
+
+/**
+ * Styles
+ */
+.section.section--style-centered {
+  .section-title {
+    text-align: center;
+    max-width: 100%;
+  }
 }
 
 /**
  * Colors
  */
-.tmpl--color-red {
-  .section-content {
-    border-color: darken($color-red, 40%);
-    color: darken($color-red, 40%);
-  }
-  .section-character {
-    border-color: darken($color-red, 40%);
-  }
-}
-.tmpl--color-green {
-  .section-content {
-    border-color: darken($color-green, 50%);
-    color: darken($color-green, 50%);
-  }
-  .section-character {
-    border-color: darken($color-green, 50%);
-  }
-}
-.tmpl--color-blue {
-  .section-content {
-    border-color: darken($color-blue, 30%);
-    color: darken($color-blue, 30%);
-  }
-  .section-character {
-    border-color: darken($color-blue, 30%);
-  }
-}
 
 /**
  * Animations

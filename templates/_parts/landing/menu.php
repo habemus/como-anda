@@ -28,7 +28,7 @@
         <ul class='menu-nav-list'>
           <li class="menu-nav-item"><a href='<?php echo esc_url(home_url( '#sobre-o-projeto' )) ?>'>Sobre o projeto</a></li>
           <li class="menu-nav-item menu-nav-item--highlight"><a href='<?php echo esc_url(home_url( '#participe' )) ?>'>Participe da Pesquisa</a></li>
-          <li class="menu-nav-item"><a href='<?php echo esc_url(home_url( '#sobre-o-assunto' )) ?>'>Sobre o assunto</a></li>
+          <li class="menu-nav-item"><a href='<?php echo esc_url(home_url( '#artigos-e-notícias' )) ?>'>Artigos e Notícias</a></li>
           <li class="menu-nav-item"><a href='<?php echo esc_url(home_url( '#quem-somos' )) ?>'>Quem Somos</a></li>
         </ul>
       </nav>

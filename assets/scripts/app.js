@@ -5,6 +5,7 @@
   // get global variables
   var nlForeach = window.nlForeach;
   var animateScroll = window.animateScroll;
+  var scrollTrigger = window.scrollTrigger;
   var colorBlend = window.colorBlend;
   var SVGInjector = window.SVGInjector;
   var marked = window.marked;
@@ -68,27 +69,24 @@
       /**
        * Intro animations
        */
-      // (function () {
+      (function () {
 
-      //   var introEl = document.querySelector('.intro');
-      //   if (introEl) {
-      //     setTimeout(function () {
-      //       introEl.classList.add('intro--isReady');
-      //     }, 400);
-      //   }
+        var introEl = document.querySelector('.intro');
+        if (introEl) {
+          setTimeout(function () {
+            introEl.classList.add('intro--isReady');
+          }, 400);
+        }
 
-      //   var charactersEl = document.querySelector('.menu-characters');
-      //   if (charactersEl) {
-      //     setTimeout(function () {
-      //       animateBackgroundImage(charactersEl, {
-      //         speed: 800,
-      //         framesCount: 11,
-      //         baseUrl: charactersEl.getAttribute('data-animation-base-url')
-      //       })
-      //     }, 1400);
-      //   }
+        var mainContentEl = document.querySelector('.landing-main');
+        if (mainContentEl) {
+          scrollTrigger(mainContentEl, {
+            visibleClass: 'is-visible',
+            topOffset: 200 - window.innerHeight
+          });
+        }
 
-      // })();
+      })();
 
       /**
        * Scroll fade sections
@@ -96,7 +94,7 @@
       (function () {
 
         nlForeach(document.querySelectorAll('.section'), function (heroEl) {
-          scrollFade(heroEl, { offset: window.innerHeight });
+          scrollFade(heroEl, { topOffset: window.innerHeight, bottomOffset: window.innerHeight * 0.5 });
         });
 
       })();
@@ -160,6 +158,7 @@
               });
             }
           });
+
         });
 
       })();

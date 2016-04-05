@@ -1,104 +1,144 @@
-.intro {
-  position: relative;
-  height: 100vh;
-}
-
-/**
- * Header
- */
-.intro-hgroup {
+.intro-header {
   position: absolute;
-  bottom: 40px;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -200px;
+  width: 200px;
 }
 .intro-title {
   height: 0;
   overflow: hidden;
 }
+.intro-logo svg {
+  width: 200px;
+}
 .intro-tagline {
-  width: 224px;
-  margin: 60px 0 60px;
-  text-align: right;
-  text-transform: uppercase;
-  font-size: 2em;
-  line-height: 1.4em;
+  width: 200px;
+  margin: 20px 0;
+  overflow: auto;
+  svg {
+    float: right;
+    width: 180px;
+  }
 }
 
-/**
- * Illustration
- */
-.intro-illustration {
+.intro-video {
   position: absolute;
-  left: 244px;
-  right: 0;
-  bottom: 40px;
-}
-.intro-characters {
-  width: 360px;
-  height: 500px;
-  background-position: bottom;
-  background-size: 360px auto;
-  background-repeat: no-repeat;
-  background-image: url('./assets/images/characters/char1.png');
-}
-.intro-floorline {
-  height: 2px;
-  background-color: $color-grey; 
+  display: flex;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -300px;
+  width: 600px;
+  height: 400px;
+  background-color: $color-white;
 }
 
-/**
- * ScrollTip
- */
+.intro-character.section-character {
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  top: 50%;
+  margin-top: -20px;
+  margin-left: -150px;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    -moz-transform: translateY(-15px);
+    -o-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
 .intro-scrollTip {
   position: absolute;
   bottom: 0;
   left: 50%;
-  margin-left: -10px;
+  margin-left: -16px;
   cursor: pointer;
+  -webkit-animation: bounce 2s infinite;
+  -moz-animation: bounce 2s infinite;
+  -o-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
   svg {
-    width: 20px;
+    width: 32px;
     height: 32px;
   }
-  &.is-hidden {
-    z-index: -1;
-    opacity: 0.0;
-    cursor: default;
+}
+
+/**
+ * Styles
+ */
+.intro.intro--style-video {
+  .intro-header {
+    margin-left: -540px;
+  }
+  .intro-character {
+    margin-left: 170px;
+    margin-top: -40px;
   }
 }
 
 /**
  * Animations
  */
-.intro-logo,
-.intro-tagline,
-.intro-characters,
-.intro-scrollTip {
+.intro-header,
+.intro-character {
   opacity: 0.0;
+  transition: opacity 0.4s;
 }
-.intro-floorline {
-  max-width: 0;
+.intro-character {
+  transition-delay: 0.4s;
 }
 .intro.intro--isReady {
-  .intro-logo,
-  .intro-tagline,
-  .intro-characters,
-  .intro-scrollTip {
+  .intro-header,
+  .intro-character {
     opacity: 1.0;
   }
-  .intro-logo {
-    transition: opacity 0.8s linear 2.6s;
+}
+
+/**
+ * Responsive
+ */
+@media all and (max-width: 1150px) {
+  .intro.intro--style-video {
+    .intro-header {
+      left: 40px;
+      margin-left: 0;
+    }
+    .intro-video {
+      left: 280px;
+      margin-left: 0;
+    }
   }
-  .intro-tagline {
-    transition: opacity 0.8s linear 4s;
+}
+@media all and (max-width: 960px) {
+  .intro.intro--style-video {
+    .intro-video {
+      right: 40px;
+      width: auto;
+    }
   }
-  .intro-characters {
-    transition: opacity 0.8s linear 1s, background-image 0.4s;
-  }
-  .intro-floorline {
-    transition: max-width 4s ease;
-    max-width: 9999px;
-  }
-  .intro-scrollTip {
-    transition: opacity 0.8s linear 5s;
+}
+@media all and (max-width: 720px) {
+  .intro.intro--style-video {
+    .intro-video {
+      left: 40%;
+    }
   }
 }

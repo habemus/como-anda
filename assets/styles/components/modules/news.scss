@@ -3,8 +3,16 @@
 }
 .news-item {
   max-width: 320px;
-  &:hover .news-item-link {
-    color: $color-black;
+  font-weight: normal;
+  &:hover {
+    opacity: 1.0;
+    -webkit-transform: scale(1.005);
+    -moz-transform: scale(1.005);
+    -o-transform: scale(1.005);
+    transform: scale(1.005);
+    .news-item-link {
+      color: $color-black;
+    }
   }
 }
 .news-item-picture {
@@ -28,9 +36,71 @@
   line-height: 1.4em;
 }
 .news-item-link {
-  margin-top: 8px;
+  margin-top: 12px;
   font-weight: bold;
   font-size: 0.9em;
   color: $color-grey;
-  text-align: right;
+}
+
+.news-signup {
+  margin: 40px -40px;
+  padding: 40px;
+  border-top: 2px solid $color-white;
+  border-bottom: 2px solid $color-white;
+  text-align: center;
+}
+.news-signup-callout {
+  font-size: 2em;
+  letter-spacing: 0.02em;
+  line-height: 1.4em;
+  color: $color-white;
+}
+.news-signup-disclaimer {
+  max-width: 480px;
+  margin: 0 auto 0;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  letter-spacing: 0.02em;
+  color: $color-white;
+  opacity: 0.8;
+}
+.news-signup-form {
+  margin: 28px auto 8px;
+}
+.news-signup-input {
+  display: inline-block;
+  max-width: 320px;
+  padding: 12px;
+  margin-bottom: 12px;
+  font-size: 1.2em;
+  border: 2px solid $color-white;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: $color-white;
+  &:hover,
+  &:focus {
+    border-color: $color-lightgrey;
+  }
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+.news-signup-submit {
+  margin: 0;
+  padding: 12px 20px;
+  font-size: 1.2em;
+  border: 2px solid $color-white;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: $color-white;
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  &:active {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  &:focus,
+  &:active {
+    outline: none;
+  }
 }

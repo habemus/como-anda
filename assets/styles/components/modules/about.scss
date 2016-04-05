@@ -1,17 +1,24 @@
 .about {
-  font-size: 1.1em;
+  margin: 0 auto 100px;
+  max-width: 600px;
+}
+.about-picture {
+  overflow: auto;
+  box-shadow: 1px 1px 16px -4px $color-darkgrey;
+  img {
+    width: 100%;
+    height: auto;
+    float: left;
+  }
+}
+.about-content {
+  padding: 20px;
+  font-size: 1.2em;
   line-height: 1.4em;
 }
 
-.about-picture,
-.about-content {
-  max-width: 45%;
-}
-
 .about-members {
-  float: left;
   margin-top: 20px;
-  margin-right: 20px;
 }
 .about-members-title {
   font-family: 'Terrorista';
@@ -20,23 +27,43 @@
   margin-bottom: 8px;
 }
 .about-members-item {
-  float: left;
+  position: relative;
+  padding-left: 88px;
 }
 .about-members-item + .about-members-item {
-  margin-left: 8px;
+  margin-top: 20px;
+}
+.about-members-item-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: auto;
+}
+.about-members-item-description {
+  position: relative;
+  top: -2px;
+}
+.about-members-item-link {
+  font-size: 0.8em;
 }
 
-/**
- * Responsive
- */
-@media all and (max-width: 1080px) {
-  .about-picture {
-    float: right;
-    max-width: 60%;
-    margin-right: 20%;
+.about-members-item.about-members-item--inline {
+  float: left;
+  margin-right: 8px;
+  padding-left: 0;
+  .about-members-item-logo {
+    position: static;
   }
-  .about-content {
-    clear: both;
-    max-width: 50%;
-  }
+}
+.about-members-item.about-members-item--inline + .about-members-item {
+  margin-top: 0;
+}
+
+
+.about-character.section-character {
+  bottom: 40px;
+  right: auto;
+  left: 50%;
+  margin-left: -20px;
 }

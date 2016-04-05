@@ -57,7 +57,7 @@
     this.absDistanceToBottom = distTopToBottom;
     this.distanceToTop = distBottomToTop >= 0 ? distBottomToTop : distTopToTop >= 0 ? 0 : distTopToTop;
     this.distanceToBottom = distBottomToBottom >= 0 ? distBottomToBottom : distTopToBottom >= 0 ? 0 : distTopToBottom;
-    this.absDistance = (this.distanceToTop === 0 || this.distanceToBottom === 0) ? 0 :
+    this.absDistance = (this.distanceToTop === 0 || this.distanceToBottom === 0 || (this.distanceToTop < 0 && this.distanceToBottom > 0)) ? 0 :
       (this.distanceToTop > 0) ? this.distanceToTop : this.distanceToBottom;
   };
   ScrollListener.prototype.getDistances = function () {

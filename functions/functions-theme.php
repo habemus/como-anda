@@ -31,7 +31,7 @@
       wp_register_script( 'marked', get_template_directory_uri().'/assets/scripts/lib/marked.js', array(), '1.0', true );
       wp_enqueue_script( 'marked' );
 
-      wp_register_script( 'app', get_template_directory_uri().'/assets/scripts/app.js', array( 'animate-classes', 'animate-scroll', 'svg-injector', 'nodelist-foreach' ), '1.0', true );
+      wp_register_script( 'app', get_template_directory_uri().'/assets/scripts/app.js', array( 'animate-classes', 'animate-scroll', 'scroll-trigger', 'svg-injector', 'nodelist-foreach' ), '1.0', true );
       wp_enqueue_script( 'app' );
     }
   }

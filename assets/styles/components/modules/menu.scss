@@ -77,19 +77,28 @@
   text-align: right;
   line-height: 1.6em;
 }
+.menu-nav-item a {
+  font-weight: normal;
+  &:hover {
+    font-weight: bold;
+    opacity: 1.0;
+  }
+}
 .menu-nav-item.menu-nav-item--highlight {
   color: $color-orange;
 }
 
 .menu-footer {
   position: absolute;
+  z-index: 2;
   bottom: 52px;
   right: 40px;
   opacity: 0.4;
   transition: opacity 0.4s;
   text-align: right;
   font-size: 0.9em;
-  &:hover {
+  &:hover,
+  &:hover a {
     opacity: 1.0;
   }
 }
@@ -192,70 +201,5 @@
   }
   .menu-footer {
     bottom: 20px;
-  }
-}
-
-/**
- * Colors
- */
-.menu-closed,
-.menu-toggleButton {
-  transition: color 0.25s ease-in-out;
-  &::before {
-    transition: border-bottom-color 0.25s ease-in-out; 
-  }
-}
-.tmpl--color-bluegrey .menu.menu--isClosed {
-  .menu-closed,
-  .menu-toggleButton {
-    color: darken($color-bluegrey, 50%);
-    &::before {
-      border-bottom: 2px solid darken($color-bluegrey, 50%);
-    }
-  }
-}
-.tmpl--color-blue .menu.menu--isClosed {
-  .menu-closed,
-  .menu-toggleButton {
-    color: darken($color-blue, 30%);
-    &::before {
-      border-bottom: 2px solid darken($color-blue, 30%);
-    }
-  }
-}
-.tmpl--color-orange .menu.menu--isClosed {
-  .menu-closed,
-  .menu-toggleButton {
-    color: darken($color-orange, 30%);
-    &::before {
-      border-bottom: 2px solid darken($color-orange, 30%);
-    }
-  }
-}
-.tmpl--color-green .menu.menu--isClosed {
-  .menu-closed,
-  .menu-toggleButton {
-    color: darken($color-green, 50%);
-    &::before {
-      border-bottom: 2px solid darken($color-green, 50%);
-    }
-  }
-}
-.tmpl--color-xlightgrey .menu.menu--isClosed {
-  .menu-closed,
-  .menu-toggleButton {
-    color: darken($color-darkgrey, 20%);
-    &::before {
-      border-bottom: 2px solid darken($color-darkgrey, 20%);
-    }
-  }
-}
-.tmpl--color-red .menu.menu--isClosed {
-  .menu-closed,
-  .menu-toggleButton {
-    color: darken($color-red, 40%);
-    &::before {
-      border-bottom: 2px solid darken($color-red, 40%);
-    }
   }
 }

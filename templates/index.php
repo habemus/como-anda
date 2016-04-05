@@ -2,11 +2,15 @@
 
 <section class='landing'>
 
-  <?php get_template_part('_parts/landing/menu'); ?>
-  <?php get_template_part('_parts/landing/project'); ?>
-  <?php get_template_part('_parts/landing/survey'); ?>
-  <?php get_template_part('_parts/landing/news'); ?>
-  <?php get_template_part('_parts/landing/about'); ?>
+  <?php get_template_part('_parts/landing/intro'); ?>
+  
+  <div class='landing-main'>
+    <?php get_template_part('_parts/landing/menu'); ?>
+    <?php get_template_part('_parts/landing/project'); ?>
+    <?php get_template_part('_parts/landing/survey'); ?>
+    <?php get_template_part('_parts/landing/news'); ?>
+    <?php get_template_part('_parts/landing/about'); ?>
+  </div>
 
 </section>
 
