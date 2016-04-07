@@ -16,7 +16,7 @@
       <div class='menu-illustration'>
 
         <?php
-          $frames = array( 0, 1, 2, 6, 9 );
+          $frames = array( 0, 1, 2, 3, 4, 5, 7, 8, 9 );
           $rndFrame = $frames[array_rand($frames)];
         ?>
 
@@ -27,10 +27,36 @@
       <nav class='menu-nav'>
         <ul class='menu-nav-list'>
           <li class="menu-nav-item"><a href='<?php echo esc_url(home_url( '#sobre-o-projeto' )) ?>'>Sobre o projeto</a></li>
-          <li class="menu-nav-item menu-nav-item--highlight"><a href='<?php echo esc_url(home_url( '#participe' )) ?>'>Participe da Pesquisa</a></li>
-          <li class="menu-nav-item"><a href='<?php echo esc_url(home_url( '#artigos-e-notícias' )) ?>'>Artigos e Notícias</a></li>
-          <li class="menu-nav-item"><a href='<?php echo esc_url(home_url( '#quem-somos' )) ?>'>Quem Somos</a></li>
+          <li class="menu-nav-item menu-nav-item--highlight"><a href='<?php echo esc_url(home_url( '#' . slugify(get_field('survey_action_title', 'options')) )) ?>'>Participe da Pesquisa</a></li>
+          <li class="menu-nav-item"><a href='<?php echo esc_url(home_url( '#' . slugify(get_field('news_title', 'options')) )) ?>'>Artigos e Notícias</a></li>
+          <li class="menu-nav-item"><a href='<?php echo esc_url(home_url( '#inscreva-se' )) ?>'>Inscreva-se</a></li>
+          <li class="menu-nav-item"><a href='<?php echo esc_url(home_url( '#' . slugify(get_field('about_title', 'options')) )) ?>'>Quem Somos</a></li>
         </ul>
+        <div class='menu-nav-social'>
+          <div class='menu-nav-social-links'>
+            
+            <a
+              class='socialIcon socialIcon--facebook'
+              href='<?php the_field('social_facebook', 'options'); ?>'
+              target='_blank'>
+              <span class='fa fa-facebook'></span>
+            </a>
+
+            <a
+              class='socialIcon socialIcon--medium'
+              href='<?php the_field('social_medium', 'options'); ?>'
+              target='_blank'>
+              <span class='fa fa-medium'></span>
+            </a>
+
+            <a
+              class='socialIcon socialIcon--email'
+              href='mailto://<?php the_field('social_email', 'options'); ?>'>
+              <span class='fa fa-envelope'></span>
+            </a>
+
+          </div>
+        </div>
       </nav>
 
       <footer class='menu-footer'>
@@ -43,9 +69,9 @@
     <div class='menu-closed'>
       <div class='menu-closed-logo'>
         <p class='menu-closed-logo-title'>como anda</p>
-        <p class='menu-closed-logo-image'>
+        <div class='menu-closed-logo-image'>
           <img class='svgimg' data-src='<?php echo get_bloginfo('template_directory'); ?>/assets/svg/logo-comoanda-horizontal.svg' />
-        </p>
+        </div>
       </div>
     </div>
 

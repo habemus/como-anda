@@ -16,8 +16,9 @@
   }
 }
 .news-item-picture {
-  margin: 0 -4px 20px;
-  box-shadow: 1px 1px 8px $color-grey;
+  margin: -20px -20px 20px;
+  box-shadow: 1px 2px 20px -4px $color-grey;
+  background-color: $color-lightgrey;
   overflow: auto;
   img {
     float: left;
@@ -26,12 +27,17 @@
   }
 }
 .news-item-title {
-  margin-bottom: 12px;
+  display: inline;
   font-family: 'Terrorista';
   font-size: 1.8em;
   letter-spacing: 0.02em;
+  line-height: 1em;
+}
+.news-item-date {
+  font-size: 0.8em;
 }
 .news-item-excerpt {
+  margin-top: 12px;
   font-size: 1.2em;
   line-height: 1.4em;
 }
@@ -42,6 +48,9 @@
   color: $color-grey;
 }
 
+.news-signup-wrapper {
+  padding-top: 120px;
+}
 .news-signup {
   margin: 40px -40px;
   padding: 40px;
@@ -64,30 +73,10 @@
   color: $color-white;
   opacity: 0.8;
 }
-.news-signup-form {
-  margin: 28px auto 8px;
-}
-.news-signup-input {
+.news-signup-button {
   display: inline-block;
-  max-width: 320px;
-  padding: 12px;
-  margin-bottom: 12px;
-  font-size: 1.2em;
-  border: 2px solid $color-white;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: $color-white;
-  &:hover,
-  &:focus {
-    border-color: $color-lightgrey;
-  }
-  &:focus,
-  &:active {
-    outline: none;
-  }
-}
-.news-signup-submit {
-  margin: 0;
-  padding: 12px 20px;
+  margin: 20px auto;
+  padding: 12px 40px;
   font-size: 1.2em;
   border: 2px solid $color-white;
   background-color: rgba(255, 255, 255, 0.2);

@@ -1,0 +1,27 @@
+.socialIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding-top: 1px;
+  border-radius: 50%;
+  background-color: $color-black;
+  color: $color-white;
+  font-size: 0.5em;
+  &:hover {
+    opacity: 1.0;
+  }
+}
+
+.socialIcon.socialIcon--facebook:hover {
+  background-color: rgb(59,89,152);
+}
+
+.socialIcon.socialIcon--medium:hover {
+  background-color: #02B875;
+}
+
+.socialIcon.socialIcon--email:hover {
+  background-color: $color-blue;
+}

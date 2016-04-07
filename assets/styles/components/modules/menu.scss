@@ -6,7 +6,7 @@
   width: 100%;
   height: 100vh;
   max-height: 100vh;
-  background-color: $color-white;
+  background-color: transparentize($color-white, 0.05);
   overflow: hidden;
 }
 .menu-wrapper {
@@ -14,6 +14,9 @@
   height: 100vh;
   padding: 24px 40px 0;
   margin: 0 auto;
+}
+.menu-body--isOpen {
+  overflow: hidden;
 }
 
 .menu-toggleButton {
@@ -87,6 +90,21 @@
 .menu-nav-item.menu-nav-item--highlight {
   color: $color-orange;
 }
+.menu-nav-social {
+  margin-top: 20px;
+  line-height: 2.4em;
+  border-top: 1px solid $color-lightgrey;
+}
+.menu-nav-social-item {
+  float: right;
+}
+.menu-nav-social-share {
+  line-height: 1.8em;
+  font-size: 0.5em;
+  a {
+    font-weight: normal;
+  }
+}
 
 .menu-footer {
   position: absolute;
@@ -149,10 +167,10 @@
  * Animations
  */
 .menu {  
-  -webkit-transition: max-height 0.4s ease-in-out, background 0.2s ease-in-out;
-  -moz-transition: max-height 0.4s ease-in-out, background 0.2s ease-in-out;
-  -o-transition: max-height 0.4s ease-in-out, background 0.2s ease-in-out;
-  transition: max-height 0.4s ease-in-out, background 0.2s ease-in-out;
+  -webkit-transition: max-height 0.4s ease-in-out, background 0.2s ease-in-out, opacity 0.4s ease-in-out;
+  -moz-transition: max-height 0.4s ease-in-out, background 0.2s ease-in-out, opacity 0.4s ease-in-out;
+  -o-transition: max-height 0.4s ease-in-out, background 0.2s ease-in-out, opacity 0.4s ease-in-out;
+  transition: max-height 0.4s ease-in-out, background 0.2s ease-in-out, opacity 0.4s ease-in-out;
 }
 .menu-open,
 .menu-closed {

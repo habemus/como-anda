@@ -82,21 +82,3 @@ a.box {
     transform: rotate(4deg);
   }
 }
-
-// headlines
-.box.box--style-news {
-  padding-top: 40px;
-  &::after {
-    content: ' ';
-    display: block;
-    position: absolute;
-    top: 12px;
-    left: 50%;
-    margin-left: -6px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    box-shadow: inset 1px 1px 4px $color-grey;
-    background-color: $color-lightgrey;
-  }
-}

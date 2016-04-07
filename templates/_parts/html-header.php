@@ -12,7 +12,8 @@
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico"/>
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css" />
-    <link rel="stylesheet" herf="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.9.7/chartist.min.css" />
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>

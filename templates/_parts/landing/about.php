@@ -1,51 +1,71 @@
 <section
+  id='<?php echo slugify(get_field('about_title', 'options')); ?>'
   class='section section--style-centered'
   data-color-point='224, 224, 224'>
-  <h1 class='section-title'>quem somos</h1>
+  <h1 class='section-title'><?php the_field('about_title', 'options'); ?></h1>
   <article class='about'>
 
-
-    <div class='about-picture'>
-      <img src='http://placehold.it/900x600' />
-    </div>
+    <?php if (get_field('team_photo', 'options')) : $image = get_field('team_photo', 'options'); ?>
+      <div class='about-picture'>
+        <img src='<?php echo $image['sizes']['medium']; ?>' />
+      </div>
+    <?php endif; ?>
     
     <div class='about-content'>
 
-      <p class='about-text'>
-        Etiam porta sem malesuada magna mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-      </p>
-      
-      <section class='about-members'>
-        <h1 class='about-members-title'>realizadores</h1>
-        <ul>
-          <li class="about-members-item">
-            <img class='about-members-item-logo' src='http://placehold.it/100x100' title='title' alt='title logo' />
-            <p class='about-members-item-description'>Cras mattis consectetur purus sit amet fermentum. Cras mattis consectetur purus sit amet fermentum. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p class='about-members-item-link'><a href='#'>http://</a></p>
-          </li>
-          <li class="about-members-item">
-            <img class='about-members-item-logo' src='http://placehold.it/100x100' title='title' alt='title logo' />
-            <p class='about-members-item-description'>Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p class='about-members-item-link'><a href='#'>http://</a></p>
-          </li>
-        </ul>
-      </section>
+      <div class='about-text'>
+        <?php the_field('team_description', 'options'); ?>
+      </div>
 
-      <section class='about-members'>
-        <h1 class='about-members-title'>apoio</h1>
-        <ul class='about-members-list'>
-          <li class="about-members-item about-members-item--inline">
-            <a href='#'>
-              <img class='about-members-item-logo' src='http://placehold.it/100x100' title='title' alt='title logo' />
-            </a>
-          </li>
-          <li class="about-members-item about-members-item--inline">
-            <a href='#'>
-              <img class='about-members-item-logo' src='http://placehold.it/100x100' title='title' alt='title logo' />
-            </a>
-          </li>
-        </ul>
-      </section>
+      <?php if ( have_rows('organizations', 'options') ) : ?>
+
+        <section class='about-members'>
+          <h1 class='about-members-title'>realizadores</h1>
+          <ul>
+
+            <?php while ( have_rows('organizations', 'options') ) : the_row(); ?>
+            <?php $logo = get_sub_field('logo'); ?>
+              <li class="about-members-item">
+                <?php if ($logo) : ?>
+                  <img 
+                    class='about-members-item-logo'
+                    src='<?php echo $logo['sizes']['medium']; ?>'
+                    title='<?php the_sub_field('name', false, false); ?>'
+                    alt='<?php the_sub_field('name', false, false); ?>' />
+                <?php endif; ?>
+                <p class='about-members-item-description'><?php the_sub_field('description', false, false); ?></p>
+                <p class='about-members-item-link'><a target='_blank' href='<?php the_sub_field('url', false, false); ?>'><?php the_sub_field('url', false, false); ?></a></p>
+              </li>
+            <?php endwhile; ?>
+
+          </ul>
+        </section>
+
+      <?php endif; ?>
+
+      <?php if ( have_rows('backers', 'options') ) : ?>
+
+        <section class='about-members'>
+          <h1 class='about-members-title'>apoio</h1>
+          <ul>
+
+            <?php while ( have_rows('backers', 'options') ) : the_row(); ?>
+            <?php $logo = get_sub_field('logo'); ?>
+              <li class="about-members-item about-members-item--inline">
+                <a target='_blank' href='<?php the_sub_field('url', false, false); ?>'>
+                  <img 
+                    class='about-members-item-logo'
+                    src='<?php echo $logo['sizes']['medium']; ?>'
+                    title='<?php the_sub_field('name', false, false); ?>'
+                    alt='<?php the_sub_field('name', false, false); ?>' />
+                </a>
+              </li>
+            <?php endwhile; ?>
+
+          </ul>
+        </section>
+
+      <?php endif; ?>
 
     </div>
 

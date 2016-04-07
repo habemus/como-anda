@@ -1,10 +1,8 @@
 (function () {
 
   /**
-   * Animate scroll when user clicks a named anchor tag.
+   * Animate scrolling to target element.
    * **Depends on `animate` module.**
-   *
-   * `<a href="#target></d>`
    */
   function animateScroll(targetEl, speed, callback) {
     
@@ -14,7 +12,7 @@
     if (scrollTop === targetScrollTop) {
       callback && callback();
     } else {
-      animate(document.body, 'scrollTop', '', scrollTop, targetScrollTop, speed || 400, true);
+      animate(document.body, 'scrollTop', '', targetScrollTop, speed || 400, true);
       callback && setTimeout(callback, speed || 400);
     }
   }

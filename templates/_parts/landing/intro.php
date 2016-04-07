@@ -1,7 +1,7 @@
 <div
   class='section'
   data-color-point='177, 194, 195'>
-  <div class='intro intro--style-video'>
+  <div class='intro<?php if (get_field('intro_video', 'options')) { echo ' intro--style-video'; } ?>'>
     
     <header class='intro-header'>
       <h1 class='intro-title'>como anda</h1>
@@ -13,9 +13,15 @@
       </div>
     </header>
 
-    <div class='intro-video'></div>
+    <?php if (get_field('intro_video', 'options')) : ?>
+      <div class='intro-video'><?php the_field('intro_video', 'options'); ?></div>
+    <?php endif; ?>
 
-    <div class='intro-character section-character' style='background-image: url("<?php echo get_bloginfo('template_directory'); ?>/assets/images/characters/char2.png")'></div>
+    <?php
+      $frames = array( 0, 1, 2, 3, 4, 5, 7, 8, 9 );
+      $rndFrame = $frames[array_rand($frames)];
+    ?>
+    <div class='intro-character section-character' style='background-image: url("<?php echo get_bloginfo('template_directory'); ?>/assets/images/characters/char<?php echo $rndFrame; ?>.png")'></div>
 
     <div class='intro-scrollTip'>
       <img class='svgimg' data-src='<?php echo get_bloginfo('template_directory'); ?>/assets/svg/arrow-down.svg' />

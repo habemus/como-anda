@@ -9,11 +9,15 @@
 @import '_config/type';
 @import '_config/colors';
 
+// lib
+@import 'lib/chartist.tooltip';
+
 // components
 // theme bem components
 //   globals (e.g. body, p)
 @import 'components/globals/a';
 @import 'components/globals/body';
+@import 'components/globals/p';
 @import 'components/globals/svg';
 //   units (e.g. .button, .link)
 @import 'components/units/box';
@@ -21,6 +25,7 @@
 @import 'components/units/embed';
 @import 'components/units/hamburger';
 @import 'components/units/infoblock';
+@import 'components/units/social-icon';
 @import 'components/units/oitentaedois';
 @import 'components/units/textblock';
 //   modules (e.g. .post, .gallery)

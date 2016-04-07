@@ -1,19 +1,14 @@
-<div class='project'>
-  <section
-    class='section'
-    data-color-point='177, 214, 152'>
-    <h1 class='section-title'>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas sed diam eget risus varius blandit sit amet non magna.</h1>
-    <p class='project-content section-content'>
-      Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum.
-    </p>
-  </section>
+<div id='sobre-o-projeto' class='project'>
 
-  <section
-    class='section'
-    data-color-point='56, 128, 189'>
-    <h1 class='section-title'>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas sed diam eget risus varius blandit sit amet non magna.</h1>
-    <p class='project-content section-content'>
-      Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur.
-    </p>
-  </section>
+  <?php 
+    if ( have_rows('about_project_sections', 'options') ) :
+      while ( have_rows('about_project_sections', 'options') ) : the_row(); ?>
+    <section
+      class='section'
+      data-color-point='<?php get_theme_color(get_sub_field('background_color')); ?>'>
+      <h1 class='section-title'><?php echo strip_tags(get_sub_field('highlight')); ?></h1>
+      <div class='project-content section-content'><?php the_sub_field('text'); ?></div>
+    </section>
+  <?php endwhile; endif; ?>
+
 </div>
