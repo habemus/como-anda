@@ -587,7 +587,7 @@
         if (!chartValueIndexes[chartId]) { chartValueIndexes[chartId] = {}; }
 
         // get new data based solely on index.
-        var colorIndex = data.indexOf(context.value);
+        var colorIndex = context.index;
         if (chartValueIndexes[chartId][colorIndex]) { colorIndex++; }
         chartValueIndexes[chartId][colorIndex] = true;
 
