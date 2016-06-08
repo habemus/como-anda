@@ -39,6 +39,11 @@
 
       wp_register_script( 'app', get_template_directory_uri().'/assets/scripts/app.js', array( 'survey', 'animate-classes', 'animate-scroll', 'scroll-trigger', 'svg-injector', 'nodelist-foreach' ), '1.0', true );
       wp_enqueue_script( 'app' );
+
+      if (is_home()) {
+        wp_register_script( 'location', get_template_directory_uri().'/assets/scripts/location.js', array( 'scroll-trigger', 'nodelist-foreach' ), '1.0', true );
+        wp_enqueue_script( 'location' );
+      }
       
     }
   }
@@ -131,7 +136,8 @@
 
     $typeformAPIKey = '1863a4d5bcae1d13d3d7ec231e18e5e12c5e30f0';
     $typeformFormId = 'RoOGoD';
-    $url = 'https://api.typeform.com/v1/form/' . $typeformFormId . '?key=' . $typeformAPIKey . '&completed=true';
+    $typeformQueryString = '&completed=true&order_by[]=date_submit,desc';
+    $url = 'https://api.typeform.com/v1/form/' . $typeformFormId . '?key=' . $typeformAPIKey . $typeformQueryString;
 
     echo file_get_contents($url);
 

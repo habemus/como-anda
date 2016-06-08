@@ -4,6 +4,7 @@
   left: 50%;
   margin: -200px 0 0 -200px;
   width: 200px;
+  cursor: pointer;
 }
 .intro-title {
   height: 0;
@@ -51,7 +52,9 @@
   left: 50%;
   top: 50%;
   margin-top: -20px;
-  margin-left: -150px;
+  margin-left: 20px;
+  border-bottom: 2px solid $color-xdarkgrey;
+  width: 260px;
 }
 
 @keyframes bounce {
@@ -155,8 +158,25 @@
 }
 @media all and (max-width: 720px) {
   .intro.intro--style-video {
-    .intro-video {
-      left: 40%;
+    .intro-header {
+      top: -80px;
+      left: 50%;
+      margin-top: 0;
+      margin-left: -90px;
+      transform: scale(0.5); 
     }
+    .intro-video {
+      left: 40px;
+      top: auto;
+      bottom: 80px;
+    }
+  }
+}
+@media all and (max-width: 480px) {
+  .intro-header {
+    margin-left: -100px;
+  }
+  .intro-character {
+    display: none;
   }
 }

@@ -19,7 +19,7 @@
 
         /**
          * subjects
-         * - Qual a abordagem da sua iniciativa sobre o tema da mobilidade a pé?
+         * - Qual a abordagem da sua organização sobre o tema da mobilidade a pé?
          * 0 - Comunicação e Informação
          * 1 - Educação e Cultura
          * 2 - Intervenção física no espaço
@@ -27,6 +27,7 @@
          * 4 - Mobilização
          * 5 - Pesquisa
          * 6 - Projetos e Planos
+         * 7 - Outros
          */
         subjects.push(!!response.answers['list_19882975_choice_25541116'].length);
         subjects.push(!!response.answers['list_19882975_choice_25541117'].length);
@@ -35,6 +36,7 @@
         subjects.push(!!response.answers['list_19882975_choice_25541120'].length);
         subjects.push(!!response.answers['list_19882975_choice_25541121'].length);
         subjects.push(!!response.answers['list_19882975_choice_25541122'].length);
+        subjects.push(!!response.answers['list_19882975_other'].length);
 
         /**
          * areas
@@ -65,6 +67,15 @@
         });
 
       }
+
+      /**
+       * Ordering results
+       */
+      // results.sort(function compare(a, b) {
+      //   if (a.name < b.name) { return -1; }
+      //   if (a.name > b.name) { return 1; }
+      //   return 0;
+      // });
 
       /**
        * API

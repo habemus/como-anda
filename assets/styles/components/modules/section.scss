@@ -18,9 +18,12 @@
   strong {
     color: $color-black;
   }
+  &.section-title--async {
+    opacity: 0.0;
+  }
 }
 .section-content {
-  border-top: 2px solid $color-darkgrey;
+  border-top: 2px solid $color-xdarkgrey;
   padding: 40px 0 40px 25%;
 }
 .section-character {

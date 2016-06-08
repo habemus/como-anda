@@ -1,42 +1,56 @@
 <div class='survey'>
 
+  <div class='survey-results-names survey-results-names-closeclick'>
+    <article class='survey-results-names-content'>
+      <button class='survey-results-names-close survey-results-names-closeclick'><span class='fa fa-close survey-results-names-closeclick'></span></button>
+      <h1 class='survey-results-names-title'>Essas são as organizações que já foram mapeadas pelo COMO ANDA.</h1>
+      <ul id='results-names' class='survey-results-names-list'></ul>
+    </article>
+  </div>
+
   <article
     class='section survey-results'
     data-color-point='255, 205, 32'>
-    <h1 class='section-title'><?php the_field('survey_results_highlight', 'options', false); ?></h1>
+    <h1 class='section-title section-title--async'><?php the_field('survey_results_highlight', 'options', false); ?></h1>
+    <p class='survey-results-disclaimer'>
+      Os dados representam <span class='survey-var-results-total'></span> organizações mapeadas e são atualizados constantemente.<br />
+      <button class='survey-results-names-open'>Clique aqui para ver a lista de organizações mapeadas.</button>
+    </p>
     
-    <section class='survey-results-item bar-chart'>
-      <div class='survey-results-item-content'>
-        <h1 class='survey-results-item-title'><?php the_field('survey_subjects_highlight', 'options', false); ?></h1>
-        <div class='survey-results-item-chart chart-subjects'></div>
-        <p class='survey-results-item-description __markdown'><?php the_field('survey_subjects_description', 'options', false); ?></p>
-        <p id='subjects-detail' class='survey-results-item-details'></p>
-      </div>
-    </section>
+    <div class='survey-results-list'>
+      <section class='survey-results-item bar-chart'>
+        <div class='survey-results-item-content'>
+          <h1 class='survey-results-item-title'><?php the_field('survey_subjects_highlight', 'options', false); ?></h1>
+          <div class='survey-results-item-chart chart-subjects'></div>
+          <p class='survey-results-item-description __markdown'><?php the_field('survey_subjects_description', 'options', false); ?></p>
+          <p id='subjects-detail' class='survey-results-item-details'></p>
+        </div>
+      </section>
 
-    <section class='survey-results-item bar-chart'>
-      <div class='survey-results-item-content'>
-        <h1 class='survey-results-item-title'><?php the_field('survey_areas_highlight', 'options', false); ?></h1>
-        <div class='survey-results-item-chart chart-areas'></div>
-        <p class='survey-results-item-description __markdown'><?php the_field('survey_areas_description', 'options', false); ?></p>
-        <p id='areas-detail' class='survey-results-item-details'></p>
-      </div>
-    </section>
+      <section class='survey-results-item bar-chart'>
+        <div class='survey-results-item-content'>
+          <h1 class='survey-results-item-title'><?php the_field('survey_areas_highlight', 'options', false); ?></h1>
+          <div class='survey-results-item-chart chart-areas'></div>
+          <p class='survey-results-item-description __markdown'><?php the_field('survey_areas_description', 'options', false); ?></p>
+          <p id='areas-detail' class='survey-results-item-details'></p>
+        </div>
+      </section>
 
-    <section class='survey-results-item pie-chart'>
-      <div class='survey-results-item-content'>
-        <h1 class='survey-results-item-title'><?php the_field('survey_bases_highlight', 'options', false); ?></h1>
-        <p class='survey-results-item-description __markdown'><?php the_field('survey_bases_description', 'options', false); ?></p>
-        <div class='survey-results-item-chart chart-bases'></div>
-        <p id='bases-detail' class='survey-results-item-details'></p>
-      </div>
-    </section>
+      <section class='survey-results-item pie-chart'>
+        <div class='survey-results-item-content'>
+          <h1 class='survey-results-item-title'><?php the_field('survey_bases_highlight', 'options', false); ?></h1>
+          <div class='survey-results-item-chart chart-bases'></div>
+          <p class='survey-results-item-description __markdown'><?php the_field('survey_bases_description', 'options', false); ?></p>
+          <p id='bases-detail' class='survey-results-item-details'></p>
+        </div>
+      </section>
+    </div>
 
   </article>
 
   <section
-    id='<?php echo slugify(get_field('survey_action_title', 'options')); ?>'
-    class='section section--style-centered'
+    id='participe'
+    class='section section--style-centered location-anchor'
     data-color-point='255, 205, 32'>
     <h1 class='section-title'><?php the_field('survey_action_title', 'options'); ?></h1>
     <article class='survey-action'>

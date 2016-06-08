@@ -1,6 +1,6 @@
 <section
-  id='<?php echo slugify(get_field('about_title', 'options')); ?>'
-  class='section section--style-centered'
+  id='quem-somos'
+  class='section section--style-centered location-anchor'
   data-color-point='224, 224, 224'>
   <h1 class='section-title'><?php the_field('about_title', 'options'); ?></h1>
   <article class='about'>
@@ -24,14 +24,15 @@
           <ul>
 
             <?php while ( have_rows('organizations', 'options') ) : the_row(); ?>
-            <?php $logo = get_sub_field('logo'); ?>
+              <?php $logo = get_sub_field('logo'); ?>
               <li class="about-members-item">
                 <?php if ($logo) : ?>
-                  <img 
-                    class='about-members-item-logo'
-                    src='<?php echo $logo['sizes']['medium']; ?>'
-                    title='<?php the_sub_field('name', false, false); ?>'
-                    alt='<?php the_sub_field('name', false, false); ?>' />
+                  <a class='about-members-item-logo' target='_blank' href='<?php the_sub_field('url', false, false); ?>'>
+                    <img 
+                      src='<?php echo $logo['sizes']['medium']; ?>'
+                      title='<?php the_sub_field('name', false, false); ?>'
+                      alt='<?php the_sub_field('name', false, false); ?>' />
+                  </a>
                 <?php endif; ?>
                 <p class='about-members-item-description'><?php the_sub_field('description', false, false); ?></p>
                 <p class='about-members-item-link'><a target='_blank' href='<?php the_sub_field('url', false, false); ?>'><?php the_sub_field('url', false, false); ?></a></p>
@@ -50,15 +51,18 @@
           <ul>
 
             <?php while ( have_rows('backers', 'options') ) : the_row(); ?>
-            <?php $logo = get_sub_field('logo'); ?>
-              <li class="about-members-item about-members-item--inline">
-                <a target='_blank' href='<?php the_sub_field('url', false, false); ?>'>
-                  <img 
-                    class='about-members-item-logo'
-                    src='<?php echo $logo['sizes']['medium']; ?>'
-                    title='<?php the_sub_field('name', false, false); ?>'
-                    alt='<?php the_sub_field('name', false, false); ?>' />
-                </a>
+              <?php $logo = get_sub_field('logo'); ?>
+              <li class="about-members-item">
+                <?php if ($logo) : ?>
+                  <a class='about-members-item-logo' target='_blank' href='<?php the_sub_field('url', false, false); ?>'>
+                    <img 
+                      src='<?php echo $logo['sizes']['medium']; ?>'
+                      title='<?php the_sub_field('name', false, false); ?>'
+                      alt='<?php the_sub_field('name', false, false); ?>' />
+                  </a>
+                <?php endif; ?>
+                <p class='about-members-item-description'><?php the_sub_field('description', false, false); ?></p>
+                <p class='about-members-item-link'><a target='_blank' href='<?php the_sub_field('url', false, false); ?>'><?php the_sub_field('url', false, false); ?></a></p>
               </li>
             <?php endwhile; ?>
 
@@ -66,6 +70,32 @@
         </section>
 
       <?php endif; ?>
+
+      <div class='about-social'>
+        <a
+          class='socialIcon socialIcon--facebook'
+          href='<?php the_field('social_facebook', 'options'); ?>'
+          target='_blank'>
+          <span class='fa fa-facebook'></span>
+        </a>
+
+        <a
+          class='socialIcon socialIcon--medium'
+          href='<?php the_field('social_medium', 'options'); ?>'
+          target='_blank'>
+          <span class='fa fa-medium'></span>
+        </a>
+
+        <a
+          class='socialIcon socialIcon--email'
+          href='mailto://<?php the_field('social_email', 'options'); ?>'>
+          <span class='fa fa-envelope'></span>
+        </a>
+      </div>
+
+      <div class='about-license'>
+        <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/license_cc.png" alt="creative commons" /></a>
+      </div>
 
     </div>
 

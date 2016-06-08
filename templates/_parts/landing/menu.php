@@ -16,7 +16,7 @@
       <div class='menu-illustration'>
 
         <?php
-          $frames = array( 0, 1, 2, 3, 4, 5, 7, 8, 9 );
+          $frames = array( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 );
           $rndFrame = $frames[array_rand($frames)];
         ?>
 
@@ -26,11 +26,11 @@
 
       <nav class='menu-nav'>
         <ul class='menu-nav-list'>
-          <li class="menu-nav-item"><a href='<?php echo esc_url(home_url( '#sobre-o-projeto' )) ?>'>Sobre o projeto</a></li>
-          <li class="menu-nav-item menu-nav-item--highlight"><a href='<?php echo esc_url(home_url( '#' . slugify(get_field('survey_action_title', 'options')) )) ?>'>Participe da Pesquisa</a></li>
-          <li class="menu-nav-item"><a href='<?php echo esc_url(home_url( '#' . slugify(get_field('news_title', 'options')) )) ?>'>Artigos e Notícias</a></li>
+          <li class="menu-nav-item"><a href='<?php echo esc_url(home_url( '#o-projeto' )) ?>'>Sobre o projeto</a></li>
+          <li class="menu-nav-item menu-nav-item--highlight"><a href='<?php echo esc_url(home_url( '#participe' )) ?>'>Participe da Pesquisa</a></li>
+          <li class="menu-nav-item"><a href='<?php echo esc_url(home_url( '#artigos-e-noticias' )) ?>'>Artigos e Notícias</a></li>
           <li class="menu-nav-item"><a href='<?php echo esc_url(home_url( '#inscreva-se' )) ?>'>Inscreva-se</a></li>
-          <li class="menu-nav-item"><a href='<?php echo esc_url(home_url( '#' . slugify(get_field('about_title', 'options')) )) ?>'>Quem Somos</a></li>
+          <li class="menu-nav-item"><a href='<?php echo esc_url(home_url( '#quem-somos' )) ?>'>Quem Somos</a></li>
         </ul>
         <div class='menu-nav-social'>
           <div class='menu-nav-social-links'>

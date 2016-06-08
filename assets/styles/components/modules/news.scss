@@ -1,24 +1,38 @@
 .news .section-character {
   right: 200px;
 }
+.news-list {
+  margin: 80px auto 0;
+  max-width: 960px;
+}
 .news-item {
-  max-width: 320px;
+  overflow: auto;
+  position: relative;
+  display: block;
+  margin: 10px;
+  padding: 20px;
+  border-top: 2px solid $color-white;
+  color: $color-white;
   font-weight: normal;
+  opacity: 0.9;
+  transition: padding 0.4s, opacity 0.4s;
   &:hover {
+    padding: 40px 20px;
     opacity: 1.0;
-    -webkit-transform: scale(1.005);
-    -moz-transform: scale(1.005);
-    -o-transform: scale(1.005);
-    transform: scale(1.005);
     .news-item-link {
-      color: $color-black;
+      opacity: 1.0;
+      font-weight: normal;
     }
   }
 }
 .news-item-picture {
-  margin: -20px -20px 20px;
+  float: right;
+  width: 320px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding: 12px;
   box-shadow: 1px 2px 20px -4px $color-grey;
-  background-color: $color-lightgrey;
+  background-color: $color-white;
   overflow: auto;
   img {
     float: left;
@@ -28,24 +42,44 @@
 }
 .news-item-title {
   display: inline;
+  max-width: 480px;
   font-family: 'Terrorista';
-  font-size: 1.8em;
+  font-size: 3em;
   letter-spacing: 0.02em;
   line-height: 1em;
 }
 .news-item-date {
-  font-size: 0.8em;
+  white-space: nowrap;
 }
 .news-item-excerpt {
+  max-width: 480px;
   margin-top: 12px;
-  font-size: 1.2em;
+  font-size: 1.4em;
   line-height: 1.4em;
 }
 .news-item-link {
+  max-width: 480px;
   margin-top: 12px;
   font-weight: bold;
-  font-size: 0.9em;
-  color: $color-grey;
+  opacity: 0.5;
+}
+
+.news-back,
+.news-more {
+  max-width: 960px; 
+  margin: 0px auto;
+  padding: 20px 20px 0;
+  display: block;
+  text-align: center;
+  color: $color-white;
+  text-transform: uppercase;
+  &:hover {
+    opacity: 1.0;
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+.news-more {
+  border-top: 2px solid $color-white;
 }
 
 .news-signup-wrapper {
@@ -91,5 +125,15 @@
   &:focus,
   &:active {
     outline: none;
+  }
+}
+
+@media all and (max-width: 720px) {
+  .news-item-picture {
+    float: none;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 20px 20px 0;
   }
 }

@@ -3,6 +3,7 @@
   display: inline-block;
   opacity: 0;
   min-width: 5em;
+  max-width: 160px;
   padding: .6em;
   background: $color-blue;
   color: $color-white;
@@ -34,4 +35,10 @@
 .chartist-tooltip-meta {
   font-size: 0.9em;
   font-weight: normal;
+  strong {
+    font-weight: bold;
+  }
+}
+.chartist-tooltip-value {
+  display: none;
 }

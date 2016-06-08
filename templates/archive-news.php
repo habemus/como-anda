@@ -1,5 +1,8 @@
+<?php oed_helpers::get_template_parts( array('_parts/html-header') ); ?>
+
+<a class='news-back' href='/'>voltar para página principal</a>
+
 <section
-  id='artigos-e-noticias'
   class='section section--style-centered location-anchor'
   data-color-point='236, 50, 51'>
   <h1 class='section-title'><?php the_field('news_title', 'options'); ?></h1>
@@ -7,7 +10,7 @@
 
     <div class='news-list'>
       
-      <?php $news_query = getNewsQuery('4', false); ?>
+      <?php $news_query = getNewsQuery('-1', false); ?>
       <?php if ( $news_query->have_posts() ) : while ($news_query->have_posts()) : $news_query->the_post(); ?>
         
         <a target='_blank' href='<?php the_field('link', false, false); ?>' class='news-item'>
@@ -25,8 +28,6 @@
       <?php endwhile; endif; ?>
 
     </div>
-
-    <a class='news-more' href='/news'>ver todas notícias</a>
 
     <div id='inscreva-se' class='news-signup-wrapper location-anchor'>
       <section
@@ -47,3 +48,5 @@
 
   </article>
 </section>
+
+<?php oed_helpers:: get_template_parts( array('_parts/html-footer') ); ?>

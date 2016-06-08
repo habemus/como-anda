@@ -1,3 +1,92 @@
+.survey-results-disclaimer {
+  margin-top: -20px;
+  color: $color-white;
+  button {
+    padding: 0;
+    border: none;
+    background: none;
+    color: $color-white;
+    font-weight: bold;
+    &:focus,
+    &:active {
+      outline: none;
+    }
+    &:hover {
+      opacity: 0.6;
+      cursor: pointer;
+    }
+  }
+}
+
+.survey-results-names {
+  cursor: pointer;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  display: none;
+  opacity: 0.0;
+  transition: opacity 0.4s;
+  &.survey-results-names--isOpen {
+    display: flex;
+    opacity: 1.0;
+  }
+}
+.survey-results-names-body--isOpen {
+  overflow: hidden;
+}
+.survey-results-names-content {
+  cursor: default;
+  position: relative;
+  max-width: 600px;
+  background-color: $color-white;
+  text-align: center;
+}
+.survey-results-names-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  border: none;
+  background: none;
+  font-size: 2em;
+  color: $color-white;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+.survey-results-names-title {
+  padding: 20px;
+  font-family: 'Terrorista';
+  font-size: 2em;
+  letter-spacing: 0.02em;
+  line-height: 1.2em;
+  color: $color-darkgrey;
+}
+.survey-results-names-list {
+  border-top: 2px solid $color-lightgrey;
+  max-height: 400px;
+  overflow: auto;
+}
+.survey-results-names-item {
+  color: $color-darkgrey;
+  padding: 8px;
+}
+.survey-results-names-item + .survey-results-names-item {
+  border-top: 1px solid $color-xlightgrey;
+}
+
 .survey-results-item {
   position: relative;
   margin: 160px auto 0;
@@ -30,6 +119,7 @@
     stroke-width: 24px;
   }
   .ct-label {
+    line-height: 1.4em;
     color: $color-white;
   }
   .ct-grids line {
@@ -55,7 +145,7 @@
 .survey-results-item-details {
   margin-top: 20px;
 }
-.survey-results-item:nth-child(2n+1) {
+.survey-results-item:nth-child(2n) {
   padding-left: 280px;
   padding-right: 0;
 }
@@ -82,5 +172,31 @@
   bottom: 10%;
   right: auto;
   left: 50%;
-  margin-left: 140px;
+  margin-left: 160px;
+}
+
+/**
+ * Responsive
+ */
+@media all and (max-width: 960px) {
+  .survey-results-item,
+  .survey-results-item:nth-child(2n) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .survey-results-item-chart {
+    margin-top: 12px;
+    left: -20px;
+  }
+  .survey-results-item.pie-chart {
+    padding-right: 240px;
+  }
+}
+@media all and (max-width: 480px) {
+  .survey-results-item.pie-chart {
+    padding-right: 0;
+    .survey-results-item-chart {
+      position: relative;
+    }
+  }
 }
