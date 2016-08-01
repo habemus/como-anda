@@ -1,0 +1,6 @@
+.menu.menu--isClosed {
+  background-color: transparent;
+}
+.menu-closed::before {
+  display: none;
+}

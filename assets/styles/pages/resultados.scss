@@ -1,0 +1,162 @@
+.menu.menu--isClosed {
+  background-color: transparent;
+}
+.menu-closed::before {
+  display: none;
+}
+
+
+/**
+ * FROM comoanda-d3 standalone project
+ */
+//
+body {
+  font-family: 'News Cycle', sans-serif;
+  background-color: #D9D9D9;
+  color: black;
+}
+
+#comoanda-viz {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#comoanda-viz path {
+  fill: none;
+}
+
+#stats {
+  position: fixed;
+  width: 20%;
+  
+  top: 50px;
+  left: 50px;
+}
+
+/**
+ * Year brush styles
+ */
+#year-brush .overlay {
+  fill: red;
+}
+
+#year-brush .selection {
+  fill: green;
+}
+
+#year-brush .handle {
+  fill: skyblue;
+}
+
+#year-brush .handle--e {
+  stroke: magenta;
+  stroke-width: 2px;
+}
+
+#year-brush .handle--w {
+  stroke: navy;
+  stroke-width: 2px;
+}
+
+/**
+ * Entity arc styles
+ */
+#comoanda-viz .state-arc path {
+  fill: #8DBEE1;
+}
+#comoanda-viz .state-arc text {
+  alignment-baseline: middle;
+  user-select: none;
+}
+#comoanda-viz .state-arc text:hover {
+  cursor: pointer;
+}
+
+#comoanda-viz .entity-arc:hover {
+  cursor: pointer;
+}
+#comoanda-viz .entity-arc text {
+  opacity: 0;
+  alignment-baseline: middle;
+}
+#comoanda-viz .entity-arc.active text {
+  opacity: 1;
+}
+#comoanda-viz .entity-arc.active path {
+  fill: #417295;
+}
+
+/**
+ * Year arc styles
+ */
+#comoanda-viz .year-arc text {
+  /* opacity: 0; */
+  alignment-baseline: middle;
+}
+#comoanda-viz .year-arc path {
+  fill: #C3C3C3;
+}
+#comoanda-viz .year-arc.show-label text {
+  opacity: 1;
+}
+/* #comoanda-viz .year-arc.active text {
+  opacity: 1;
+} */
+#comoanda-viz .year-arc.active path {
+  fill: #E57435;
+}
+
+/**
+ * Question arc styles
+ */
+/* question-arc is a class that is applied to all arcs in the questions */
+#comoanda-viz .question-arc {
+  cursor: pointer;
+}
+#comoanda-viz .question-arc text {
+  alignment-baseline: middle;
+}
+
+#comoanda-viz .closed-question path {
+  fill: #C3C3C3;
+}
+#comoanda-viz .closed-question text {
+  fill: black;
+}
+
+#comoanda-viz .open-question path {
+  fill: #C3C3C3;
+}
+#comoanda-viz .open-question text {
+  fill: #DF1E2D;
+}
+
+#comoanda-viz .question-option path {
+  fill: #F98F99;
+}
+#comoanda-viz .question-option text {
+  fill: #A5A5A5;
+}
+#comoanda-viz .question-option.selected text {
+  fill: #0C0C0C;
+}
+#comoanda-viz .question-option:hover text,
+#comoanda-viz .question-option.active text {
+  fill: #0C0C0C;
+}
+#comoanda-viz .question-option:hover path {
+  fill: green;
+}
+#comoanda-viz .question-option.active path {
+  fill: #DF1E2D;
+}
+
+/**
+ * Map
+ */
+#map-container path {
+  fill: blue;
+}
+

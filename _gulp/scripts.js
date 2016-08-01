@@ -19,9 +19,9 @@ module.exports = function (prodDir) {
 
   gulp.task('scripts', ['scripts:clean'], function () {
     return gulp.src(src)
-      .pipe(lint())
-      .pipe(lint.format())
-      .pipe(lint.failAfterError())
+      // .pipe(lint())
+      // .pipe(lint.format())
+      // .pipe(lint.failAfterError())
       .pipe(sourcemaps.init())
         .pipe(uglify().on('error', gulpUtil.log))
       .pipe(sourcemaps.write())

@@ -1,6 +1,6 @@
 <div
-  class='section'
-  data-color-point='177, 194, 195'>
+  id="intro"
+  class='section'>
   <div class='intro<?php if (get_field('intro_video', 'options')) { echo ' intro--style-video'; } ?>'>
     
     <header class='intro-header'>
@@ -22,10 +22,6 @@
       $rndFrame = $frames[array_rand($frames)];
     ?>
     <div class='intro-character section-character' style='background-image: url("<?php echo get_bloginfo('template_directory'); ?>/assets/images/characters/char<?php echo $rndFrame; ?>.png")'></div>
-
-    <div class='intro-scrollTip'>
-      <img class='svgimg' data-src='<?php echo get_bloginfo('template_directory'); ?>/assets/svg/arrow-down.svg' />
-    </div>
 
   </div>
 </div>
