@@ -32,6 +32,12 @@
       wp_register_script( 'chartist.tooltip', get_template_directory_uri().'/assets/scripts/lib/chartist.tooltip.min.js', array(), '1.0', true );
       wp_enqueue_script( 'chartist.tooltip' );
 
+      wp_register_script( 'd3.v4', get_template_directory_uri().'/assets/scripts/lib/d3.v4.min.js', array(), '1.0', true );
+      wp_enqueue_script( 'd3.v4' );
+
+      wp_register_script( 'comoanda-legis', get_template_directory_uri().'/assets/scripts/comoanda-legis.js', array(), '1.0', true );
+      wp_enqueue_script( 'comoanda-legis' );
+
       wp_enqueue_script('jquery');
       wp_register_script( 'survey', get_template_directory_uri().'/assets/scripts/survey.js', array( 'jquery', 'animate-classes', 'animate-scroll', 'scroll-trigger', 'svg-injector', 'nodelist-foreach' ), '1.0', true );
       wp_localize_script( 'survey', 'ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
@@ -146,5 +152,20 @@
   }
   add_action("wp_ajax_get_typeform_results", "get_typeform_results");
   add_action("wp_ajax_nopriv_get_typeform_results", "get_typeform_results");
+
+  /**
+   * Ajax requests for retrieving legislation data.
+   */
+  function get_legis() {
+
+    $filepath = get_template_directory().'/assets/data/comoanda-legis.csv';
+
+    echo file_get_contents($filepath);
+
+    die;
+
+  }
+  add_action("wp_ajax_get_legis", "get_legis");
+  add_action("wp_ajax_nopriv_get_legis", "get_legis");
     
 ?>

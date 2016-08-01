@@ -7,12 +7,14 @@ const clean = require('gulp-clean');
 const fontsSrc = './assets/fonts/**/*.*';
 const imagesSrc = './assets/images/**/*.*';
 const svgSrc = './assets/svg/**/*.*';
+const dataSrc = './assets/data/**/*';
 
 module.exports = function (prodDir) {
 
   const fontsProdDir = path.join(prodDir, 'assets', 'fonts');
   const imagesProdDir = path.join(prodDir, 'assets', 'images');
   const svgProdDir = path.join(prodDir, 'assets', 'svg');
+  const dataProdDir = path.join(prodDir, 'assets', 'data');
   
   gulp.task('assets:fonts:clean', function () {
     return gulp.src(fontsProdDir)
@@ -50,6 +52,18 @@ module.exports = function (prodDir) {
     return gulp.watch(svgSrc, ['files']);
   });
 
-  return ['assets:fonts:watch', 'assets:images:watch', 'assets:svg:watch'];
+  gulp.task('assets:data:clean', function () {
+    return gulp.src(dataProdDir)
+      .pipe(clean({ read: false, force: true }));
+  });
+  gulp.task('assets:data', ['assets:data:clean'], function () {
+    return gulp.src(dataSrc)
+      .pipe(gulp.dest(dataProdDir));
+  });
+  gulp.task('assets:data:watch', ['assets:data'], function () {
+    return gulp.watch(fontsSrc, ['files']);
+  });
+
+  return ['assets:fonts:watch', 'assets:images:watch', 'assets:svg:watch', 'assets:data:watch'];
   
 };
