@@ -285,8 +285,8 @@
       
       _uiRenderControls(data);
       
-      // render first 10...
-      _uiRenderEntries(data.slice(0, 10));
+      // do not render entries before user interaction
+      // _uiRenderEntries(data);
     });
     
   });

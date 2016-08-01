@@ -1,4 +1,4 @@
-.survey-results-disclaimer {
+.downloads-results-disclaimer {
   margin-top: -20px;
   color: $color-white;
   button {
@@ -18,185 +18,16 @@
   }
 }
 
-.survey-results-names {
-  cursor: pointer;
-  position: fixed;
-  z-index: 2000;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.75);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  display: none;
-  opacity: 0.0;
-  transition: opacity 0.4s;
-  &.survey-results-names--isOpen {
-    display: flex;
-    opacity: 1.0;
-  }
-}
-.survey-results-names-body--isOpen {
-  overflow: hidden;
-}
-.survey-results-names-content {
-  cursor: default;
-  position: relative;
-  max-width: 600px;
-  background-color: $color-white;
-  text-align: center;
-}
-.survey-results-names-close {
-  position: absolute;
-  top: -40px;
-  right: 0;
-  border: none;
-  background: none;
-  font-size: 2em;
-  color: $color-white;
-  cursor: pointer;
-  &:hover {
-    opacity: 0.8;
-  }
-  &:focus,
-  &:active {
-    outline: none;
-  }
-}
-.survey-results-names-title {
-  padding: 20px;
-  font-family: 'Terrorista';
-  font-size: 2em;
-  letter-spacing: 0.02em;
-  line-height: 1.2em;
-  color: $color-darkgrey;
-}
-.survey-results-names-list {
-  border-top: 2px solid $color-lightgrey;
-  max-height: 400px;
-  overflow: auto;
-}
-.survey-results-names-item {
-  color: $color-darkgrey;
-  padding: 8px;
-}
-.survey-results-names-item + .survey-results-names-item {
-  border-top: 1px solid $color-xlightgrey;
-}
-
-.survey-results-item {
-  position: relative;
-  margin: 160px auto 0;
-  padding-right: 280px;
-  max-width: 980px;
-  &.pie-chart {
-    display: flex;
-    align-items: center;
-    .survey-results-item-chart {
-      position: absolute;
-      width: 240px;
-      top: 0;
-      left: auto;
-      right: 0;
-    }
-  }
-}
-.survey-results-item-chart {
-  position: relative;
-  left: -49px;
-  height: 240px;
-  max-width: 980px;
-  margin-bottom: 20px;
-  .ct-chart-bar .ct-series line:hover,
-  .ct-chart-donut .ct-series path:hover {
-    stroke: $color-white !important;
-    cursor: pointer;
-  }
-  .ct-chart-bar .ct-series line {
-    stroke-width: 24px;
-  }
-  .ct-label {
-    line-height: 1.4em;
-    color: $color-white;
-  }
-  .ct-grids line {
-    stroke: $color-white;
-  }
-}
-.survey-results-item-title {
-  font-family: 'Terrorista';
-  font-size: 4em;
-  line-height: 1.2em;
-  color: $color-white;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-}
-.survey-results-item-description {
-  margin-top: 12px;
-  font-size: 1.6em;
-  line-height: 1.4em;
-  strong {
-    font-weight: bold;
-  }
-}
-.survey-results-item-details {
-  margin-top: 20px;
-}
-.survey-results-item:nth-child(2n) {
-  padding-left: 280px;
-  padding-right: 0;
-}
-
-.survey-action {
+.downloads-action {
   margin: 40px auto 0;
   max-width: 600px;
   text-align: center;
 }
-.survey-action-disclaimer {
+
+.downloads-explanantion-text {
   margin-top: 40px;
+  margin-bottom: 100px;
   font-size: 1.6em;
   line-height: 1.4em;
   color: $color-white;
-}
-.survey .survey-action-character-1 {
-  bottom: auto;
-  right: auto;
-  top: 20%;
-  left: 50%;
-  margin-left: -720px;
-}
-.survey .survey-action-character-2 {
-  bottom: 10%;
-  right: auto;
-  left: 50%;
-  margin-left: 160px;
-}
-
-/**
- * Responsive
- */
-@media all and (max-width: 960px) {
-  .survey-results-item,
-  .survey-results-item:nth-child(2n) {
-    padding-right: 0;
-    padding-left: 0;
-  }
-  .survey-results-item-chart {
-    margin-top: 12px;
-    left: -20px;
-  }
-  .survey-results-item.pie-chart {
-    padding-right: 240px;
-  }
-}
-@media all and (max-width: 480px) {
-  .survey-results-item.pie-chart {
-    padding-right: 0;
-    .survey-results-item-chart {
-      position: relative;
-    }
-  }
 }

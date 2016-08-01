@@ -46,17 +46,25 @@
     toggleButtonEl.addEventListener('click', toggle);
   }
 
+  var anchorRegExp = /#.*$/;
+
   // menu navigation
   nlForeach(menuEl.querySelectorAll('.menu-nav-item a'), function (navItemEl) {
     navItemEl.addEventListener('click', function (e) {
-      e.preventDefault();
-      close();
-      setTimeout(function () {
-        var href = navItemEl.getAttribute('href');
-        var targetId = href.replace(/^(.*)\/#/, '');
-        var targetEl = document.getElementById(targetId);
-        if (targetEl) { animateScroll(targetEl, 1200); }
-      }, 400);
+      var href = navItemEl.getAttribute('href');
+      var targetUrl = href.replace(anchorRegExp, '');
+      var targetId  = href.replace(/^(.*)\/#/, '');
+
+      var currentUrl = window.location.toString().replace(anchorRegExp, '');
+
+      if (targetUrl === currentUrl) {
+        e.preventDefault();
+        close();
+        setTimeout(function () {
+          var targetEl = document.getElementById(targetId);
+          if (targetEl) { animateScroll(targetEl, 1200); }
+        }, 400);
+      }
     });
   });
 

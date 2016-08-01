@@ -26,11 +26,51 @@
 
       <nav class='menu-nav'>
         <ul class='menu-nav-list'>
-          <li class="menu-nav-item"><a href='<?php echo esc_url(home_url( '#o-projeto' )) ?>'>Sobre o projeto</a></li>
-          <li class="menu-nav-item menu-nav-item--highlight"><a href='<?php echo esc_url(home_url( '#participe' )) ?>'>Participe da Pesquisa</a></li>
-          <li class="menu-nav-item"><a href='<?php echo esc_url(home_url( '#artigos-e-noticias' )) ?>'>Artigos e Notícias</a></li>
-          <li class="menu-nav-item"><a href='<?php echo esc_url(home_url( '#inscreva-se' )) ?>'>Inscreva-se</a></li>
-          <li class="menu-nav-item"><a href='<?php echo esc_url(home_url( '#quem-somos' )) ?>'>Quem Somos</a></li>
+          <li class="menu-nav-item">
+            <a href='<?php echo esc_url(home_url( '/pesquisa/#o-projeto' )) ?>'>
+              Sobre o COMO ANDA
+            </a>
+          </li>
+          <li class="menu-nav-item">
+            <a target="_blank" href='<?php echo esc_url(home_url( '/resultados/' )) ?>'>
+              Explorar os resultados
+            </a>
+          </li>
+          <li class="menu-nav-item menu-nav-item--highlight">
+            <a href='<?php echo esc_url(home_url( '/pesquisa/#participe' )) ?>'>
+              Participe da Pesquisa
+            </a>
+          </li>
+          <li class="menu-nav-item">
+            <a target="_blank" href='<?php echo esc_url(home_url( '/marcos-da-mobilidade/' )) ?>'>
+              Marcos da mobilidade a pé
+            </a>
+          </li>
+          <li class="menu-nav-item">
+            <a href='<?php echo esc_url(home_url( '/pesquisa/#legis' )) ?>'>
+              Legislação
+            </a>
+          </li>
+          <li class="menu-nav-item">
+            <a href='<?php echo esc_url(home_url( '/pesquisa/#downloads' )) ?>'>
+              Downloads
+            </a>
+          </li>
+          <li class="menu-nav-item">
+            <a href='<?php echo esc_url(home_url( '/pesquisa/#artigos-e-noticias' )) ?>'>
+              Mural COMO ANDA
+            </a>
+          </li>
+          <li class="menu-nav-item">
+            <a href='<?php echo esc_url(home_url( '/pesquisa/#inscreva-se' )) ?>'>
+              Inscreva-se
+            </a>
+          </li>
+          <li class="menu-nav-item">
+            <a href='<?php echo esc_url(home_url( '/pesquisa/#quem-somos' )) ?>'>
+              Quem Somos
+            </a>
+          </li>
         </ul>
         <div class='menu-nav-social'>
           <div class='menu-nav-social-links'>
