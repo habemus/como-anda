@@ -7,6 +7,11 @@
     data-color-point='79, 123, 51'>
     <h1 class='section-title'>**como anda** a legislação</h1>
     
+    <div class='legislation-explanantion-text'>
+      <p><?php the_field('legislation_explanation_text', 'options'); ?></p>
+    </div>
+
+
     <form id="legis-controls">
       
       <select name="elemento" id="legis-elemento">

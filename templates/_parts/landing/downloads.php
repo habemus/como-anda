@@ -3,7 +3,9 @@
   <section
     id='downloads'
     class='section section--style-centered location-anchor'
-    data-color-point='230, 114, 53'>
+    data-color-point='60, 129, 187'>
+
+    <!-- data-color-point='230, 114, 53'> -->
     <h1 class='section-title'>downloads **como anda**</h1>
 
     <article class='downloads-action'>

@@ -60,11 +60,12 @@
       if (targetUrl === currentUrl) {
         e.preventDefault();
         close();
-        setTimeout(function () {
-          var targetEl = document.getElementById(targetId);
-          if (targetEl) { animateScroll(targetEl, 1200); }
-        }, 400);
       }
+      
+      setTimeout(function () {
+        var targetEl = document.getElementById(targetId);
+        if (targetEl) { animateScroll(targetEl, 1200); }
+      }, 400);
     });
   });
 

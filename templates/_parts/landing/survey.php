@@ -62,7 +62,7 @@
       
       <a data-mode="1"
         target="_blank"
-        href="http://google.com"
+        href="../resultados"
         class="button button--size-large survey-action-button">
         explore o resultado parcial da pesquisa
       </a>

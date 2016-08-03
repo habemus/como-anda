@@ -196,7 +196,8 @@
       '<div class="legis-details">',
         '<h3>' + legisData['Descrição'] + '</h3>',
         '<p>' + legisData['Trecho da Lei'] + '</p>',
-        '<a target="_blank" href="' + legisData['Link'] + '">saiba mais</a>',
+        '<br>',
+        '<a target="_blank" href="' + legisData['Link'] + '">leia na íntegra</a>',
       '</div>',
     ].join('');
   }

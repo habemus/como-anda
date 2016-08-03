@@ -18,4 +18,5 @@
 
   // ensure this is run before d3 data viz
   window.STATES_GEO_JSON_URL = window.ajax_object.ajax_url + '?action=get_states_geo_json';
+  window.TYPEFORM_DATA_JSON_URL = window.ajax_object.ajax_url + '?action=get_typeform_results';
 })()

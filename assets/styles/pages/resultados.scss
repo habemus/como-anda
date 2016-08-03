@@ -5,26 +5,144 @@
   display: none;
 }
 
+#comoanda-viz path {
+  fill: none;
+}
 
 /**
  * FROM comoanda-d3 standalone project
  */
 //
+
 body {
   font-family: 'News Cycle', sans-serif;
   background-color: #D9D9D9;
+  
+  margin: 0 0;
   color: black;
 }
 
+h1, h2, h3 {
+  margin: 0 0;
+}
+
+/**
+ * 
+ * Navigation
+ * 
+ */
+#timeline-link {
+  position: fixed;
+  z-index: 1;
+  bottom: 20px;
+  left: 70%;
+  
+  color: grey;
+}
+
+#know-more-link {
+  position: fixed;
+  z-index: 1;
+  bottom: 20px;
+  right: 20px;
+  
+  color: black;
+}
+
+/**
+ * 
+ * Entity details
+ * 
+ */
+#entity-details {
+  width: 50vw;
+  border: none;
+  
+  padding: 0 0;
+}
+
+#entity-details > * {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#entity-details > header {
+  border-bottom: 2px grey solid;
+  
+  color: grey;
+  font-size: 14px;
+  font-family: "Terrorista", sans-serif;
+  
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#entity-details section {
+  height: 300px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  overflow: auto;
+}
+
+#entity-details section h3 {
+  font-size: 14px;
+}
+
+#entity-details section p {
+  font-size: 12px;
+}
+
+#entity-details footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#entity-details a, 
+#entity-details button {
+  cursor: pointer;
+  font-family: 'News Cycle', sans-serif;
+  height: 50px;
+  width: 100px;
+  border: 2px solid grey;
+  outline: none;
+  background-color: white;
+  
+  color: black;
+  text-decoration: none;
+  
+  box-sizing: border-box;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  
+  margin-right: 10px;
+}
+
+#entity-details a:hover,
+#entity-details button:hover {
+  background-color: #497C32;
+  color: white;
+}
+
+/**
+ * 
+ * Data visualization tool
+ * 
+ */
 #comoanda-viz {
   position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-
-#comoanda-viz path {
-  fill: none;
+  z-index: 0;
 }
 
 #stats {
@@ -35,29 +153,54 @@ body {
   left: 50px;
 }
 
+#stats h1 {
+  font-family: 'Terrorista', sans-serif;
+  color: #3c81bb;
+  font-size: 40px;
+  line-height: 1em;
+  
+  margin: 0 0;
+}
+
+#stats h3 {
+  margin: 0 0;
+  font-weight: normal;
+  line-height: 1.3;
+  font-size: 18px;
+}
+
+#stats h3 strong {
+  font-weight: bold;
+}
+
 /**
  * Year brush styles
  */
 #year-brush .overlay {
-  fill: red;
+  fill: #808080;
 }
 
 #year-brush .selection {
-  fill: green;
+  fill: #ED8744;
+  fill-opacity: 1;
+  stroke: none;
+  opacity: 1;
 }
 
 #year-brush .handle {
-  fill: skyblue;
+  fill: #f9f9f9;
+  stroke: #f9f9f9;
+  /* stroke-width: 5px; */
 }
 
 #year-brush .handle--e {
-  stroke: magenta;
-  stroke-width: 2px;
 }
 
 #year-brush .handle--w {
-  stroke: navy;
-  stroke-width: 2px;
+}
+
+#year-brush .brush-label {
+  fill: black;
 }
 
 /**
@@ -78,7 +221,7 @@ body {
   cursor: pointer;
 }
 #comoanda-viz .entity-arc text {
-  opacity: 0;
+  opacity: .5;
   alignment-baseline: middle;
 }
 #comoanda-viz .entity-arc.active text {
@@ -130,11 +273,11 @@ body {
   fill: #C3C3C3;
 }
 #comoanda-viz .open-question text {
-  fill: #DF1E2D;
+  fill: #E9353A;
 }
 
 #comoanda-viz .question-option path {
-  fill: #F98F99;
+  fill: #FCA2A9;
 }
 #comoanda-viz .question-option text {
   fill: #A5A5A5;
@@ -142,21 +285,187 @@ body {
 #comoanda-viz .question-option.selected text {
   fill: #0C0C0C;
 }
-#comoanda-viz .question-option:hover text,
+#comoanda-viz .question-option:hover text {
+  fill: #8C8C8C;
+}
 #comoanda-viz .question-option.active text {
   fill: #0C0C0C;
 }
 #comoanda-viz .question-option:hover path {
-  fill: green;
+  fill: #F76173;
 }
 #comoanda-viz .question-option.active path {
-  fill: #DF1E2D;
+  fill: #E9353A;
 }
 
-/**
- * Map
- */
 #map-container path {
-  fill: blue;
+  opacity: 0.6;
+  fill: white;
+  
+  stroke: #e0e0e0;
+}
+
+#map-container path.active {
+  fill: #3c81bb;
+}
+/**
+ * Link lines
+ */
+#comoanda-viz .link-line path {
+  opacity: 0.2;
+}
+
+
+
+
+/**
+ * 
+ * INTRO STYLES
+ *
+ */
+#intro-overlay {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  
+  opacity: 1;
+  transition: opacity 1s ease;
+  background-color: #A2B5B6;
+  
+  z-index: 2;
+}
+
+#intro-overlay.fade-away {
+  opacity: 0;
+}
+
+#intro-container {
+  position: fixed;
+  height: 40vh;
+  width: 18vw;
+  
+  top: 50%;
+  left: 5vw;
+  
+  transform: translateY(-50%);
+  
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.4);
+  
+  z-index: 2;
+}
+
+#intro-container .intro-control {
+  position: absolute;
+  top: 50%;
+  
+  height: 20px;
+  
+  transition: opacity 1s;
+  
+  opacity: 0;
+}
+#intro-container .intro-control.active {
+  opacity: 1;
+  cursor: pointer;
+}
+#intro-container .intro-control.previous {
+  left: 0;
+  transform: translate(-100%, -50%) rotate(180deg);
+}
+#intro-container .intro-control.next {
+  right: 0;
+  transform: translate(100%, -50%);
+}
+
+#intro-container .intro-skip {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  
+  color: #bcbcbc;
+}
+
+#intro-text-container {
+  
+  height: 100%;
+  width: 100%;
+  
+  /**
+   * Let only overflow-y hidden in order not to hide controls
+   */
+  overflow-y: hidden;
+}
+
+#intro-text-scroller {
+  transition: transform ease 2s;
+}
+
+#intro-text-scroller p {
+  padding: 20px 20px;
+  margin: 0 0;
+  transition: opacity ease 2s;
+  opacity: 0.3;
+}
+
+#intro-text-scroller p.current {
+  opacity: 1;
+}
+
+
+/**
+ * Foot animation
+ */
+#intro-image-container {
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  
+  display: flex;
+  
+  transition: transform 1s ease, opacity 1.5s ease;
+  opacity: 1;
+  
+  transform: translate(-10%, -50%);
+}
+
+#intro-image-container.fade-away {
+  opacity: 0;
+  transform: translate(-50%, 100%) scaleX(0.1);
+}
+
+#intro-image-container > img {
+  position: relative;
+  display: block;
+  margin-right: -150px;
+  
+  transition: opacity .5s ease;
+  
+  opacity: 0;
+}
+
+#intro-image-container > img.active {
+  opacity: 1;
+}
+
+#intro-image-container > .floor {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  height: 2px;
+  width: 300px;
+  background-color: black;
+  
+  opacity: 0;
+  transition: width 2s ease, opacity 2s ease;
+}
+
+#intro-image-container > .floor.active {
+  opacity: 1;
+}
+
+#intro-image-container > .floor.walkable {
+  width: 100%;
 }
 

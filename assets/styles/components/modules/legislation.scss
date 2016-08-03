@@ -1,3 +1,21 @@
+
+.legislation-explanantion-text {
+  margin-top: 40px;
+  font-size: 1.6em;
+  line-height: 1.4em;
+  color: #fff;
+  
+  margin: 40px auto 0;
+  max-width: 600px;
+  text-align: center;
+}
+
+
+/**
+ * FROM standalone comoanda-legis project.
+ * Modifications should be made there:
+ */
+
 #legis {
   // background-color: #4F7B33;
   
@@ -11,8 +29,16 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  // flex-wrap: wrap;
   
   height: 150px;
+}
+
+@media (max-width: 600px) {
+  #legis-controls {
+    flex-direction: column;
+  }
 }
 
 #legis-controls select {
@@ -45,6 +71,14 @@
   padding: .5em;
   padding-right: 1.4em;
   padding-left: 1.2em; 
+}
+
+@media (max-width: 600px) {
+  #legis-controls select {
+    height: 55px;
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 #legis-entries {
