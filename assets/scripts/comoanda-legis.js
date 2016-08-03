@@ -196,7 +196,6 @@
       '<div class="legis-details">',
         '<h3>' + legisData['Descrição'] + '</h3>',
         '<p>' + legisData['Trecho da Lei'] + '</p>',
-        '<br>',
         '<a target="_blank" href="' + legisData['Link'] + '">leia na íntegra</a>',
       '</div>',
     ].join('');
@@ -253,9 +252,9 @@
   /**
    * Renders entries into dom
    */
-  function _uiRenderEntries(data) {
+  function _uiRenderEntries(data, options) {
     
-    console.log('render entries', data);
+    options = options || {};
     
     var entryList = d3.select('#legis-entries');
     
@@ -271,6 +270,15 @@
     
     var itemExit = entryItems.exit()
       .remove();
+      
+    // display/hide message for 'empty results'
+    if (data.length === 0) {
+      document.querySelector('#legis-empty-results')
+        .removeAttribute('hidden');
+    } else {
+      document.querySelector('#legis-empty-results')
+        .setAttribute('hidden', true);
+    }
   }
   
   window.addEventListener('DOMContentLoaded', function () {

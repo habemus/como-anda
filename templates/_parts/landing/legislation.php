@@ -1,6 +1,5 @@
 <div class='legislation'>
 
-
   <section 
     id="legis"
     class='section section--style-centered location-anchor'
@@ -10,7 +9,6 @@
     <div class='legislation-explanantion-text'>
       <p><?php the_field('legislation_explanation_text', 'options'); ?></p>
     </div>
-
 
     <form id="legis-controls">
       
@@ -39,16 +37,11 @@
     <ul id="legis-entries">
       
     </ul>
+    
+    <div id="legis-empty-results" hidden="true">
+      Nenhum resultado foi encontrado para os critérios selecionados.<br>
+      Por favor selecione outra combinação de critérios.
+    </div>
   </section>
 
-<!--   <section
-    id='participe'
-    class='section section--style-centered location-anchor'
-    data-color-point='79, 123, 51'>
-    <h1 class='section-title'>**como anda** a legislação</h1>
-    <article class='legislation-content'>
-      banana
-    </article>
-  </section>
- -->
 </div>

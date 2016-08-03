@@ -37,8 +37,8 @@
   </form>
 </dialog>
 
-<a target="_blank" id="timeline-link" href="../marcos-da-mobilidade">+ linha do tempo</a>
-<a id="know-more-link" href="../pesquisa">saiba mais</a>
+<a id="timeline-link" href="/marcos-da-mobilidade">+ linha do tempo</a>
+<a id="know-more-link" href="/pesquisa">saiba mais</a>
 
 <!-- intro -->
 
@@ -110,10 +110,7 @@
       </p>
       <!-- 11 -->
       <p>
-        navegue e entenda mais sobre o cenário da mobilidade a pé
-      </p>
-      <!-- 12 -->
-      <p>
+        navegue e entenda mais sobre o cenário da mobilidade a pé<br>
         venha caminhar com a gente!
       </p>
     </div>

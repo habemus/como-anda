@@ -23783,281 +23783,281 @@ function hasOwnProperty(obj, prop) {
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"./support/isBuffer":8,"_process":6,"inherits":5}],10:[function(require,module,exports){
 module.exports=[
-  {
-    "name": "ACRE",
-    "code": "AC"
-  },
-  {
-    "name": "ALAGOAS",
-    "code": "AL"
-  },
-  {
-    "name": "AMAPÁ",
-    "code": "AP"
-  },
-  {
-    "name": "AMAZONAS",
-    "code": "AM"
-  },
-  {
-    "name": "BAHIA",
-    "code": "BA"
-  },
-  {
-    "name": "CEARÁ",
-    "code": "CE"
-  },
-  {
-    "name": "DISTRITO FEDERAL",
-    "code": "DF"
-  },
-  {
-    "name": "ESPIRITO SANTO",
-    "code": "ES"
-  },
-  {
-    "name": "GOIÁS",
-    "code": "GO"
-  },
-  {
-    "name": "MARANHÃO",
-    "code": "MA"
-  },
-  {
-    "name": "MATO GROSSO",
-    "code": "MT"
-  },
-  {
-    "name": "MATO GROSSO DO SUL",
-    "code": "MS"
-  },
-  {
-    "name": "MINAS GERAIS",
-    "code": "MG"
-  },
-  {
-    "name": "PARÁ",
-    "code": "PA"
-  },
-  {
-    "name": "PARAÍBA",
-    "code": "PB"
-  },
-  {
-    "name": "PARANÁ",
-    "code": "PR"
-  },
-  {
-    "name": "PERNAMBUCO",
-    "code": "PE"
-  },
-  {
-    "name": "PIAUÍ",
-    "code": "PI"
-  },
-  {
-    "name": "RIO DE JANEIRO",
-    "code": "RJ"
-  },
-  {
-    "name": "RIO GRANDE DO NORTE",
-    "code": "RN"
-  },
-  {
-    "name": "RIO GRANDE DO SUL",
-    "code": "RS"
-  },
-  {
-    "name": "RONDÔNIA",
-    "code": "RO"
-  },
-  {
-    "name": "RORAIMA",
-    "code": "RR"
-  },
-  {
-    "name": "SANTA CATARINA",
-    "code": "SC"
-  },
-  {
-    "name": "SÃO PAULO",
-    "code": "SP"
-  },
-  {
-    "name": "SERGIPE",
-    "code": "SE"
-  },
-  {
-    "name": "TOCANTINS",
-    "code": "TO"
-  },
-  {
-    "name": "--",
-    "code": "--"
-  }
+    {
+        "name": "ACRE",
+        "code": "AC"
+    },
+    {
+        "name": "ALAGOAS",
+        "code": "AL"
+    },
+    {
+        "name": "AMAPÁ",
+        "code": "AP"
+    },
+    {
+        "name": "AMAZONAS",
+        "code": "AM"
+    },
+    {
+        "name": "BAHIA",
+        "code": "BA"
+    },
+    {
+        "name": "CEARÁ",
+        "code": "CE"
+    },
+    {
+        "name": "DISTRITO FEDERAL",
+        "code": "DF"
+    },
+    {
+        "name": "ESPIRITO SANTO",
+        "code": "ES"
+    },
+    {
+        "name": "GOIÁS",
+        "code": "GO"
+    },
+    {
+        "name": "MARANHÃO",
+        "code": "MA"
+    },
+    {
+        "name": "MATO GROSSO",
+        "code": "MT"
+    },
+    {
+        "name": "MATO GROSSO DO SUL",
+        "code": "MS"
+    },
+    {
+        "name": "MINAS GERAIS",
+        "code": "MG"
+    },
+    {
+        "name": "PARÁ",
+        "code": "PA"
+    },
+    {
+        "name": "PARAÍBA",
+        "code": "PB"
+    },
+    {
+        "name": "PARANÁ",
+        "code": "PR"
+    },
+    {
+        "name": "PERNAMBUCO",
+        "code": "PE"
+    },
+    {
+        "name": "PIAUÍ",
+        "code": "PI"
+    },
+    {
+        "name": "RIO DE JANEIRO",
+        "code": "RJ"
+    },
+    {
+        "name": "RIO GRANDE DO NORTE",
+        "code": "RN"
+    },
+    {
+        "name": "RIO GRANDE DO SUL",
+        "code": "RS"
+    },
+    {
+        "name": "RONDÔNIA",
+        "code": "RO"
+    },
+    {
+        "name": "RORAIMA",
+        "code": "RR"
+    },
+    {
+        "name": "SANTA CATARINA",
+        "code": "SC"
+    },
+    {
+        "name": "SÃO PAULO",
+        "code": "SP"
+    },
+    {
+        "name": "SERGIPE",
+        "code": "SE"
+    },
+    {
+        "name": "TOCANTINS",
+        "code": "TO"
+    },
+    {
+      "name": "--",
+      "code": "--"
+    }
 ]
 
 },{}],11:[function(require,module,exports){
 module.exports=[
-  {
-    "label": "Formalização",
-    "question": "Como vocês estão formalizados?",
-    "options": [
-      "Organização Social (OS)",
-      "Movimento Social",
-      "Coletivo",
-      "Empresa",
-      "Associação",
-      "Em processo de formalização",
-      "Fundação",
-      "Não formalizado",
-      "Organização da Sociedade Civil de Interesse Público (OSCIP)",
-      "Instituto",
-      "Comissão",
-      "Outros",
-      "Orgão Público",
-      "Rede",
-      "Universidade / grupo de pesquisa"
-    ]
-  },
-  {
-    "label": "Foco",
-    "question": "Mobilidade a pé é o foco principal da sua organização?",
-    "options": [
-      "Não, mas uma das principais iniciativas da organização trata do tema",
-      "Sim",
-      "Não, a mobilidade a pé é apenas um dos temas abordados, mas aparece sempre em um contexto mais amplo"
-    ]
-  },
-  {
-    "label": "Aspectos da mobilidade",
-    "question": "Com quais aspectos da mobilidade a pé sua organização trabalha ou como o tema está inserido na sua atuação?",
-    "options": [
-      "Infraestrutura local [calçadas, cruzamentos, escadarias, passarelas, passagens subterrâneas, travessias, sinalização, mobiliário urbano]",
-      "Planejamento e desenho urbano [uso e ocupação do solo, infraestrutura de transporte, planejamento na escala do bairro/cidade]",
-      "Saúde e Qualidade de Vida [sedentarismo e doenças relacionadas, como obesidade, diabetes; problemas respiratórios; estresse e depressão]",
-      "Meio ambiente e sustentabilidade [mudanças climáticas, energia, emissão de gases, poluição, economia sustentável]",
-      "Bicicleta [convívio entre mobilidade cicloviária e mobilidade a pé]",
-      "Economia [impactos da mobilidade na economia; geração de emprego; análise de trade-off; fomento ao comércio local]",
-      "Microacessibilidade ao Transporte Público Coletivo [conectividade, intermodalidade]",
-      "Segurança [pessoal, viária e acidentalidade vertical]",
-      "Tecnologia e Inovação [aplicativos, rede e plataforma online, base de dados]",
-      "Arquitetura da edificação [interface entre espaço público e lote privado; projeto na infraestrutura para mobilidade a pé]",
-      "Outros",
-      "Bicicleta [incentivo ao uso da bicicleta em geral]"
-    ]
-  },
-  {
-    "label": "Abordagem",
-    "question": "Qual a abordagem da sua organização sobre o tema da mobilidade a pé?",
-    "options": [
-      "Comunicação e Informação [produção e compartilhamento: sites, blogs, grupos de discussão virtual]",
-      "Educação e Cultura [disseminação, capacitação, intervenção artística, sensibilização]",
-      "Intervenção física no espaço [obra civil, intervenções temporárias, artísticas]",
-      "Legislação e Políticas Públicas [produção e revisão de leis, planos e programas relacionados à mobilidade a pé]",
-      "Mobilização [ativismo, participação, engajamento e controle social]",
-      "Pesquisa [diagnóstico, caracterização, indicadores]",
-      "Projetos e Planos [projetos de arquitetura, desenho urbano, planos de mobilidade, diretores]",
-      "Outros"
-    ]
-  },
-  {
-    "label": "Área de atuação",
-    "question": "Qual é a área de atuação da sua organização?",
-    "options": [
-      "Arquitetura e urbanismo",
-      "Saúde e qualidade de vida",
-      "Comunicação",
-      "Políticas públicas",
-      "Educação",
-      "Outros",
-      "Direito",
-      "Engenharia ",
-      "Meio ambiente"
-    ]
-  },
-  {
-    "label": "Dificuldades",
-    "question": "Quais são as principais dificuldades que sua organização encontra para trabalhar com o tema da mobilidade a pé?",
-    "options": [
-      "Ausência / escassez de recursos / financiamento",
-      "Acesso a informações",
-      "Capacitação da equipe",
-      "Outros",
-      "Burocracia / meios legais de atuar",
-      "Falta de colaboradores",
-      "Escassez de parcerias",
-      "Apoio político",
-      "Falta de planejamento estratégico",
-      "Escassez de voluntários",
-      "Interesse das lideranças da organização",
-      "Falta de conhecimento / clareza sobre o tema"
-    ]
-  },
-  {
-    "label": "Fontes de recurso",
-    "question": "Quais são as fontes de recurso da sua organização?",
-    "options": [
-      "Doação direta (Investimento social/filantrópico)",
-      "Prestação de serviço",
-      "Trabalho voluntário",
-      "Doação direta (membros associados)",
-      "Edital",
-      "Nenhuma fonte de financiamento",
-      "Financiamento coletivo (crowdfunding)",
-      "Patrocínio (investimento empresarial)",
-      "Venda de produtos",
-      "Outros",
-      "Leis de incentivo (ex. Lei de incentivo ao esporte)",
-      "Orçamento Público",
-      "Bolsa de fomento",
-      "Convênio (poder público)"
-    ]
-  },
-  {
-    "label": "Finalidade das parcerias",
-    "question": "A sua organização atua ou atuou nos últimos doze meses em parceria? Qual a finalidade?",
-    "options": [
-      "Apoio financeiro",
-      "Apoio institucional",
-      "Parceria para pesquisas",
-      "Parceria para ações",
-      "Parceria para aprendizagem, capacitação ou treinamento",
-      "Parceria para campanhas",
-      "Parceria para mobilização e sensibilização",
-      "Não possuímos ações em parceria",
-      "Apoio político",
-      "Outros"
-    ]
-  },
-  {
-    "label": "Fontes de informação",
-    "question": "Quais as fontes de informação que sua organização utiliza com mais frequência?",
-    "options": [
-      "Coleto meus próprios dados em campo",
-      "Dados municipais abertos",
-      "Pesquisa Origem e Destino",
-      "Mídias Sociais (Facebook, Twitter, Medium)",
-      "Jornais, Revistas, Sites, Blogs",
-      "Trabalhos acadêmicos",
-      "IBGE",
-      "Legislação",
-      "Outros"
-    ]
-  },
-  {
-    "label": "Escala de atuação",
-    "question": "Para qual(is) escala(s) as ações da sua organização estão direcionadas?",
-    "options": [
-      "Bairro / comunidade",
-      "Cidade",
-      "Nacional",
-      "Vários Estados / Regional",
-      "Estado",
-      "Internacional",
-      "Regiões Metropolitanas (várias cidades)"
-    ]
-  }
+    {
+        "label": "Formalização",
+        "question": "Como vocês estão formalizados?",
+        "options": [
+            "Organização Social (OS)",
+            "Movimento Social",
+            "Coletivo",
+            "Empresa",
+            "Associação",
+            "Em processo de formalização",
+            "Fundação",
+            "Não formalizado",
+            "Organização da Sociedade Civil de Interesse Público (OSCIP)",
+            "Instituto",
+            "Comissão",
+            "Outros",
+            "Orgão Público",
+            "Rede",
+            "Universidade / grupo de pesquisa"
+        ]
+    },
+    {
+        "label": "Foco",
+        "question": "Mobilidade a pé é o foco principal da sua organização?",
+        "options": [
+            "Não, mas uma das principais iniciativas da organização trata do tema",
+            "Sim",
+            "Não, a mobilidade a pé é apenas um dos temas abordados, mas aparece sempre em um contexto mais amplo"
+        ]
+    },
+    {
+        "label": "Aspectos da mobilidade",
+        "question": "Com quais aspectos da mobilidade a pé sua organização trabalha ou como o tema está inserido na sua atuação?",
+        "options": [
+            "Infraestrutura local [calçadas, cruzamentos, escadarias, passarelas, passagens subterrâneas, travessias, sinalização, mobiliário urbano]",
+            "Planejamento e desenho urbano [uso e ocupação do solo, infraestrutura de transporte, planejamento na escala do bairro/cidade]",
+            "Saúde e Qualidade de Vida [sedentarismo e doenças relacionadas, como obesidade, diabetes; problemas respiratórios; estresse e depressão]",
+            "Meio ambiente e sustentabilidade [mudanças climáticas, energia, emissão de gases, poluição, economia sustentável]",
+            "Bicicleta [convívio entre mobilidade cicloviária e mobilidade a pé]",
+            "Economia [impactos da mobilidade na economia; geração de emprego; análise de trade-off; fomento ao comércio local]",
+            "Microacessibilidade ao Transporte Público Coletivo [conectividade, intermodalidade]",
+            "Segurança [pessoal, viária e acidentalidade vertical]",
+            "Tecnologia e Inovação [aplicativos, rede e plataforma online, base de dados]",
+            "Arquitetura da edificação [interface entre espaço público e lote privado; projeto na infraestrutura para mobilidade a pé]",
+            "Outros",
+            "Bicicleta [incentivo ao uso da bicicleta em geral]"
+        ]
+    },
+    {
+        "label": "Abordagem",
+        "question": "Qual a abordagem da sua organização sobre o tema da mobilidade a pé?",
+        "options": [
+            "Comunicação e Informação [produção e compartilhamento: sites, blogs, grupos de discussão virtual]",
+            "Educação e Cultura [disseminação, capacitação, intervenção artística, sensibilização]",
+            "Intervenção física no espaço [obra civil, intervenções temporárias, artísticas]",
+            "Legislação e Políticas Públicas [produção e revisão de leis, planos e programas relacionados à mobilidade a pé]",
+            "Mobilização [ativismo, participação, engajamento e controle social]",
+            "Pesquisa [diagnóstico, caracterização, indicadores]",
+            "Projetos e Planos [projetos de arquitetura, desenho urbano, planos de mobilidade, diretores]",
+            "Outros"
+        ]
+    },
+    {
+        "label": "Área de atuação",
+        "question": "Qual é a área de atuação da sua organização?",
+        "options": [
+            "Arquitetura e urbanismo",
+            "Saúde e qualidade de vida",
+            "Comunicação",
+            "Políticas públicas",
+            "Educação",
+            "Outros",
+            "Direito",
+            "Engenharia ",
+            "Meio ambiente"
+        ]
+    },
+    {
+        "label": "Dificuldades",
+        "question": "Quais são as principais dificuldades que sua organização encontra para trabalhar com o tema da mobilidade a pé?",
+        "options": [
+            "Ausência / escassez de recursos / financiamento",
+            "Acesso a informações",
+            "Capacitação da equipe",
+            "Outros",
+            "Burocracia / meios legais de atuar",
+            "Falta de colaboradores",
+            "Escassez de parcerias",
+            "Apoio político",
+            "Falta de planejamento estratégico",
+            "Escassez de voluntários",
+            "Interesse das lideranças da organização",
+            "Falta de conhecimento / clareza sobre o tema"
+        ]
+    },
+    {
+        "label": "Fontes de recurso",
+        "question": "Quais são as fontes de recurso da sua organização?",
+        "options": [
+            "Doação direta (Investimento social/filantrópico)",
+            "Prestação de serviço",
+            "Trabalho voluntário",
+            "Doação direta (membros associados)",
+            "Edital",
+            "Nenhuma fonte de financiamento",
+            "Financiamento coletivo (crowdfunding)",
+            "Patrocínio (investimento empresarial)",
+            "Venda de produtos",
+            "Outros",
+            "Leis de incentivo (ex. Lei de incentivo ao esporte)",
+            "Orçamento Público",
+            "Bolsa de fomento",
+            "Convênio (poder público)"
+        ]
+    },
+    {
+        "label": "Finalidade das parcerias",
+        "question": "A sua organização atua ou atuou nos últimos doze meses em parceria? Qual a finalidade?",
+        "options": [
+            "Apoio financeiro",
+            "Apoio institucional",
+            "Parceria para pesquisas",
+            "Parceria para ações",
+            "Parceria para aprendizagem, capacitação ou treinamento",
+            "Parceria para campanhas",
+            "Parceria para mobilização e sensibilização",
+            "Não possuímos ações em parceria",
+            "Apoio político",
+            "Outros"
+        ]
+    },
+    {
+        "label": "Fontes de informação",
+        "question": "Quais as fontes de informação que sua organização utiliza com mais frequência?",
+        "options": [
+            "Coleto meus próprios dados em campo",
+            "Dados municipais abertos",
+            "Pesquisa Origem e Destino",
+            "Mídias Sociais (Facebook, Twitter, Medium)",
+            "Jornais, Revistas, Sites, Blogs",
+            "Trabalhos acadêmicos",
+            "IBGE",
+            "Legislação",
+            "Outros"
+        ]
+    },
+    {
+        "label": "Escala de atuação",
+        "question": "Para qual(is) escala(s) as ações da sua organização estão direcionadas?",
+        "options": [
+            "Bairro / comunidade",
+            "Cidade",
+            "Nacional",
+            "Vários Estados / Regional",
+            "Estado",
+            "Internacional",
+            "Regiões Metropolitanas (várias cidades)"
+        ]
+    }
 ]
 
 },{}],12:[function(require,module,exports){
@@ -24915,6 +24915,16 @@ module.exports = function (app, options) {
       }
     },
     
+    hideText: function () {
+      stateArcContainer.classed('hide-text', true);
+      entityArcContainer.classed('hide-text', true);
+    },
+    
+    showText: function () {
+      stateArcContainer.classed('hide-text', false);
+      entityArcContainer.classed('hide-text', false);
+    },
+    
     activate: function (requestedItem) {
       entityArcContainer
         .select('#entity-' + requestedItem._id)
@@ -25337,6 +25347,10 @@ module.exports = function (app, options) {
   elements.previous = document.querySelector('.previous');
   elements.next     = document.querySelector('.next');
   elements.skip     = document.querySelector('.intro-skip');
+  elements.menu     = document.querySelector('.menu');
+  
+  // remove the 'is-visible' class from the menu at bootstrap
+  elements.menu.classList.toggle('is-visible', false);
   
   // render bindings
   aux.renderBindings(elements.container, {
@@ -25405,9 +25419,6 @@ module.exports = function (app, options) {
       Bluebird.resolve() : Bluebird.resolve(currStep.leave());
     
     return promise.then(function () {
-      return destStep.enter();
-    })
-    .then(function () {
       
       /**
        * Transition text
@@ -25435,7 +25446,11 @@ module.exports = function (app, options) {
       var translateY = -1 * (destTop - (viewportHeight - destHeight) /2);
       elements.textScroller.style.transform = 
         'translateY(' + translateY + 'px)';
-        
+    })
+    .then(function () {
+      return destStep.enter();
+    })
+    .then(function () {
       app.intro.currentStep = step;
       
       // terminate transition
@@ -25443,6 +25458,7 @@ module.exports = function (app, options) {
       
       // re-enable controls
       app.intro.toggleControls(true);
+      
     });
   };
   
@@ -25493,6 +25509,9 @@ module.exports = function (app, options) {
     app.ui.stats.show();
     app.ui.map.show();
     
+    app.ui.questions.showText();
+    app.ui.entities.showText();
+    
     app.ui.yearBrush.moveBrush([1936, 2016]);
   };
   
@@ -25538,6 +25557,10 @@ module.exports = function (app, options) {
         app.ui.stats.hide();
         app.ui.map.hide();
         
+        // hide text
+        app.ui.entities.hideText();
+        app.ui.questions.hideText();
+        
         // reset the controls
         app.ui.yearBrush.moveBrush([1936, 1937]);
         
@@ -25575,7 +25598,7 @@ module.exports = function (app, options) {
         
         elements.imageContainer.querySelector('.floor').classList.add('walkable');
         
-        return wait(2000);
+        return wait(3000);
       },
     },
     {
@@ -25589,7 +25612,7 @@ module.exports = function (app, options) {
         
         elements.imageContainer.classList.add('fade-away');
         
-        return wait(1000);
+        return wait(3000);
       },
     },
     {
@@ -25607,26 +25630,31 @@ module.exports = function (app, options) {
     {
       name: '2013',
       enter: function () {
-        var timePerYear = 5000 / (2013 - 1936);
         
-        var startYear = 1937;
-        var endYear   = 2013;
-        
-        var current = startYear;
-        
-        while (current < endYear) {
-          
-          setTimeout(
-            app.ui.yearBrush.moveBrush.bind(
-              app.ui.yearBrush,
-              [1936, current]
-            ),
-            (current - startYear) * timePerYear
-          );
-          
-          current += 1;
-        }
-        
+        return wait(7000)
+          .then(function () {
+            var timePerYear = 5000 / (2013 - 1936);
+            
+            var startYear = 1937;
+            var endYear   = 2013;
+            
+            var current = startYear;
+            
+            while (current < endYear) {
+              
+              setTimeout(
+                app.ui.yearBrush.moveBrush.bind(
+                  app.ui.yearBrush,
+                  [1936, current]
+                ),
+                (current - startYear) * timePerYear
+              );
+              
+              current += 1;
+            }
+            
+            return wait(5000);
+          });
       },
       leave: function () {
         
@@ -25635,27 +25663,34 @@ module.exports = function (app, options) {
     {
       name: 'falta-de-visao-integrada',
       enter: function () {
-        var startYear = 2013;
-        var endYear   = 2016;
         
-        var timePerYear = 2000 / (endYear - startYear);
-        
-        var current = startYear;
-        
-        while (current < endYear) {
-          
-          console.log((current - startYear) * timePerYear);
-          
-          setTimeout(
-            app.ui.yearBrush.moveBrush.bind(
-              app.ui.yearBrush,
-              [1936, current]
-            ),
-            (current - startYear) * timePerYear
-          );
-          
-          current += 1;
-        }
+        return wait(5000)
+          .then(function () {
+            
+            var startYear = 2013;
+            var endYear   = 2016;
+            
+            var timePerYear = 2000 / (endYear - startYear);
+            
+            var current = startYear;
+            
+            while (current < endYear) {
+              
+              console.log((current - startYear) * timePerYear);
+              
+              setTimeout(
+                app.ui.yearBrush.moveBrush.bind(
+                  app.ui.yearBrush,
+                  [1936, current]
+                ),
+                (current - startYear) * timePerYear
+              );
+              
+              current += 1;
+            }
+            
+            return wait(1000);
+          })
       },
       leave: function () {
         
@@ -25665,19 +25700,10 @@ module.exports = function (app, options) {
       name: 'surge-o-comoanda',
       enter: function () {
         
-        return wait(0)
+        return wait(4000)
           .then(function () {
+            elements.menu.classList.toggle('is-visible', true);
             
-            app.ui.questions.openQuestion(
-              'Qual a abordagem da sua organização sobre o tema da mobilidade a pé?');
-            
-            return wait(2000);
-          })
-          .then(function () {
-            
-            app.ui.questions.openQuestion(
-              'Qual é a área de atuação da sua organização?');
-              
             return wait(500);
           });
       },
@@ -25686,29 +25712,20 @@ module.exports = function (app, options) {
       }
     },
     {
-      name: 'o-que-e-o-comoanda',
+      name: 'quem-sao-e-como-atuam',
       enter: function () {
-        return wait(0)
+        
+        elements.textContainer.classList.toggle('opaque', true);
+        
+        return wait(7000)
           .then(function () {
-            app.services.questionLinkFilter.set(
-              'Qual é a área de atuação da sua organização?',
-              [
-                'Qual é a área de atuação da sua organização?--Arquitetura e urbanismo',
-                'Qual é a área de atuação da sua organização?--Comunicação',
-                'Qual é a área de atuação da sua organização?--Políticas públicas'
-              ]
-            );
-            
-            return wait(2000);
+            app.ui.entities.showText();
+            return wait(3000);
           })
           .then(function () {
-            app.services.questionLinkFilter.set(
-              'Qual a abordagem da sua organização sobre o tema da mobilidade a pé?',
-              [
-                'Qual a abordagem da sua organização sobre o tema da mobilidade a pé?--Educação e Cultura [disseminação, capacitação, intervenção artística, sensibilização]',
-                'Qual a abordagem da sua organização sobre o tema da mobilidade a pé?--Legislação e Políticas Públicas [produção e revisão de leis, planos e programas relacionados à mobilidade a pé]'
-              ]
-            );
+            app.ui.questions.showText();
+            
+            return wait(1000);
           })
           
       },
@@ -25717,40 +25734,71 @@ module.exports = function (app, options) {
       },
     },
     {
-      name: '130',
+      name: 'x-orgs-em-y-estados-do-brasil',
       enter: function () {
         
-        // show stats and map
-        app.ui.stats.show();
-        app.ui.map.show();
+        return wait(3000)
+          .then(function () {
+            app.ui.map.show();
+            
+            return wait(1000);
+          });
+      },
+      leave: function () {},
+    },
+    {
+      name: 'descubra-a-situacao-das-organizacoes',
+      enter: function () {
         
-        // select all entities and use 'byEntity' criteria for link filter
-        app.services.entityLinkFilter.set(
-          '_id',
-          options.entities.map(function (e) {
-            return e._id;
+        return wait(8000)
+          .then(function () {
+            // open criteria
+            app.ui.questions.openQuestion(
+              'Qual a abordagem da sua organização sobre o tema da mobilidade a pé?');
+            
+            return wait(2000)
           })
-        );
+          .then(function () {
+            
+            app.ui.questions.openQuestion(
+              'Qual é a área de atuação da sua organização?');
+            
+            return wait(3000);
+          })
+          .then(function () {
+            // select only 'Cidade Ativa'
+            app.services.entityLinkFilter.set('_id', [
+              'Cidade Ativa'.replace(/\W+/g, '-').toLowerCase(),
+            ]);
+            return wait(2000);
+          })
+          .then(function () {
+            app.services.entityLinkFilter.set('_id', [
+              'Cidade Ativa'.replace(/\W+/g, '-').toLowerCase(),
+              'Corrida Amiga'.replace(/\W+/g, '-').toLowerCase(),
+            ]);
+            
+            return wait(5000);
+          });
       },
       leave: function () {},
     },
     {
       name: '',
-      enter: function () {},
+      enter: function () {
+        
+        return wait(2000)
+          .then(function () {
+            app.ui.stats.show();
+            
+            return wait(3000);
+          });
+        
+      },
       leave: function () {},
     },
     {
-      name: '',
-      enter: function () {},
-      leave: function () {},
-    },
-    {
-      name: '',
-      enter: function () {},
-      leave: function () {},
-    },
-    {
-      name: '',
+      name: 'end',
       enter: function () {},
       leave: function () {},
     },
@@ -26203,11 +26251,11 @@ module.exports = function (app, options) {
     filter: mapFilter,
     
     show: function () {
-      mapContainer.style('opacity', 1);
+      mapContainer.classed('hidden', false);
     },
     
     hide: function () {
-      mapContainer.style('opacity', 0);
+      mapContainer.classed('hidden', true);
     },
   }
 };
@@ -26710,7 +26758,13 @@ module.exports = function (app, options) {
     updateActiveOptions: uiUpdateActiveOptions,
     filter: app.services.questionLinkFilter,
     layout: uiQuestionLayout,
-    openQuestion: uiOpenQuestion
+    openQuestion: uiOpenQuestion,
+    hideText: function () {
+      questionArcContainer.classed('hide-text', true);
+    },
+    showText: function () {
+      questionArcContainer.classed('hide-text', false);
+    }
   };
 }
 
@@ -26881,11 +26935,11 @@ module.exports = function (app, options) {
     },
     
     hide: function () {
-      statsEl.setAttribute('hidden', 'true');
+      statsEl.classList.toggle('hidden', true);
     },
     
     show: function () {
-      statsEl.removeAttribute('hidden');
+      statsEl.classList.toggle('hidden', false);
     }
   }
 };

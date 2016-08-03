@@ -14,30 +14,41 @@
         <p><?php the_field('downloads_explanation_text', 'options'); ?></p>
       </div>
 
-      <a
-        target="_blank"
-        href="<?php the_field('download_results_xls', 'options'); ?>"
-        class="button button--size-large downloads-action-button">
-        planilha com resultado integral da pesquisa .xls
-      </a>
-      <a
-        target="_blank"
-        href="<?php the_field('download_report_url', 'options'); ?>"
-        class="button button--size-large downloads-action-button">
-        relatório completo sobre a pesquisa .pdf
-      </a>
-      <a
+      <?php if (get_field('download_results_xls', 'options')) : ?>
+        <a
+          target="_blank"
+          href="<?php the_field('download_results_xls', 'options'); ?>"
+          class="button button--size-large downloads-action-button">
+          planilha com resultado integral da pesquisa .xls
+        </a>
+      <?php endif; ?>
+
+
+      <?php if (get_field('download_report_url', 'options')) : ?>
+        <a
+          target="_blank"
+          href="<?php the_field('download_report_url', 'options'); ?>"
+          class="button button--size-large downloads-action-button">
+          relatório completo sobre a pesquisa .pdf
+        </a>
+      <?php endif; ?>
+
+<!--       <a
         target="_blank"
         href="http://google.com"
         class="button button--size-large downloads-action-button">
         fichas resumo sobre as organizações pesquisadas
       </a>
-      <a
-        target="_blank"
-        href="<?php the_field('download_legislation_url', 'options'); ?>"
-        class="button button--size-large downloads-action-button">
-        planilha completa de legislação .xls
-      </a>
+ -->  
+      <?php if (get_field('download_legislation_url', 'options')) : ?>
+        <a
+          target="_blank"
+          href="<?php the_field('download_legislation_url', 'options'); ?>"
+          class="button button--size-large downloads-action-button">
+          planilha completa de legislação .xls
+        </a>
+      <?php endif; ?>
+
 
     </article>
   </section>
