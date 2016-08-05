@@ -11,33 +11,38 @@
 </div>
 
 <dialog id="entity-details">
+  <form method="dialog">  
+    <button type="submit">
+      <span class="fa fa-close"></span>
+    </button>
+  </form>
   <header>
     <h1 data-bind="Qual o nome da organização da qual faz parte?"></h1>
   </header>
   <section>
     <header>
-      <h3>Localização da sede:</h3> <span data-bind="Cidade:"></span> | <span data-bind="Estado:"></span>
+      <h3>Localização da sede: <span data-bind="Cidade:"></span></h3>
       <p data-bind="Mobilidade a pé é o foco principal da sua organização?"></p>
 
     </header>
-    <h3>O que move a organização</h3>
+    <h3>O que move a organização:</h3>
     <p data-bind="O que move sua organização?"></p>
     
-    <h3>Aspectos da mobilidade a pé</h3>
+    <h3>Aspectos da mobilidade a pé:</h3>
     <p data-bind="Com quais aspectos da mobilidade a pé sua organização trabalha ou como o tema está inserido na sua atuação?"></p>
   </section>
   
-  <form method="dialog">
-    <footer>
-      <span data-bind="Facebook da organização:"></span>
-      <span data-bind="Site da organização:"></span>
-      
-      <button type="submit">fechar</button>
-    </footer>
-  </form>
+  
+  <footer>
+    <span data-bind="Facebook da organização:"></span>
+    <span data-bind="Site da organização:"></span>
+  </footer>
 </dialog>
 
-<a id="timeline-link" href="/marcos-da-mobilidade">+ linha do tempo</a>
+<a id="timeline-link" href="/marcos-da-mobilidade">
+  <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/svg/plus.svg" alt="ver mais">
+  <div>ver marcos da<br> mobilidade a pé</div>
+</a>
 <a id="know-more-link" href="/pesquisa">saiba mais</a>
 
 <!-- intro -->
@@ -70,48 +75,46 @@
     <div id="intro-text-scroller">
       <!-- 1 -->
       <p>
-        A pé é a forma mais democrática, sustentável, saudável e econômica de se deslocar pela cidade
+        <strong>A pé</strong> é a forma mais democrática, sustentável, saudável e econômica de se deslocar pela cidade.
       </p>
       <!-- 2 -->
       <p>
-        apesar disso, pouco foi feito pela mobilidade a pé nas cidades brasileiras
+        Apesar disso, pouco foi feito pela <strong>mobilidade a pé</strong> nas cidades brasileiras.
       </p>
       <!-- 3 -->
       <p>
-        de maneira <strong>descentralizada</strong>, nascem organizações com o objetivo de colocar a questão em pauta.
+        De maneira <strong>descentralizada</strong>, nascem organizações com o objetivo de colocar a questão em pauta.
       </p>
       <!-- 4 -->
       <p>
-        A partir de <strong>2013</strong>, estimuladas pelo contexto político, social e econômico do país, proliferam inúmeras iniciativas levantando a bandeira da mobilidade a pé.
+        A partir de <strong>2013</strong>, estimuladas pelo contexto político, social e econômico do país, proliferam iniciativas levantando a bandeira da mobilidade a pé,
       </p>
       <!-- 5 -->
       <p>
-        mas a falta de uma visão integrada do cenário ainda é uma barreira para que o movimento ganhe força e espaço
+        mas a falta de uma <strong>visão integrada</strong> do cenário ainda é uma barreira para que o movimento ganhe força e espaço.
       </p>
       <!-- 6 -->
       <p>
-        neste contexto surge a pesquisa <strong>COMO ANDA</strong>
+        Neste contexto surge a pesquisa <strong>COMO ANDA</strong>.
       </p>
       <!-- 7 -->
       <p>
-        que quer compreender o movimento pela <strong>mobilidade a pé</strong> no Brasil: quem são, onde estão e como atuam os agentes que a promovem
+        Nós queremos compreender o movimento pela <strong>mobilidade a pé</strong> no Brasil: quem são, onde estão e como atuam os agentes que a promovem.
       </p>
       <!-- 8 -->
       <p>
-        Até agora, foram mapeadas <span data-bind="totalCount"></span> organizações, localizadas em 12 estados pelo Brasil
+        Até agora, foram mapeadas <strong><span data-bind="totalCount"></span> organizações</strong>, localizadas em <strong><span data-bind="totalStateCount"></span> estados</strong> pelo Brasil.
       </p>
-      <!-- 9 -->
-      <p>
-        descubra a situação das organizações mapeadas, entenda organização, identifique atuações, viabilize parcerias e potencialize o posicionamento da sua suas ações
-      </p>
+      <!-- 9 retirado -->
+      
       <!-- 10 -->
       <p>
-        entenda o posicionamento da sua organização, identifique atuações, viabilize parcerias e potencialize suas ações
+        Descubra a situação das <strong>organizações</strong> mapeadas, identifique atuações, viabilize parcerias e <strong>potencialize</strong> suas ações.
       </p>
       <!-- 11 -->
       <p>
-        navegue e entenda mais sobre o cenário da mobilidade a pé<br>
-        venha caminhar com a gente!
+        Navegue e entenda mais sobre o cenário da mobilidade a pé.<br>
+        Venha caminhar com a gente!
       </p>
     </div>
   </div>

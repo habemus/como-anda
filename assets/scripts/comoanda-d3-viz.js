@@ -24069,7 +24069,7 @@ const questionsParser    = require('./lib/questions-parser');
 
 window.addEventListener('DOMContentLoaded', function () {
   
-  var app     = {};
+  var app     = window.app = {};
   var options = {};
   
   // load data
@@ -24718,6 +24718,15 @@ module.exports = function (app, options) {
       .select('text')
       .style('text-anchor', entityTextAnchor)
       .style('font-size', entityTextFontSize)
+      // .style('font-size', function (d) {
+        
+      //   var v = entityTextFontSize(d);
+        
+      //   console.log('update font size', v);
+        
+      //   return v;
+      // })
+
       .attr('transform', entityTextTransform)
     
     //////////
@@ -25044,14 +25053,33 @@ module.exports = function (app, options) {
       },
       'Com quais aspectos da mobilidade a pé sua organização trabalha ou como o tema está inserido na sua atuação?': function (el, value, key) {
         
+        var bracketsRegExp = /\s*\[.+\]/;
+        
         // remove the question part from the answers
         value = value.map(function (v) {
           var vsplit = v.split('--');
           
-          return vsplit[1];
+          return vsplit[1].replace(bracketsRegExp, '');
         });
         
         el.innerHTML = value.join(', ');
+      },
+      'Mobilidade a pé é o foco principal da sua organização?': function (el, value, key) {
+        
+        var questionRegExp = /^.+--/;
+        
+        // remove the question from the response
+        var response = value = value[0].replace(questionRegExp, '');
+        
+        var texts = {
+          'Não, mas uma das principais iniciativas da organização trata do tema': 'A mobilidade a pé não é o foco principal da organização, mas uma das principais iniciativas da organização trata do tema.',
+          'Sim': 'Mobilidade a pé é o foco principal da organização.',
+          'Não, a mobilidade a pé é apenas um dos temas abordados, mas aparece sempre em um contexto mais amplo': 'A mobilidade a pé não é o foco principal da organização. É apenas um dos temas abordados, mas aparece sempre em um contexto mais amplo.'
+        };
+        
+        var displayValue = texts[response];
+        
+        el.innerHTML = texts[value];
       }
     });
   }
@@ -25081,7 +25109,8 @@ module.exports = function (app, options) {
   const INNER_RADIUS = OUTER_RADIUS - ARC_WIDTH;
   const MAX_TEXT_WIDTH = 100;
   
-  const GRAPH_HALF = OUTER_RADIUS + MAX_TEXT_WIDTH;
+  // const GRAPH_HALF = OUTER_RADIUS + MAX_TEXT_WIDTH;
+  const GRAPH_HALF = window.innerHeight / 2;
   
   const WINDOW_X_CENTER = window.innerWidth / 2;
   const WINDOW_Y_CENTER = window.innerHeight / 2;
@@ -25090,7 +25119,7 @@ module.exports = function (app, options) {
     .attr('id', 'comoanda-viz')
     // .attr('width', GRAPH_HALF * 2)
     .attr('width', window.innerWidth)
-    .attr('height', GRAPH_HALF * 2)
+    .attr('height', window.innerHeight)
 
   /**
    * The container of the graph.
@@ -25352,9 +25381,23 @@ module.exports = function (app, options) {
   // remove the 'is-visible' class from the menu at bootstrap
   elements.menu.classList.toggle('is-visible', false);
   
+  // get a list of different states
+  var states = options.entities.reduce(function (acc, entity) {
+    
+    var state = entity['Estado:'];
+    
+    if (acc.indexOf(state) === -1) {
+      acc.push(state);
+    }
+    
+    return acc;
+    
+  }, []);
+  
   // render bindings
   aux.renderBindings(elements.container, {
-    totalCount: options.entities.length
+    totalCount: options.entities.length,
+    totalStateCount: states.length,
   });
   
   // event listeners
@@ -25584,8 +25627,8 @@ module.exports = function (app, options) {
         var illustrations = elements.imageContainer.querySelectorAll('img');
         
         _each(illustrations, function (illus, index) {
-          var enterIn = index * 300;
-          var leaveIn = (index + 1) * 400;
+          var enterIn = index * 500;
+          var leaveIn = enterIn + 700;
           
           setTimeout(function () {
             illus.classList.add('active');
@@ -25700,7 +25743,7 @@ module.exports = function (app, options) {
       name: 'surge-o-comoanda',
       enter: function () {
         
-        return wait(4000)
+        return wait(3000)
           .then(function () {
             elements.menu.classList.toggle('is-visible', true);
             
@@ -25766,6 +25809,28 @@ module.exports = function (app, options) {
             return wait(3000);
           })
           .then(function () {
+            // deselect one by one all options for
+            // 'Qual a abordagem da sua organização sobre o tema da mobilidade a pé?'
+            
+            var question = 'Qual a abordagem da sua organização sobre o tema da mobilidade a pé?';
+            
+            var current = app.services.questionLinkFilter.get(question);
+            
+            // invert order of removal
+            current = current.concat([]);
+            current.reverse();
+            
+            current.forEach(function (opt, index) {
+              
+              setTimeout(function () {
+                app.services.questionLinkFilter.arrayRemove(question, opt);
+              }, index * 500);
+              
+            });
+            
+            return wait(current.length * 500 + 2000);
+          })
+          .then(function () {
             // select only 'Cidade Ativa'
             app.services.entityLinkFilter.set('_id', [
               'Cidade Ativa'.replace(/\W+/g, '-').toLowerCase(),
@@ -25779,15 +25844,7 @@ module.exports = function (app, options) {
             ]);
             
             return wait(5000);
-          });
-      },
-      leave: function () {},
-    },
-    {
-      name: '',
-      enter: function () {
-        
-        return wait(2000)
+          })
           .then(function () {
             app.ui.stats.show();
             
@@ -26078,31 +26135,60 @@ module.exports = function (app, options) {
     
     computeLinks: function (entities, questionOptions) {
       
-      // build links
-      var links = entities.reduce(function (acc, entity) {
-        
+      
+      var links = [];
+      
+      entities.forEach(function (entity) {
         // get the entity links among
         // the questionOptions
-        entityActiveOptions = questionOptions.filter(function (option) {
+        questionOptions.forEach(function (option) {
           var entityValue = entity[option.question._id];
           
           if (!entityValue) {
-            return false;
+            return;
           }
           
-          return entityValue.some(function (v) {
+          var shouldDrawLink = entityValue.some(function (v) {
             return v === option._id;
           });
-        });
-        
-        return acc.concat(entityActiveOptions.map(function (option) {
-          return {
-            from: Object.assign({ type: 'question-option' }, option),
-            to: Object.assign({ type: 'entity' }, entity),
+          
+          if (shouldDrawLink) {
+            links.push({
+              from: Object.assign({ type: 'question-option' }, option),
+              to: Object.assign({ type: 'entity' }, entity),
+            });
+          } else {
+            return;
           }
-        }));
+          
+        });
+      })
+      
+      // // build links
+      // var links = entities.reduce(function (acc, entity) {
         
-      }, []);
+      //   // get the entity links among
+      //   // the questionOptions
+      //   entityActiveOptions = questionOptions.filter(function (option) {
+      //     var entityValue = entity[option.question._id];
+          
+      //     if (!entityValue) {
+      //       return false;
+      //     }
+          
+      //     return entityValue.some(function (v) {
+      //       return v === option._id;
+      //     });
+      //   });
+        
+      //   return acc.concat(entityActiveOptions.map(function (option) {
+      //     return {
+      //       from: Object.assign({ type: 'question-option' }, option),
+      //       to: Object.assign({ type: 'entity' }, entity),
+      //     }
+      //   }));
+        
+      // }, []);
       
       // year links
       entities.forEach(function (entity) {
@@ -26237,8 +26323,8 @@ module.exports = function (app, options) {
     var rect = mapContainerEl.getBoundingClientRect();
     
     mapContainer.attr('transform', function () {
-      var targetTop  = (2 * options.centerY) - rect.height - 50;
-      var targetLeft = 50;
+      var targetTop  = (2 * options.centerY) - rect.height - 10;
+      var targetLeft = 20;
       
       var dTop  = targetTop - rect.top;
       var dLeft = targetLeft - rect.left;
@@ -26474,30 +26560,6 @@ module.exports = function (app, options) {
         if (d.type === 'closed-question') {
           
           uiOpenQuestion(d._id);
-          
-          // // toggle the clicked question's `isOpen` value
-          // var clickedQuestion = questionsSourceData.find(function (q) {
-          //   return q._id === d._id;
-          // });
-          
-          // // IMPORTANT: first update layout
-          // // and only after set the filter,
-          // // so that options are found by link functions
-          // clickedQuestion.isOpen = true;
-          // uiUpdate(questionsSourceData);
-          
-          // setTimeout(function () {
-          //   // set filter to empty array
-          //   app.services.questionLinkFilter.set(
-          //     d._id,
-          //     clickedQuestion.options.map(function (opt) {
-          //       return opt._id;
-          //     })
-          //   );
-            
-          //   // make links update their positions
-          //   app.ui.persistentLinks.updateLinkPositions();
-          // }, 0);
           
         } else if (d.type === 'open-question') {
           // toggle the clicked question's `isOpen` value
@@ -26972,7 +27034,7 @@ module.exports = function (app, options) {
   /**
    * Brush width varies according to the centerX
    */
-  const BRUSH_WIDTH  = options.centerX * 0.2;
+  const BRUSH_WIDTH  = options.centerX * 0.5;
   const BRUSH_HEIGHT = 2;
   
   const brushExtent = d3.extent(options.entities, function (d) {
@@ -26991,7 +27053,8 @@ module.exports = function (app, options) {
     .attr('transform', function () {
       
       var brushLeft = options.centerX - (BRUSH_WIDTH / 2);
-      var brushTop  = options.centerY + options.outerRadius + 50;
+      // var brushTop  = options.centerY + options.outerRadius + 72;
+      var brushTop = options.centerY * 2 - 30; 
       
       return 'translate(' + brushLeft + ',' + brushTop + ')';
     });
@@ -27017,22 +27080,21 @@ module.exports = function (app, options) {
     .attr('font-size', 12)
     .text(BRUSH_MAXIMUM);
   
-  // brush start label
+  // relative brush start label
   var brushStartLabel = brushG.append('text')
     .attr('id', 'brush-start-label')
     .attr('class', 'brush-label')
-    .attr('dy', -10)
-    .attr('text-anchor', 'end')
+    .attr('dy', 24)
+    .attr('text-anchor', 'middle')
     .attr('font-size', 10);
   
-  // brush end label
+  // relative brush end label
   var brushEndLabel = brushG.append('text')
     .attr('id', 'brush-end-label')
     .attr('class', 'brush-label')
-    .attr('dy', -10)
-    .attr('text-anchor', 'start')
+    .attr('dy', 24)
+    .attr('text-anchor', 'middle')
     .attr('font-size', 10);
-  
   
   /**
    * All years that are selectable.
@@ -27055,7 +27117,7 @@ module.exports = function (app, options) {
    */
   var yearBrush = d3.brushX()
     .extent([[0, 0], [BRUSH_WIDTH, BRUSH_HEIGHT]])
-    .handleSize(10)
+    .handleSize(15)
     .on('brush', function (e) {
       var brushSelection = d3.brushSelection(this);
       
@@ -27222,6 +27284,44 @@ module.exports = function (app, options) {
       .attr('class', 'year-arc')
       .attr('id', function (d) {
         return 'year-' + d.data.year;
+      })
+      .on('click', function (d) {
+        
+        var year = d.data.year;
+        
+        var filteredEntities = app.services.entityDataStore.applyFilter({
+          'Quando sua organização surgiu?': [year],
+        });
+        var current = app.services.entityLinkFilter.get('_id') || [];
+        
+        if (!d.active) {
+          /**
+           * Flag indicating the year toggle status is active
+           */
+          d.active = true;
+          
+          app.services.entityLinkFilter.set(
+            '_id',
+            current.concat(filteredEntities.map(function (entity) {
+              return entity._id;
+            }))
+          );
+        } else {
+          
+          d.active = false;
+          
+          app.services.entityLinkFilter.set(
+            '_id',
+            current.filter(function (_id) {
+              // pass only entities not in the filteredEntities array
+              var shouldExit = filteredEntities.some(function (e) {
+                return e._id === _id;
+              });
+              
+              return !shouldExit;
+            })
+          );
+        }
       });
       
     yearEnter
