@@ -20,7 +20,7 @@
       <?php if ( have_rows('organizations', 'options') ) : ?>
 
         <section class='about-members'>
-          <h1 class='about-members-title'>que faz</h1>
+          <h1 class='about-members-title'>quem faz</h1>
           <ul>
 
             <?php while ( have_rows('organizations', 'options') ) : the_row(); ?>
@@ -80,16 +80,8 @@
             <?php while ( have_rows('consultants', 'options') ) : the_row(); ?>
               <?php $logo = get_sub_field('logo'); ?>
               <li class="about-members-item">
-                <?php if ($logo) : ?>
-                  <a class='about-members-item-logo' target='_blank' href='<?php the_sub_field('url', false, false); ?>'>
-                    <img 
-                      src='<?php echo $logo['sizes']['medium']; ?>'
-                      title='<?php the_sub_field('name', false, false); ?>'
-                      alt='<?php the_sub_field('name', false, false); ?>' />
-                  </a>
-                <?php endif; ?>
+                <strong><?php the_sub_field('name', false, false); ?></strong>
                 <p class='about-members-item-description'><?php the_sub_field('description', false, false); ?></p>
-                <p class='about-members-item-link'><a target='_blank' href='<?php the_sub_field('url', false, false); ?>'><?php the_sub_field('url', false, false); ?></a></p>
               </li>
             <?php endwhile; ?>
 
