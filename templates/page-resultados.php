@@ -2,6 +2,8 @@
 
 <?php get_template_part('_parts/landing/menu'); ?>
 
+<div id="viz-tooltip"></div>
+
 <div id="stats">
   <h1><span data-bind="percentage"></span>%</h1>
   <h3>
@@ -70,7 +72,7 @@
   <img class="intro-control previous" src="<?php echo get_bloginfo('template_directory'); ?>/assets/svg/arrow-right.svg" alt="previous">
   <img class="intro-control next" src="<?php echo get_bloginfo('template_directory'); ?>/assets/svg/arrow-right.svg" alt="next">
   <a href="#" class="intro-skip">pular intro</a>
-  
+      
   <div id="intro-text-container">
     <div id="intro-text-scroller">
       <!-- 1 -->

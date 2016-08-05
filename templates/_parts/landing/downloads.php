@@ -33,13 +33,13 @@
         </a>
       <?php endif; ?>
 
-<!--       <a
+      <a
         target="_blank"
-        href="http://google.com"
+        href="../organizacoes"
         class="button button--size-large downloads-action-button">
         fichas resumo sobre as organizações pesquisadas
       </a>
- -->  
+  
       <?php if (get_field('download_legislation_url', 'options')) : ?>
         <a
           target="_blank"

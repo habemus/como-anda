@@ -23908,10 +23908,18 @@ module.exports=[
             "Coletivo",
             "Empresa",
             "Associação",
-            "Em processo de formalização",
+            {
+              "label": "Em processo",
+              "option": "Em processo de formalização",
+              "tooltip": "Em processo de formalização"
+            },
             "Fundação",
             "Não formalizado",
-            "Organização da Sociedade Civil de Interesse Público (OSCIP)",
+            {
+              "label": "OSCIP",
+              "option": "Organização da Sociedade Civil de Interesse Público (OSCIP)",
+              "tooltip": "Organização da Sociedade Civil de Interesse Público"
+            },
             "Instituto",
             "Comissão",
             "Outros",
@@ -23924,27 +23932,86 @@ module.exports=[
         "label": "Foco",
         "question": "Mobilidade a pé é o foco principal da sua organização?",
         "options": [
-            "Não, mas uma das principais iniciativas da organização trata do tema",
-            "Sim",
-            "Não, a mobilidade a pé é apenas um dos temas abordados, mas aparece sempre em um contexto mais amplo"
+          {
+            "label": "Mobilidade a pé principalmente",
+            "option": "Sim",
+            "tooltip": "Mobilidade a pé é o foco principal"
+          },
+          {
+            "label": "Mobilidade a pé dentre outros temas",
+            "option": "Não, mas uma das principais iniciativas da organização trata do tema",
+            "tooltip": "A mobilidade a pé não é o foco principal, mas uma das principais iniciativas da organização trata do tema"
+          },
+          {
+            "label": "Outros temas",
+            "option": "Não, a mobilidade a pé é apenas um dos temas abordados, mas aparece sempre em um contexto mais amplo",
+            "tooltip": "A mobilidade a pé não é o foco principal, mas aparece sempre em um contexto mais amplo"
+          }
         ]
     },
     {
         "label": "Aspectos da mobilidade",
         "question": "Com quais aspectos da mobilidade a pé sua organização trabalha ou como o tema está inserido na sua atuação?",
         "options": [
-            "Infraestrutura local [calçadas, cruzamentos, escadarias, passarelas, passagens subterrâneas, travessias, sinalização, mobiliário urbano]",
-            "Planejamento e desenho urbano [uso e ocupação do solo, infraestrutura de transporte, planejamento na escala do bairro/cidade]",
-            "Saúde e Qualidade de Vida [sedentarismo e doenças relacionadas, como obesidade, diabetes; problemas respiratórios; estresse e depressão]",
-            "Meio ambiente e sustentabilidade [mudanças climáticas, energia, emissão de gases, poluição, economia sustentável]",
-            "Bicicleta [convívio entre mobilidade cicloviária e mobilidade a pé]",
-            "Economia [impactos da mobilidade na economia; geração de emprego; análise de trade-off; fomento ao comércio local]",
-            "Microacessibilidade ao Transporte Público Coletivo [conectividade, intermodalidade]",
-            "Segurança [pessoal, viária e acidentalidade vertical]",
-            "Tecnologia e Inovação [aplicativos, rede e plataforma online, base de dados]",
-            "Arquitetura da edificação [interface entre espaço público e lote privado; projeto na infraestrutura para mobilidade a pé]",
-            "Outros",
-            "Bicicleta [incentivo ao uso da bicicleta em geral]"
+          {
+            "label": "Infraestrutura local",
+            "option": "Infraestrutura local [calçadas, cruzamentos, escadarias, passarelas, passagens subterrâneas, travessias, sinalização, mobiliário urbano]",
+            "tooltip": "Calçadas, cruzamentos, escadarias, passarelas, passagens subterrâneas, travessias, sinalização, mobiliário urbano"
+          },
+          {
+            "label": "Planejamento e desenho urbano",
+            "option": "Planejamento e desenho urbano [uso e ocupação do solo, infraestrutura de transporte, planejamento na escala do bairro/cidade]",
+            "tooltip": "Uso e ocupação do solo, infraestrutura de transporte, planejamento na escala do bairro/cidade"
+          },
+          {
+            "label": "Saúde e Qualidade de Vida",
+            "option": "Saúde e Qualidade de Vida [sedentarismo e doenças relacionadas, como obesidade, diabetes; problemas respiratórios; estresse e depressão]",
+            "tooltip": "Sedentarismo e doenças relacionadas, como obesidade, diabetes; problemas respiratórios; estresse e depressão"
+          },
+          {
+            "label": "Meio ambiente e sustentabilidade",
+            "option": "Meio ambiente e sustentabilidade [mudanças climáticas, energia, emissão de gases, poluição, economia sustentável]",
+            "tooltip": "Mudanças climáticas, energia, emissão de gases, poluição, economia sustentável"
+          },
+          {
+            "label": "Bicicleta (convívio)",
+            "option": "Bicicleta [convívio entre mobilidade cicloviária e mobilidade a pé]",
+            "tooltip": "Convívio entre mobilidade cicloviária e mobilidade a pé"
+          },
+          {
+            "label": "Economia",
+            "option": "Economia [impactos da mobilidade na economia; geração de emprego; análise de trade-off; fomento ao comércio local]",
+            "tooltip": "Impactos da mobilidade na economia; geração de emprego; análise de trade-off; fomento ao comércio local"
+          },
+          {
+            "label": "Microacessibilidade ao Transporte Público Coletivo",
+            "option": "Microacessibilidade ao Transporte Público Coletivo [conectividade, intermodalidade]",
+            "tooltip": "Conectividade, intermodalidade"
+          },
+          {
+            "label": "Segurança",
+            "option": "Segurança [pessoal, viária e acidentalidade vertical]",
+            "tooltip": "Pessoal, viária e acidentalidade vertical"
+          },
+          {
+            "label": "Tecnologia e Inovação",
+            "option": "Tecnologia e Inovação [aplicativos, rede e plataforma online, base de dados]",
+            "tooltip": "Aplicativos, rede e plataforma online, base de dados"
+          },
+          {
+            "label": "Arquitetura da edificação",
+            "option": "Arquitetura da edificação [interface entre espaço público e lote privado; projeto na infraestrutura para mobilidade a pé]",
+            "tooltip": "Interface entre espaço público e lote privado; projeto na infraestrutura para mobilidade a pé"
+          },
+          {
+            "label": "Outros",
+            "option": "Outros"
+          },
+          {
+            "label": "Bicicleta (incentivo)",
+            "option": "Bicicleta [incentivo ao uso da bicicleta em geral]",
+            "tooltip": "Incentivo ao uso da bicicleta em geral"
+          }
         ]
     },
     {
@@ -24037,7 +24104,11 @@ module.exports=[
             "Coleto meus próprios dados em campo",
             "Dados municipais abertos",
             "Pesquisa Origem e Destino",
-            "Mídias Sociais (Facebook, Twitter, Medium)",
+            {
+              "label": "Mídias sociais",
+              "option": "Mídias Sociais (Facebook, Twitter, Medium)",
+              "tooltip": "Facebook, Twitter, Medium"
+            },
             "Jornais, Revistas, Sites, Blogs",
             "Trabalhos acadêmicos",
             "IBGE",
@@ -24052,15 +24123,151 @@ module.exports=[
             "Bairro / comunidade",
             "Cidade",
             "Nacional",
-            "Vários Estados / Regional",
+            {
+              "label": "Regional",
+              "option": "Vários Estados / Regional",
+              "tooltip": "Vários estados"
+            },
             "Estado",
             "Internacional",
-            "Regiões Metropolitanas (várias cidades)"
+            {
+              "label": "Regiões Metropolitanas",
+              "option": "Regiões Metropolitanas (várias cidades)",
+              "tooltip": "Várias cidades"
+            }
         ]
     }
 ]
 
 },{}],12:[function(require,module,exports){
+module.exports={
+    "Cidadeapé - Associação pela Mobilidade a Pé em São Paulo": "https://cidadeape.org/",
+    "WRI Brasil Cidades Sustentáveis": "http://www.wribrasil.org.br/pt",
+    "Mobilize": "http://mobilize.org.br/",
+    "Escola de Ativismo": "https://ativismo.org.br/",
+    "JBMC Arquitetura & Urbanismo": "http://jbmc.com.br/",
+    "Zoom Urbanismo Arquitetura e Design": "http://www.zoom.arq.br/",
+    "GEPAF - EACH - USP": "http://www.each.usp.br/gepaf/",
+    "Núcleo de Pesquisas Epidemiológicas em Nutrição e Saúde, Faculdade de Saúde Pública, Universidade de São Paulo": "http://www.fsp.usp.br/nupens/nupens.htm",
+    "Caminha RIO": "",
+    "Canal MOVA-SE": "http://www.canalmovase.com.br/",
+    "Calçadas que andei": "",
+    "Liberação das calçadas para o trânsito de pedestres": "",
+    "É bom andar a pé": "http://ebomandarape.com.br/",
+    "Rua de Gente": "http://ruadegente.blogspot.com.br/",
+    "MUDA práticas Ltda.": "http://www.mudapraticas.com.br/",
+    "Mapa Daqui": "http://mapadaqui.org/",
+    "Associação dos Ciclistas Urbanos de Belo Horizonte - BH em Ciclo": "http://bhemciclo.org/",
+    "Prefeitura Municipal de Teresina": "http://www.teresina.pi.gov.br/",
+    "SampaPé!": "http://www.sampape.com.br/",
+    "Secretaria de Estado de Mobilidade do Distrito Federal": "http://www.semob.df.gov.br/",
+    "Caminhada Jane Jacobs Floripa": "",
+    "Grupo de Trabalho Mobilidade Urbana da Rede Butantã": "http://redebutanta.blogspot.com.br/",
+    "Genos Consultoria Ambiental ": "http://genos.eco.br/",
+    "Urb-i": "http://www.urb-i.com/",
+    "PASEOS A PIE": "http://www.paseosapie.com/",
+    "A Pezito": "",
+    "Direitos Urbanos Fortaleza": "https://www.facebook.com/DireitosUrbanosFortal/?fref=ts",
+    "Bike Anjo": "http://bikeanjo.org/",
+    "SP Free Walking Tour": "http://www.saopaulofreewalkingtour.com/",
+    "Vá de Bike": "http://vadebike.org",
+    "Bike Anjo - Niterói": "",
+    "IVM - Instituto Cidade em Movimento": "http://www.cidadeemmovimento.org/",
+    "Coordenação de Mobilidade Urbana (CMOB / SETRAN)": "http://www.setran.curitiba.pr.gov.br/",
+    "MOB - Movimente e Ocupe seu Bairro ": "http://www.coletivomob.com/",
+    "DESENHE SUA FAIXA": "",
+    "Rede Vida no Trânsito - Florianópolis-SC": "https://issuu.com/leandropereiragarcia/docs/rede_vida_no_tr__nsito_-_princ__pio",
+    "MObfloripa": "http://www.mobfloripa.com.br/",
+    "Vigliecca & Associados": "http://www.vigliecca.com.br/",
+    "23 SUL ": "http://www.23sul.com.br/",
+    "goma oficina plataforma colaborativa": "http://gomaoficina.com/",
+    "Comissão Técnica de Mobilidade a Pé e Acessibilidade da Associação Nacional de Transportes Públicos": "http://www.antp.org.br/comissoes-tecnicas/comissao-tecnica-mobilidade-a-pe-e-acessibilidade.html",
+    "Pé de Igualdade": "http://www.mobilize.org.br/blogs/pe-de-igualdade/",
+    "Arquipélagos Urbanos": "http://www.arquipelagosurbanos.org/",
+    "Brasília para Pessoas e Jane's Walk Bsb": "http://www.mobilize.org.br/blogs/brasilia-para-pessoas/",
+    "red OCARA": "https://www.redocara.com",
+    "Neourbix": "http://neourbix.com/",
+    "Super-Ando": "",
+    "Prefeitura Municipal de Governador Valadares": "http://www.valadares.mg.gov.br/",
+    "EMDEC": "",
+    "Secretaria Municipal de Ordem Pública": "http://www.emdec.com.br",
+    "Bela Rua": "http://www.belarua.com.br/",
+    "Fórum de Mobilidade Urbana da Região Metropolitana de Goiânia": "http://forumdemobilidadermg.blogspot.com/",
+    "Vila a 30": "",
+    "Giro Inclusivo e Biomob": "",
+    "Diverte Inverte": "",
+    "silviaenina.org": "http://silviaenina.org/",
+    "Caminhadas Urbanas": "http://sao-paulo.estadao.com.br/blogs/caminhadas-urbanas/",
+    "Pedestre-se": "",
+    "Sobreurbana": "http://sobreurbana.com/",
+    "Caminhada das QUEBRADAS": "",
+    "Soluções para Cidades/ ABCP": "http://www.solucoesparacidades.org.br",
+    "Milalá - A Liberdade de Ir e Vir": "http://milala.com.br",
+    "PingPoint": "http://www.pingpoint.com.br",
+    "Parqueleta": "",
+    "Desbravadores de Sampa": "http://www.desbravadoresdesampa.com.br/",
+    "BHTRANS - Empresa de Transportes e Trânsito de belo Horizonte": "http://www.bhtrans.pbh.gov.br/",
+    "Carona a Pé": "http://caronaape.com.br/",
+    "Pedala Manaus": "http://www.pedalamanaus.org/home/",
+    "Instituto de Políticas de Transporte e Desenvolvimento": "http://itdpbrasil.org.br/",
+    "Calçada Livre": "http://www.artitude.com.br/",
+    "The MIX Bazar": "",
+    "CalçadaSP": "https://www.instagram.com/calcadasp/?hl=pt",
+    "Coletivo Rodas de Leitura": "http://www.rodasdeleitura.org.br/",
+    "Jane's Walk": "http://janeswalk.org/brazil/recife/",
+    "TECTRAN - Grupo SYSTRA": "http://website.tectran.com.br/",
+    "Minha Garopaba - Rede Nossas Cidades": "http://www.minhagaropaba.org.br/",
+    "SECRETARIA MUNICIPAL DE TRÂNSITO, TRANSPORTES E MOBILIDADE - SMT": "http://www4.goiania.go.gov.br/portal/site.asp?s=822&m=1536",
+    "Câmara Temática de Mobilidade a Pé do CMTT": "http://www.prefeitura.sp.gov.br/cidade/secretarias/upload/chamadas/composicao_1462908054.pdf",
+    "Vaga Viva - Instituto Energia Humana": "",
+    "Ameciclo - Associação Metropolitana de Ciclistas do Grande Recife": "http://www.ameciclo.org/",
+    "[un]tourism": "http://untourism.net",
+    "Associação de Ciclistas do Alto Iguaçu": "http://www.cicloiguacu.org.br/",
+    "Instituto do Movimento Nacional pelo Direito ao transporte Público de Qualidade para Todos": "http://www.mdt.org.br/",
+    "Secretaria de Municipal de Mobilidade de Salvador": "http://mobilidade.salvador.ba.gov.br/",
+    "Instituto A Cidade Precisa de Você": "http://www.acidadeprecisa.org/",
+    "apē estudos em mobilidade": "http://apemobilidade.org",
+    "Fatec Ipiranga": "",
+    "Coletivo Não Só o Gato": "http://www.naosoogato.com.br",
+    "Instituto Mobilidade Verde": "http://www.mobilidadeverde.org",
+    "Basurama Brasil": "http://brasil.basurama.org",
+    "Ciclomobilidade (Associação de Ciclistas Urbanos de Maceió)": "http://ciclomobilidade.org",
+    "CIDADE AMBIENTE PROJETOS RESPONSÁVEIS LTDA": "http://www.cidadeambiente.com.br",
+    "Projeto A Pé": "http://youtube.com/projetoape",
+    "places for us": "http://www.placesforus.com.br",
+    "Prefeitura Municipal São José dos Campos - ST - Scretaria de Transportes -Programa Calçada Segura": "http://www.sjc.sp.gov.br/calcadasegura",
+    "Via trolebus ": "http://viatrolebus.com.br",
+    "cidades sem fronteiras": "http://bit.ly/marianabarros",
+    "Outra Cidade": "http://outracidade.com.br",
+    "Colab.re": "http://colab.re",
+    "COMISSÃO ESPECÍFICA PERMANENTE DE CALÇADAS - CEPC": "",
+    "Centro de Criação de Imagem Popular": "http://www.cecip.org.br",
+    "Blog Passeios Baratos em SP": "http://passeiosbaratosemsp.com.br/",
+    "Micrópolis": "http://micropolis.com.br",
+    "Scipopulis": "http://www.scipopulis.com",
+    "Freewalk POA": "http://www.freewalkpoa.com",
+    "Greenpeace": "http://www.greenpeace.org.br",
+    "Corrida Amiga": "http://www.corridaamiga.com.br",
+    "Expurgação Filmes": "http://www.expurgacao.art.br",
+    "Qualifica Calçada": "",
+    "Cidade é pra brincar": "",
+    "Instituto de Energia e Meio Ambiente (IEMA)": "http://www.energiaeambiente.org.br",
+    "Vou Di Apé": "",
+    "Polo Planejamento": "http://poloplanejamento.com",
+    "Fundação Instituto de Pesquisa e Planejamento para o Desenvolvimento Sustentável de Joinville - IPPUJ": "http://ippuj.joinville.sc.gov.br",
+    "WalkingTour Brasil": "http://wtbrasil.net",
+    "Beeline": "http://www.beeline-app.com",
+    "Rio Eu Amo Eu Cuido": "http://www.rioeuamoeucuido.com.br",
+    "ASSOCIAÇÃO BRASILEIRA DE PEDESTRES EM SÃO PAULO - PEDESTRE SÃO PAULO": "http://www.pedestresp.org.br",
+    "MUDA práticas ": "http://www.mudapraticas.com.br",
+    "I Love São Paulo tours": "https://www.google.com.br/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjDg9X_0ILOAhXDH5AKHS_4D4gQFghCMAA&url=https%3A%2F%2Fwww.facebook.com%2Filovesaopauloproject%2F&usg=AFQjCNGNKy2OObaAvo0p7MmCkgYO1NHUnQ&sig2=MHx4iYU_BTWX92g46ILqbw&bvm=bv.127521224,d.Y2I",
+    "aromeiazero": "http://aromeiazero.org.br",
+    "Caminhadas Domingueiras": "",
+    "Observatório do Recife": "http://www.observatoriodorecife.org.br/",
+    "Cidade Ativa": "http://www.cidadeativa.org.br"
+}
+
+},{}],13:[function(require,module,exports){
 const d3 = require('d3');
 
 const displayQuestions   = require('./data/display-questions');
@@ -24097,7 +24304,7 @@ window.addEventListener('DOMContentLoaded', function () {
   })
   
 });
-},{"./data/display-questions":11,"./lib/questions-parser":13,"./lib/typeform-data-parser":14,"./services/init":16,"./ui/init":21,"./ui/intro":22,"d3":2}],13:[function(require,module,exports){
+},{"./data/display-questions":11,"./lib/questions-parser":14,"./lib/typeform-data-parser":15,"./services/init":17,"./ui/init":22,"./ui/intro":23,"d3":2}],14:[function(require,module,exports){
 const d3 = require('d3');
 
 /**
@@ -24111,24 +24318,50 @@ module.exports = function (sourceQuestions) {
       
       var questionObj = {
         _label: sourceQuestion.label,
+        _tooltip: sourceQuestion.tooltip,
         _value: sourceQuestion.question,
         _id: sourceQuestion.question,
         _type: 'question',
       };
       
       var options = sourceQuestion.options.map(function (sourceOption) {
-        return {
-          _question: questionObj,
-          _value: sourceOption,
-          _id: sourceQuestion.question + '--' + sourceOption,
-          _type: 'question-option',
+        
+        if (typeof sourceOption === 'string') {
+          // in simple cases, we'll just use strings in the options
+          return {
+            _question: questionObj,
+            _value: sourceOption,
+            _id: sourceQuestion.question + '--' + sourceOption,
+            _type: 'question-option',
+          };
+        } else {
+          return {
+            _question: questionObj,
+            _label: sourceOption.label,
+            _tooltip: sourceOption.tooltip,
+            _value: sourceOption.option,
+            _id: sourceQuestion.question + '--' + sourceOption.option,
+            _type: 'question-option'
+          }
         }
       });
       
       // sort alphabetically
       // and ensure 'Outros is the last one';
       options.sort(function (opt1, opt2) {
-        if (opt1._value < opt2._value) {
+        
+        var v1 = (typeof opt1 === 'string') ? opt1 : opt1._value;
+        var v2 = (typeof opt2 === 'string') ? opt2 : opt2._value;
+        
+        if (v1 === 'Outros') {
+          return 1;
+        }
+        
+        if (v2 === 'Outros') {
+          return -1;
+        }
+        
+        if (v1 < v2) {
           return -1;
         } else {
           return 1;
@@ -24153,7 +24386,7 @@ module.exports = function (sourceQuestions) {
     parse: parse,
   };
 }
-},{"d3":2}],14:[function(require,module,exports){
+},{"d3":2}],15:[function(require,module,exports){
 function _loopObj(obj, fn) {
   for (var prop in obj) {
     if (obj.hasOwnProperty(prop)) {
@@ -24349,7 +24582,7 @@ module.exports = function createTypeformParser(sourceData, displayQuestions) {
 
 };
 
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 function EntityDataStore(entities, filterFns) {
   
   if (!entities) {
@@ -24426,7 +24659,7 @@ EntityDataStore.prototype.applyFilter = function (filter) {
 
 module.exports = EntityDataStore;
 
-},{}],16:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 // third-party
 const d3 = require('d3');
 
@@ -24531,7 +24764,7 @@ module.exports = function (app, options) {
   
 };
 
-},{"../data/br-state-data.json":10,"./entity-data-store":15,"d3":2,"data-obj":33}],17:[function(require,module,exports){
+},{"../data/br-state-data.json":10,"./entity-data-store":16,"d3":2,"data-obj":34}],18:[function(require,module,exports){
 const d3 = require('d3');
 
 exports.arcTextFontSize = function (options) {
@@ -24602,7 +24835,7 @@ exports.renderBindings = function (wrapperElement, data, bindFns) {
   });
 };
 
-},{"d3":2}],18:[function(require,module,exports){
+},{"d3":2}],19:[function(require,module,exports){
 const d3 = require('d3');
 
 const computeEntitiesLayout = require('./layout');
@@ -24947,7 +25180,7 @@ module.exports = function (app, options) {
     }
   };
 };
-},{"../auxiliary":17,"./layout":19,"d3":2}],19:[function(require,module,exports){
+},{"../auxiliary":18,"./layout":20,"d3":2}],20:[function(require,module,exports){
 const d3 = require('d3');
 
 module.exports = function computeEntitiesLayout(entities, options) {
@@ -25011,11 +25244,13 @@ module.exports = function computeEntitiesLayout(entities, options) {
   };
 };
 
-},{"d3":2}],20:[function(require,module,exports){
+},{"d3":2}],21:[function(require,module,exports){
 const d3 = require('d3');
 const dialogPolyfill = require('dialog-polyfill');
 
 const aux = require('../auxiliary');
+
+const orgWebsites = require('../../data/org-websites.json');
 
 module.exports = function (app, options) {
   
@@ -25045,6 +25280,11 @@ module.exports = function (app, options) {
         }
       },
       'Site da organização:': function (el, value, key) {
+        
+        var orgName = entity['Qual o nome da organização da qual faz parte?'];
+      
+        value = value || orgWebsites[orgName];
+        
         if (value) {
           el.innerHTML = '<a target="_blank" href="' + value + '">visitar site</a>';
         } else {
@@ -25100,7 +25340,7 @@ module.exports = function (app, options) {
   }
 };
 
-},{"../auxiliary":17,"d3":2,"dialog-polyfill":3}],21:[function(require,module,exports){
+},{"../../data/org-websites.json":12,"../auxiliary":18,"d3":2,"dialog-polyfill":3}],22:[function(require,module,exports){
 const d3 = require('d3');
 
 module.exports = function (app, options) {
@@ -25344,7 +25584,7 @@ module.exports = function (app, options) {
   
 };
 
-},{"./entities":18,"./entity-details":20,"./links":24,"./map":25,"./questions":26,"./stats":28,"./year-brush":29,"./years":30,"d3":2}],22:[function(require,module,exports){
+},{"./entities":19,"./entity-details":21,"./links":25,"./map":26,"./questions":27,"./stats":29,"./year-brush":30,"./years":31,"d3":2}],23:[function(require,module,exports){
 const Bluebird = require('bluebird');
 
 const aux = require('../auxiliary');
@@ -25377,7 +25617,9 @@ module.exports = function (app, options) {
   elements.next     = document.querySelector('.next');
   elements.skip     = document.querySelector('.intro-skip');
   elements.menu     = document.querySelector('.menu');
-  
+  elements.timelineLink = document.querySelector('#timeline-link');
+  elements.knowMoreLink = document.querySelector('#know-more-link');
+
   // remove the 'is-visible' class from the menu at bootstrap
   elements.menu.classList.toggle('is-visible', false);
   
@@ -25551,6 +25793,8 @@ module.exports = function (app, options) {
     
     app.ui.stats.show();
     app.ui.map.show();
+    elements.timelineLink.classList.remove('hide');
+    elements.knowMoreLink.classList.remove('hide');
     
     app.ui.questions.showText();
     app.ui.entities.showText();
@@ -25574,7 +25818,7 @@ module.exports = function (app, options) {
     });
   
 };
-},{"../auxiliary":17,"./steps":23,"bluebird":1}],23:[function(require,module,exports){
+},{"../auxiliary":18,"./steps":24,"bluebird":1}],24:[function(require,module,exports){
 const d3       = require('d3');
 const Bluebird = require('bluebird');
 
@@ -25599,6 +25843,8 @@ module.exports = function (app, options) {
         // hide all graph elements
         app.ui.stats.hide();
         app.ui.map.hide();
+        elements.timelineLink.classList.add('hide');
+        elements.knowMoreLink.classList.add('hide');
         
         // hide text
         app.ui.entities.hideText();
@@ -25861,7 +26107,7 @@ module.exports = function (app, options) {
     },
   ]
 }
-},{"bluebird":1,"d3":2}],24:[function(require,module,exports){
+},{"bluebird":1,"d3":2}],25:[function(require,module,exports){
 const d3 = require('d3');
 
 module.exports = function (app, options) {
@@ -26207,7 +26453,7 @@ module.exports = function (app, options) {
     }
   };
 };
-},{"d3":2}],25:[function(require,module,exports){
+},{"d3":2}],26:[function(require,module,exports){
 const d3 = require('d3');
 const topojson = require('topojson');
 const DataObj = require('data-obj');
@@ -26345,7 +26591,7 @@ module.exports = function (app, options) {
     },
   }
 };
-},{"../../data/br-state-data.json":10,"d3":2,"data-obj":33,"topojson":7}],26:[function(require,module,exports){
+},{"../../data/br-state-data.json":10,"d3":2,"data-obj":34,"topojson":7}],27:[function(require,module,exports){
 const d3 = require('d3');
 const DataObj = require('data-obj');
 
@@ -26359,6 +26605,12 @@ module.exports = function (app, options) {
   
   var questionsStartAngle = 0;
   var questionsFullAngleSpan = twoPI * 4/9;
+  
+  /**
+   * Elements
+   */
+  var tooltip = d3.select('#viz-tooltip');
+  var tooltipDOMElement = document.querySelector('#viz-tooltip');
   
   /**
   * Generators
@@ -26596,6 +26848,35 @@ module.exports = function (app, options) {
             uiUpdate(questionsSourceData);
           }
         }
+      })
+      .on('mousemove', function (d) {
+        switch (d.type) {
+          case 'closed-question':
+            
+            break;
+          case 'open-question':
+            
+            break;
+          case 'question-option':
+            
+            if (d._tooltip) {
+              
+              tooltip
+                .classed('active', true)
+                .html(d._tooltip);
+                
+              var rect = tooltipDOMElement.getBoundingClientRect();
+              
+              tooltip
+                .style('top', (d3.event.clientY - rect.height) + 'px')
+                .style('left', (d3.event.clientX) + 'px');
+            }
+            break;
+        }
+      })
+      .on('mouseout', function (d) {
+        tooltip
+          .classed('active', false);
       });
     
     // ENTER path
@@ -26830,7 +27111,7 @@ module.exports = function (app, options) {
   };
 }
 
-},{"../auxiliary":17,"./layout":27,"d3":2,"data-obj":33}],27:[function(require,module,exports){
+},{"../auxiliary":18,"./layout":28,"d3":2,"data-obj":34}],28:[function(require,module,exports){
 module.exports = function computeQuestionsLayout(questionsData, options) {
   /**
    * Start and End angles for the
@@ -26964,7 +27245,7 @@ module.exports = function computeQuestionsLayout(questionsData, options) {
   return layoutItems;
 };
 
-},{}],28:[function(require,module,exports){
+},{}],29:[function(require,module,exports){
 const d3 = require('d3');
 const dialogPolyfill = require('dialog-polyfill');
 
@@ -27006,7 +27287,7 @@ module.exports = function (app, options) {
   }
 };
 
-},{"../auxiliary":17,"d3":2,"dialog-polyfill":3}],29:[function(require,module,exports){
+},{"../auxiliary":18,"d3":2,"dialog-polyfill":3}],30:[function(require,module,exports){
 const d3 = require('d3');
 
 module.exports = function (app, options) {
@@ -27204,7 +27485,7 @@ module.exports = function (app, options) {
   }
 };
 
-},{"d3":2}],30:[function(require,module,exports){
+},{"d3":2}],31:[function(require,module,exports){
 const d3 = require('d3');
 
 const computeYearsLayout = require('./layout'); 
@@ -27389,7 +27670,7 @@ module.exports = function (app, options) {
     }
   }
 };
-},{"../auxiliary":17,"./layout":31,"d3":2}],31:[function(require,module,exports){
+},{"../auxiliary":18,"./layout":32,"d3":2}],32:[function(require,module,exports){
 const d3 = require('d3');
 
 module.exports = function computeYearsLayout(years, options) {
@@ -27421,7 +27702,7 @@ module.exports = function computeYearsLayout(years, options) {
   return yearPieGen(years);
 };
 
-},{"d3":2}],32:[function(require,module,exports){
+},{"d3":2}],33:[function(require,module,exports){
 /**
  * Ensures the key refers to an array.
  * If the key is undefined, creates it as an empty array
@@ -27566,7 +27847,7 @@ exports.arrayRemove = function (key, value, findFn) {
   }
 };
 
-},{}],33:[function(require,module,exports){
+},{}],34:[function(require,module,exports){
 // native dependencies
 const util         = require('util');
 const EventEmitter = require('events');
@@ -27668,4 +27949,4 @@ Object.assign(DataModel.prototype, require('./array-methods'));
 
 module.exports = DataModel;
 
-},{"./array-methods":32,"events":4,"util":9}]},{},[12]);
+},{"./array-methods":33,"events":4,"util":9}]},{},[13]);
