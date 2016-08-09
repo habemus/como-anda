@@ -36,7 +36,7 @@
               Explore os resultados
             </a>
           </li>
-          <li class="menu-nav-item menu-nav-item--highlight">
+          <li class="menu-nav-item">
             <a href='<?php echo esc_url(home_url( '/pesquisa/#participe' )) ?>'>
               Participe da Pesquisa
             </a>

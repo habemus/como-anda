@@ -191,8 +191,12 @@
     $typeformQueryString = '&completed=true&order_by[]=date_submit,desc';
     $url = 'https://api.typeform.com/v1/form/' . $typeformFormId . '?key=' . $typeformAPIKey . $typeformQueryString;
 
-    echo file_get_contents($url);
+    // echo file_get_contents($url);
 
+    $typeform_data_filepath = get_template_directory().'/assets/data/typeform-results.json';
+
+    echo file_get_contents($typeform_data_filepath);
+    
     die;
 
   }

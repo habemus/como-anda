@@ -50,7 +50,12 @@
   );
 
 
-  $raw_data = file_get_contents($url);
+  $typeform_data_filepath = get_template_directory().'/assets/data/typeform-results.json';
+
+  $raw_data = file_get_contents($typeform_data_filepath);
+  
+
+  // $raw_data = file_get_contents($url);
 
   $parsed_data = json_decode($raw_data);
   $orgs = $parsed_data->responses;
@@ -82,10 +87,10 @@
       echo   '' . join(', ', $aspectos);
 
       if ($org->answers->website_24252115) {
-        echo '<a class="org-facebook" href="' . $org->answers->website_24252115 . '">facebook da organização</a>';
+        echo '<a target="_blank" class="org-facebook" href="' . $org->answers->website_24252115 . '">facebook da organização</a>';
       }
       if ($org->answers->website_24252104) {
-        echo '<a class="org-website" href="' . $org->answers->website_24252104 . '">website da organização</a>';
+        echo '<a target="_blank" class="org-website" href="' . $org->answers->website_24252104 . '">website da organização</a>';
       }
 
       echo '</li>';
