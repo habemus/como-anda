@@ -43,22 +43,22 @@
           </li>
           <li class="menu-nav-item">
             <a target="_blank" href='<?php echo esc_url(home_url( '/marcos-da-mobilidade/' )) ?>'>
-              Caminhe na linha do tempo
+              Linha do tempo
             </a>
           </li>
           <li class="menu-nav-item">
             <a href='<?php echo esc_url(home_url( '/pesquisa/#legis' )) ?>'>
-              COMO ANDA a legislação
+              Legislação
             </a>
           </li>
           <li class="menu-nav-item">
             <a href='<?php echo esc_url(home_url( '/pesquisa/#downloads' )) ?>'>
-              Downloads COMO ANDA
+              Downloads
             </a>
           </li>
           <li class="menu-nav-item">
             <a href='<?php echo esc_url(home_url( '/pesquisa/#artigos-e-noticias' )) ?>'>
-              Mural COMO ANDA
+              Mural
             </a>
           </li>
           <li class="menu-nav-item">
@@ -68,7 +68,7 @@
           </li>
           <li class="menu-nav-item">
             <a href='<?php echo esc_url(home_url( '/pesquisa/#quem-somos' )) ?>'>
-              Quem Somos
+              Quem somos
             </a>
           </li>
         </ul>
