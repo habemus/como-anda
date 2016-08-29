@@ -101,8 +101,16 @@
       echo   '<h3>Aspectos da mobilidade a pé</h3>';
       echo   '' . join(', ', $aspectos);
 
-      $org_website = $org->answers->website_24252104 || $org_fb_website_data->{$org_name}->website;
-      $org_fb      = $org->answers->website_24252115 || $org_fb_website_data->{$org_name}->fb;
+      $org_website = $org->answers->website_24252104;
+
+      if (!$org_website) {
+        $org_website = $org_fb_website_data->{$org_name}->website;
+      }
+
+      $org_fb = $org->answers->website_24252115;
+      if (!$org_fb) {
+        $org_fb = $org_fb_website_data->{$org_name}->fb;
+      }
 
       // if ($org->answers->website_24252115) {
       //   echo '<a target="_blank" class="org-facebook" href="' . $org->answers->website_24252115 . '">facebook da organização</a>';
