@@ -50,15 +50,27 @@
   );
 
 
-  $typeform_data_filepath = get_template_directory().'/assets/data/typeform-results.json';
 
-  $raw_data = file_get_contents($typeform_data_filepath);
-  
+  $org_fb_website_data_filepath = get_template_directory().'/assets/data/org-fb-websites.json';
+  $org_fb_website_data = file_get_contents($org_fb_website_data_filepath);
+  $org_fb_website_data = json_decode($org_fb_website_data);
 
   // $raw_data = file_get_contents($url);
 
+  $typeform_data_filepath = get_template_directory().'/assets/data/typeform-results.json';
+  $raw_data = file_get_contents($typeform_data_filepath);
   $parsed_data = json_decode($raw_data);
   $orgs = $parsed_data->responses;
+
+  // sort orgs alphabetically by name
+  function sort_orgs_by_org_name($org_a, $org_b) {
+
+    $org_name_a = $org_a->answers->textfield_19881669;
+    $org_name_b = $org_b->answers->textfield_19881669;
+
+    return strcasecmp($org_name_a, $org_name_b);
+  }
+  usort($orgs, 'sort_orgs_by_org_name');
 
   ?>
 
@@ -77,8 +89,11 @@
         }
       }
 
+      // save the organization's name in a separate variable
+      $org_name = $org->answers->textfield_19881669;
+
       echo '<li>';
-      echo   '<h1>' . $org->answers->textfield_19881669 . '</h1>';
+      echo   '<h1>' . $org_name . '</h1>';
       echo   '<h3>localização da sede: ' . $org->answers->dropdown_20020978 . '</h3>';
       echo   '' . $mobilidade_a_pe_texts[$org->answers->list_19881916_choice];
       echo   '<h3>O que move a organização</h3>';
@@ -86,11 +101,20 @@
       echo   '<h3>Aspectos da mobilidade a pé</h3>';
       echo   '' . join(', ', $aspectos);
 
-      if ($org->answers->website_24252115) {
-        echo '<a target="_blank" class="org-facebook" href="' . $org->answers->website_24252115 . '">facebook da organização</a>';
+      $org_website = $org->answers->website_24252104 || $org_fb_website_data->{$org_name}->website;
+      $org_fb      = $org->answers->website_24252115 || $org_fb_website_data->{$org_name}->fb;
+
+      // if ($org->answers->website_24252115) {
+      //   echo '<a target="_blank" class="org-facebook" href="' . $org->answers->website_24252115 . '">facebook da organização</a>';
+      // } else if ($org_fb_website_data)
+      // if ($org->answers->website_24252104) {
+      //   echo '<a target="_blank" class="org-website" href="' . $org->answers->website_24252104 . '">website da organização</a>';
+      // }
+      if ($org_fb) {
+        echo '<a target="_blank" class="org-facebook" href="' . $org_fb . '">facebook da organização</a>';
       }
-      if ($org->answers->website_24252104) {
-        echo '<a target="_blank" class="org-website" href="' . $org->answers->website_24252104 . '">website da organização</a>';
+      if ($org_website) {
+        echo '<a target="_blank" class="org-website" href="' . $org_website . '">website da organização</a>';
       }
 
       echo '</li>';

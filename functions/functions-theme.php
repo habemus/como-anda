@@ -182,14 +182,49 @@
   }
 
   /**
-   * Ajax requests for retrieving typeform responses.
+   * Function that updates the typeform-file
    */
-  function get_typeform_results() {
+  function update_typeform_results() {
 
     $typeformAPIKey = '1863a4d5bcae1d13d3d7ec231e18e5e12c5e30f0';
     $typeformFormId = 'RoOGoD';
     $typeformQueryString = '&completed=true&order_by[]=date_submit,desc';
-    $url = 'https://api.typeform.com/v1/form/' . $typeformFormId . '?key=' . $typeformAPIKey . $typeformQueryString;
+    $typeform_data_url = 'https://api.typeform.com/v1/form/' . $typeformFormId . '?key=' . $typeformAPIKey . $typeformQueryString;
+
+    $typeform_file = fopen(get_template_directory().'/assets/data/typeform-results.json', "w");
+
+    $typeform_latest_data = file_get_contents($typeform_data_url);
+    fwrite($typeform_file, $typeform_latest_data);
+    fclose($typeform_file);
+
+    echo 'Dados atualizados com sucesso';
+    die;
+  }
+  add_action("wp_ajax_update_typeform_results", "update_typeform_results");
+  add_action("wp_ajax_nopriv_update_typeform_results", "update_typeform_results");
+
+  /**
+   * Adds a button to the admin bar 
+   * that links to the update_typeform_results ajax action
+   */
+  function update_typeform_results_button($wp_admin_bar){
+    $args = array(
+      'id' => 'update_typeform_results_button',
+      'title' => 'Atualizar dados do Typeform',
+      'href' => admin_url( 'admin-ajax.php' ) . '?action=update_typeform_results',
+      'meta' => array(
+        'target' => '_blank',
+      )
+    );
+    $wp_admin_bar->add_node($args);
+  }
+  add_action('admin_bar_menu', 'update_typeform_results_button', 50);
+
+
+  /**
+   * Ajax requests for retrieving typeform responses.
+   */
+  function get_typeform_results() {
 
     // echo file_get_contents($url);
 
