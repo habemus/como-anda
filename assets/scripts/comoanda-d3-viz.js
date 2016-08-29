@@ -24141,130 +24141,506 @@ module.exports=[
 
 },{}],12:[function(require,module,exports){
 module.exports={
-    "Cidadeapé - Associação pela Mobilidade a Pé em São Paulo": "https://cidadeape.org/",
-    "WRI Brasil Cidades Sustentáveis": "http://www.wribrasil.org.br/pt",
-    "Mobilize": "http://mobilize.org.br/",
-    "Escola de Ativismo": "https://ativismo.org.br/",
-    "JBMC Arquitetura & Urbanismo": "http://jbmc.com.br/",
-    "Zoom Urbanismo Arquitetura e Design": "http://www.zoom.arq.br/",
-    "GEPAF - EACH - USP": "http://www.each.usp.br/gepaf/",
-    "Núcleo de Pesquisas Epidemiológicas em Nutrição e Saúde, Faculdade de Saúde Pública, Universidade de São Paulo": "http://www.fsp.usp.br/nupens/nupens.htm",
-    "Caminha RIO": "",
-    "Canal MOVA-SE": "http://www.canalmovase.com.br/",
-    "Calçadas que andei": "",
-    "Liberação das calçadas para o trânsito de pedestres": "",
-    "É bom andar a pé": "http://ebomandarape.com.br/",
-    "Rua de Gente": "http://ruadegente.blogspot.com.br/",
-    "MUDA práticas Ltda.": "http://www.mudapraticas.com.br/",
-    "Mapa Daqui": "http://mapadaqui.org/",
-    "Associação dos Ciclistas Urbanos de Belo Horizonte - BH em Ciclo": "http://bhemciclo.org/",
-    "Prefeitura Municipal de Teresina": "http://www.teresina.pi.gov.br/",
-    "SampaPé!": "http://www.sampape.com.br/",
-    "Secretaria de Estado de Mobilidade do Distrito Federal": "http://www.semob.df.gov.br/",
-    "Caminhada Jane Jacobs Floripa": "",
-    "Grupo de Trabalho Mobilidade Urbana da Rede Butantã": "http://redebutanta.blogspot.com.br/",
-    "Genos Consultoria Ambiental ": "http://genos.eco.br/",
-    "Urb-i": "http://www.urb-i.com/",
-    "PASEOS A PIE": "http://www.paseosapie.com/",
-    "A Pezito": "",
-    "Direitos Urbanos Fortaleza": "https://www.facebook.com/DireitosUrbanosFortal/?fref=ts",
-    "Bike Anjo": "http://bikeanjo.org/",
-    "SP Free Walking Tour": "http://www.saopaulofreewalkingtour.com/",
-    "Vá de Bike": "http://vadebike.org",
-    "Bike Anjo - Niterói": "",
-    "IVM - Instituto Cidade em Movimento": "http://www.cidadeemmovimento.org/",
-    "Coordenação de Mobilidade Urbana (CMOB / SETRAN)": "http://www.setran.curitiba.pr.gov.br/",
-    "MOB - Movimente e Ocupe seu Bairro ": "http://www.coletivomob.com/",
-    "DESENHE SUA FAIXA": "",
-    "Rede Vida no Trânsito - Florianópolis-SC": "https://issuu.com/leandropereiragarcia/docs/rede_vida_no_tr__nsito_-_princ__pio",
-    "MObfloripa": "http://www.mobfloripa.com.br/",
-    "Vigliecca & Associados": "http://www.vigliecca.com.br/",
-    "23 SUL ": "http://www.23sul.com.br/",
-    "goma oficina plataforma colaborativa": "http://gomaoficina.com/",
-    "Comissão Técnica de Mobilidade a Pé e Acessibilidade da Associação Nacional de Transportes Públicos": "http://www.antp.org.br/comissoes-tecnicas/comissao-tecnica-mobilidade-a-pe-e-acessibilidade.html",
-    "Pé de Igualdade": "http://www.mobilize.org.br/blogs/pe-de-igualdade/",
-    "Arquipélagos Urbanos": "http://www.arquipelagosurbanos.org/",
-    "Brasília para Pessoas e Jane's Walk Bsb": "http://www.mobilize.org.br/blogs/brasilia-para-pessoas/",
-    "red OCARA": "https://www.redocara.com",
-    "Neourbix": "http://neourbix.com/",
-    "Super-Ando": "",
-    "Prefeitura Municipal de Governador Valadares": "http://www.valadares.mg.gov.br/",
-    "EMDEC": "",
-    "Secretaria Municipal de Ordem Pública": "http://www.emdec.com.br",
-    "Bela Rua": "http://www.belarua.com.br/",
-    "Fórum de Mobilidade Urbana da Região Metropolitana de Goiânia": "http://forumdemobilidadermg.blogspot.com/",
-    "Vila a 30": "",
-    "Giro Inclusivo e Biomob": "",
-    "Diverte Inverte": "",
-    "silviaenina.org": "http://silviaenina.org/",
-    "Caminhadas Urbanas": "http://sao-paulo.estadao.com.br/blogs/caminhadas-urbanas/",
-    "Pedestre-se": "",
-    "Sobreurbana": "http://sobreurbana.com/",
-    "Caminhada das QUEBRADAS": "",
-    "Soluções para Cidades/ ABCP": "http://www.solucoesparacidades.org.br",
-    "Milalá - A Liberdade de Ir e Vir": "http://milala.com.br",
-    "PingPoint": "http://www.pingpoint.com.br",
-    "Parqueleta": "",
-    "Desbravadores de Sampa": "http://www.desbravadoresdesampa.com.br/",
-    "BHTRANS - Empresa de Transportes e Trânsito de belo Horizonte": "http://www.bhtrans.pbh.gov.br/",
-    "Carona a Pé": "http://caronaape.com.br/",
-    "Pedala Manaus": "http://www.pedalamanaus.org/home/",
-    "Instituto de Políticas de Transporte e Desenvolvimento": "http://itdpbrasil.org.br/",
-    "Calçada Livre": "http://www.artitude.com.br/",
-    "The MIX Bazar": "",
-    "CalçadaSP": "https://www.instagram.com/calcadasp/?hl=pt",
-    "Coletivo Rodas de Leitura": "http://www.rodasdeleitura.org.br/",
-    "Jane's Walk": "http://janeswalk.org/brazil/recife/",
-    "TECTRAN - Grupo SYSTRA": "http://website.tectran.com.br/",
-    "Minha Garopaba - Rede Nossas Cidades": "http://www.minhagaropaba.org.br/",
-    "SECRETARIA MUNICIPAL DE TRÂNSITO, TRANSPORTES E MOBILIDADE - SMT": "http://www4.goiania.go.gov.br/portal/site.asp?s=822&m=1536",
-    "Câmara Temática de Mobilidade a Pé do CMTT": "http://www.prefeitura.sp.gov.br/cidade/secretarias/upload/chamadas/composicao_1462908054.pdf",
-    "Vaga Viva - Instituto Energia Humana": "",
-    "Ameciclo - Associação Metropolitana de Ciclistas do Grande Recife": "http://www.ameciclo.org/",
-    "[un]tourism": "http://untourism.net",
-    "Associação de Ciclistas do Alto Iguaçu": "http://www.cicloiguacu.org.br/",
-    "Instituto do Movimento Nacional pelo Direito ao transporte Público de Qualidade para Todos": "http://www.mdt.org.br/",
-    "Secretaria de Municipal de Mobilidade de Salvador": "http://mobilidade.salvador.ba.gov.br/",
-    "Instituto A Cidade Precisa de Você": "http://www.acidadeprecisa.org/",
-    "apē estudos em mobilidade": "http://apemobilidade.org",
-    "Fatec Ipiranga": "",
-    "Coletivo Não Só o Gato": "http://www.naosoogato.com.br",
-    "Instituto Mobilidade Verde": "http://www.mobilidadeverde.org",
-    "Basurama Brasil": "http://brasil.basurama.org",
-    "Ciclomobilidade (Associação de Ciclistas Urbanos de Maceió)": "http://ciclomobilidade.org",
-    "CIDADE AMBIENTE PROJETOS RESPONSÁVEIS LTDA": "http://www.cidadeambiente.com.br",
-    "Projeto A Pé": "http://youtube.com/projetoape",
-    "places for us": "http://www.placesforus.com.br",
-    "Prefeitura Municipal São José dos Campos - ST - Scretaria de Transportes -Programa Calçada Segura": "http://www.sjc.sp.gov.br/calcadasegura",
-    "Via trolebus ": "http://viatrolebus.com.br",
-    "cidades sem fronteiras": "http://bit.ly/marianabarros",
-    "Outra Cidade": "http://outracidade.com.br",
-    "Colab.re": "http://colab.re",
-    "COMISSÃO ESPECÍFICA PERMANENTE DE CALÇADAS - CEPC": "",
-    "Centro de Criação de Imagem Popular": "http://www.cecip.org.br",
-    "Blog Passeios Baratos em SP": "http://passeiosbaratosemsp.com.br/",
-    "Micrópolis": "http://micropolis.com.br",
-    "Scipopulis": "http://www.scipopulis.com",
-    "Freewalk POA": "http://www.freewalkpoa.com",
-    "Greenpeace": "http://www.greenpeace.org.br",
-    "Corrida Amiga": "http://www.corridaamiga.com.br",
-    "Expurgação Filmes": "http://www.expurgacao.art.br",
-    "Qualifica Calçada": "",
-    "Cidade é pra brincar": "",
-    "Instituto de Energia e Meio Ambiente (IEMA)": "http://www.energiaeambiente.org.br",
-    "Vou Di Apé": "",
-    "Polo Planejamento": "http://poloplanejamento.com",
-    "Fundação Instituto de Pesquisa e Planejamento para o Desenvolvimento Sustentável de Joinville - IPPUJ": "http://ippuj.joinville.sc.gov.br",
-    "WalkingTour Brasil": "http://wtbrasil.net",
-    "Beeline": "http://www.beeline-app.com",
-    "Rio Eu Amo Eu Cuido": "http://www.rioeuamoeucuido.com.br",
-    "ASSOCIAÇÃO BRASILEIRA DE PEDESTRES EM SÃO PAULO - PEDESTRE SÃO PAULO": "http://www.pedestresp.org.br",
-    "MUDA práticas ": "http://www.mudapraticas.com.br",
-    "I Love São Paulo tours": "https://www.google.com.br/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjDg9X_0ILOAhXDH5AKHS_4D4gQFghCMAA&url=https%3A%2F%2Fwww.facebook.com%2Filovesaopauloproject%2F&usg=AFQjCNGNKy2OObaAvo0p7MmCkgYO1NHUnQ&sig2=MHx4iYU_BTWX92g46ILqbw&bvm=bv.127521224,d.Y2I",
-    "aromeiazero": "http://aromeiazero.org.br",
-    "Caminhadas Domingueiras": "",
-    "Observatório do Recife": "http://www.observatoriodorecife.org.br/",
-    "Cidade Ativa": "http://www.cidadeativa.org.br"
+  "Qual o nome da organização da qual faz parte?": {
+    "website": "Site da organização:",
+    "fb": "Facebook da organização:"
+  },
+  "Cidadeapé - Associação pela Mobilidade a Pé em São Paulo": {
+    "website": "https://cidadeape.org/",
+    "fb": "https://www.facebook.com/cidadeapesp/"
+  },
+  "WRI Brasil Cidades Sustentáveis": {
+    "website": "http://www.wribrasil.org.br/pt",
+    "fb": "https://www.facebook.com/wricidades/?fref=ts"
+  },
+  "Mobilize": {
+    "website": "http://mobilize.org.br/",
+    "fb": "https://www.facebook.com/portalmobilize/?fref=ts"
+  },
+  "Escola de Ativismo": {
+    "website": "https://ativismo.org.br/",
+    "fb": "https://www.facebook.com/ativismo/?fref=ts"
+  },
+  "JBMC Arquitetura & Urbanismo": {
+    "website": "http://jbmc.com.br/",
+    "fb": "https://www.facebook.com/jbmc.br/?fref=ts"
+  },
+  "Zoom Urbanismo Arquitetura e Design": {
+    "website": "http://www.zoom.arq.br/",
+    "fb": "https://www.facebook.com/zoomarquitetura/"
+  },
+  "GEPAF - EACH - USP": {
+    "website": "http://www.each.usp.br/gepaf/",
+    "fb": "https://www.facebook.com/gepaf.usp"
+  },
+  "Núcleo de Pesquisas Epidemiológicas em Nutrição e Saúde, Faculdade de Saúde Pública, Universidade de São Paulo": {
+    "website": "http://www.fsp.usp.br/nupens/nupens.htm",
+    "fb": "https://www.facebook.com/nupens.usp.fsp/?fref=ts"
+  },
+  "Caminha RIO": {
+    "website": "",
+    "fb": "https://www.facebook.com/caminhario/?ref=ts&fref=ts"
+  },
+  "Canal MOVA-SE": {
+    "website": "http://www.canalmovase.com.br/",
+    "fb": "https://www.facebook.com/movasecanal"
+  },
+  "Calçadas que andei": {
+    "website": "",
+    "fb": "https://www.facebook.com/calcadasqueandei/?fref=ts"
+  },
+  "Liberação das calçadas para o trânsito de pedestres": {
+    "website": "",
+    "fb": "https://www.facebook.com/Libera%C3%A7%C3%A3o-das-cal%C3%A7adas-para-o-tr%C3%A2nsito-de-pedestres-1693237470918910/?fref=ts"
+  },
+  "É bom andar a pé": {
+    "website": "http://ebomandarape.com.br/",
+    "fb": "https://www.facebook.com/ebomandarape/?fref=ts"
+  },
+  "Rua de Gente": {
+    "website": "http://ruadegente.blogspot.com.br/",
+    "fb": ""
+  },
+  "MUDA práticas Ltda.": {
+    "website": "http://www.mudapraticas.com.br/",
+    "fb": "http://www.facebook.com/mudapraticas"
+  },
+  "Mapa Daqui": {
+    "website": "http://mapadaqui.org/",
+    "fb": "https://www.facebook.com/projetomapadaqui/?fref=ts"
+  },
+  "Associação dos Ciclistas Urbanos de Belo Horizonte - BH em Ciclo": {
+    "website": "http://bhemciclo.org/",
+    "fb": "https://www.facebook.com/bhemciclo/?fref=ts"
+  },
+  "Prefeitura Municipal de Teresina": {
+    "website": "http://www.teresina.pi.gov.br/",
+    "fb": ""
+  },
+  "SampaPé!": {
+    "website": "http://www.sampape.com.br/",
+    "fb": "https://www.facebook.com/sampape.sp/?fref=ts"
+  },
+  "Secretaria de Estado de Mobilidade do Distrito Federal": {
+    "website": "http://www.semob.df.gov.br/",
+    "fb": "https://www.facebook.com/SecretariadeMobilidade/"
+  },
+  "Caminhada Jane Jacobs Floripa": {
+    "website": "",
+    "fb": "https://www.facebook.com/janejacobs.walk.1/"
+  },
+  "Grupo de Trabalho Mobilidade Urbana da Rede Butantã": {
+    "website": "http://redebutanta.blogspot.com.br/",
+    "fb": "https://www.facebook.com/rbutanta/?fref=ts"
+  },
+  "Genos Consultoria Ambiental ": {
+    "website": "http://genos.eco.br/",
+    "fb": "https://www.facebook.com/genos.eco/?fref=ts"
+  },
+  "Urb-i": {
+    "website": "http://www.urb-i.com/",
+    "fb": "https://www.facebook.com/urb.i4/?fref=ts"
+  },
+  "PASEOS A PIE": {
+    "website": "http://www.paseosapie.com/",
+    "fb": "https://www.facebook.com/paseosapie/?fref=ts"
+  },
+  "A Pezito": {
+    "website": "",
+    "fb": "https://www.facebook.com/andarapezito/?fref=ts"
+  },
+  "Direitos Urbanos Fortaleza": {
+    "website": "https://www.facebook.com/DireitosUrbanosFortal/?fref=ts",
+    "fb": ""
+  },
+  "Bike Anjo": {
+    "website": "http://bikeanjo.org/",
+    "fb": "https://www.facebook.com/bikeanjo"
+  },
+  "SP Free Walking Tour": {
+    "website": "http://www.saopaulofreewalkingtour.com/",
+    "fb": "https://www.facebook.com/spfreewalkingtour/?fref=ts"
+  },
+  "Vá de Bike": {
+    "website": "http://vadebike.org",
+    "fb": "https://www.facebook.com/VaDeBike/?fref=ts"
+  },
+  "Bike Anjo - Niterói": {
+    "website": "",
+    "fb": "https://www.facebook.com/bikeanjoniteroi/?fref=ts"
+  },
+  "IVM - Instituto Cidade em Movimento": {
+    "website": "http://www.cidadeemmovimento.org/",
+    "fb": "https://www.facebook.com/institutocidadeemmovimento/?fref=ts"
+  },
+  "Coordenação de Mobilidade Urbana (CMOB / SETRAN)": {
+    "website": "http://www.setran.curitiba.pr.gov.br/",
+    "fb": ""
+  },
+  "MOB - Movimente e Ocupe seu Bairro ": {
+    "website": "http://www.coletivomob.com/",
+    "fb": "https://www.facebook.com/coletivomob/?fref=ts"
+  },
+  "DESENHE SUA FAIXA": {
+    "website": "",
+    "fb": "https://www.facebook.com/desenhesuafaixa/?fref=ts"
+  },
+  "Rede Vida no Trânsito - Florianópolis-SC": {
+    "website": "https://issuu.com/leandropereiragarcia/docs/rede_vida_no_tr__nsito_-_princ__pio",
+    "fb": "https://www.facebook.com/redevidanotransito/?fref=ts"
+  },
+  "MObfloripa": {
+    "website": "http://www.mobfloripa.com.br/",
+    "fb": "https://www.facebook.com/mobfloripa/?fref=ts"
+  },
+  "Vigliecca & Associados": {
+    "website": "http://www.vigliecca.com.br/",
+    "fb": "https://www.facebook.com/viglieccaeassociados/?fref=ts"
+  },
+  "23 SUL ": {
+    "website": "http://www.23sul.com.br/",
+    "fb": "https://www.facebook.com/23-SUL-176479979076458/?fref=ts"
+  },
+  "goma oficina plataforma colaborativa": {
+    "website": "http://gomaoficina.com/",
+    "fb": "https://www.facebook.com/gomaoficina?fref=ts"
+  },
+  "Comissão Técnica de Mobilidade a Pé e Acessibilidade da Associação Nacional de Transportes Públicos": {
+    "website": "http://www.antp.org.br/comissoes-tecnicas/comissao-tecnica-mobilidade-a-pe-e-acessibilidade.html",
+    "fb": "https://www.facebook.com/antpbrasil/?fref=ts"
+  },
+  "Pé de Igualdade": {
+    "website": "http://www.mobilize.org.br/blogs/pe-de-igualdade/",
+    "fb": "https://www.facebook.com/pedeigualdade/?fref=ts"
+  },
+  "Arquipélagos Urbanos": {
+    "website": "http://www.arquipelagosurbanos.org/",
+    "fb": "https://www.facebook.com/arquipelagosurbanos/?fref=ts"
+  },
+  "Brasília para Pessoas e Jane's Walk Bsb": {
+    "website": "http://www.mobilize.org.br/blogs/brasilia-para-pessoas/",
+    "fb": "https://www.facebook.com/Bras%C3%ADlia-para-Pessoas-1684539205151217/?fref=ts"
+  },
+  "red OCARA": {
+    "website": "https://www.redocara.com",
+    "fb": "https://www.facebook.com/ocarared/?fref=ts"
+  },
+  "Neourbix": {
+    "website": "http://neourbix.com/",
+    "fb": "https://www.facebook.com/Neourbix/?fref=ts"
+  },
+  "Super-Ando": {
+    "website": "",
+    "fb": "https://www.facebook.com/superandoape/?fref=ts"
+  },
+  "Prefeitura Municipal de Governador Valadares": {
+    "website": "http://www.valadares.mg.gov.br/",
+    "fb": ""
+  },
+  "EMDEC": {
+    "website": "",
+    "fb": "https://www.facebook.com/pages/Emdec/348634665263815?fref=ts"
+  },
+  "Secretaria Municipal de Ordem Pública": {
+    "website": "http://www.emdec.com.br",
+    "fb": ""
+  },
+  "Bela Rua": {
+    "website": "http://www.belarua.com.br/",
+    "fb": "https://www.facebook.com/BelaRua/?fref=ts"
+  },
+  "Fórum de Mobilidade Urbana da Região Metropolitana de Goiânia": {
+    "website": "http://forumdemobilidadermg.blogspot.com/",
+    "fb": "https://www.facebook.com/F%C3%B3rum-de-Mobilidade-796085180425363/"
+  },
+  "Vila a 30": {
+    "website": "",
+    "fb": "https://www.facebook.com/Vila.a.30/?fref=ts"
+  },
+  "Giro Inclusivo e Biomob": {
+    "website": "",
+    "fb": "https://www.facebook.com/giroinclusivo.biomob?fref=ts"
+  },
+  "Diverte Inverte": {
+    "website": "",
+    "fb": "https://www.facebook.com/diverteinverte/?fref=ts"
+  },
+  "silviaenina.org": {
+    "website": "http://silviaenina.org/",
+    "fb": "https://www.facebook.com/silviaenina/?fref=ts"
+  },
+  "Caminhadas Urbanas": {
+    "website": "http://sao-paulo.estadao.com.br/blogs/caminhadas-urbanas/",
+    "fb": ""
+  },
+  "Pedestre-se": {
+    "website": "",
+    "fb": "https://www.facebook.com/Pedestre-Se-830380870416636/?fref=ts"
+  },
+  "Sobreurbana": {
+    "website": "http://sobreurbana.com/",
+    "fb": "https://www.facebook.com/Sobreurbana/?fref=ts"
+  },
+  "Caminhada das QUEBRADAS": {
+    "website": "",
+    "fb": "https://www.facebook.com/caminhadadasquebradas/?fref=ts"
+  },
+  "Soluções para Cidades/ ABCP": {
+    "website": "http://www.solucoesparacidades.org.br",
+    "fb": "https://www.facebook.com/Institutosolucoes/?fref=ts"
+  },
+  "Milalá - A Liberdade de Ir e Vir": {
+    "website": "http://milala.com.br",
+    "fb": "https://www.facebook.com/milala.com.br/?ref=ts&fref=ts&qsefr=1"
+  },
+  "PingPoint": {
+    "website": "http://www.pingpoint.com.br",
+    "fb": "https://www.facebook.com/pingpointsocial/?fref=ts"
+  },
+  "Parqueleta": {
+    "website": "",
+    "fb": "https://www.facebook.com/parqueleta/?fref=ts"
+  },
+  "Desbravadores de Sampa": {
+    "website": "http://www.desbravadoresdesampa.com.br/",
+    "fb": "https://www.facebook.com/desbravadoresdesp/?fref=ts"
+  },
+  "BHTRANS - Empresa de Transportes e Trânsito de belo Horizonte": {
+    "website": "http://www.bhtrans.pbh.gov.br/",
+    "fb": "https://www.facebook.com/OficialBHTRANS"
+  },
+  "Carona a Pé": {
+    "website": "http://caronaape.com.br/",
+    "fb": "https://www.facebook.com/caronaape/?fref=ts"
+  },
+  "Pedala Manaus": {
+    "website": "http://www.pedalamanaus.org/home/",
+    "fb": "https://www.facebook.com/PedalaMANAUS/?fref=ts"
+  },
+  "Instituto de Políticas de Transporte e Desenvolvimento": {
+    "website": "http://itdpbrasil.org.br/",
+    "fb": "https://www.facebook.com/ITDPBrasil/?fref=ts"
+  },
+  "Calçada Livre": {
+    "website": "http://www.artitude.com.br/",
+    "fb": "https://www.facebook.com/calcadalivre/?fref=ts"
+  },
+  "The MIX Bazar": {
+    "website": "",
+    "fb": "https://www.facebook.com/themixbazar/?fref=ts"
+  },
+  "CalçadaSP": {
+    "website": "https://www.instagram.com/calcadasp/?hl=pt",
+    "fb": ""
+  },
+  "Coletivo Rodas de Leitura": {
+    "website": "http://www.rodasdeleitura.org.br/",
+    "fb": "https://www.facebook.com/rodasdleitura"
+  },
+  "Jane's Walk": {
+    "website": "http://janeswalk.org/brazil/recife/",
+    "fb": "https://www.facebook.com/janeswalkrecife/"
+  },
+  "TECTRAN - Grupo SYSTRA": {
+    "website": "http://website.tectran.com.br/",
+    "fb": ""
+  },
+  "Minha Garopaba - Rede Nossas Cidades": {
+    "website": "http://www.minhagaropaba.org.br/",
+    "fb": "https://www.facebook.com/MinhaGaropaba/?fref=ts"
+  },
+  "SECRETARIA MUNICIPAL DE TRÂNSITO, TRANSPORTES E MOBILIDADE - SMT": {
+    "website": "http://www4.goiania.go.gov.br/portal/site.asp?s=822&m=1536",
+    "fb": ""
+  },
+  "Câmara Temática de Mobilidade a Pé do CMTT": {
+    "website": "http://www.prefeitura.sp.gov.br/cidade/secretarias/upload/chamadas/composicao_1462908054.pdf",
+    "fb": "https://www.facebook.com/cmttsp/?fref=ts"
+  },
+  "Vaga Viva - Instituto Energia Humana": {
+    "website": "",
+    "fb": "https://www.facebook.com/vagaviva/?fref=ts"
+  },
+  "Ameciclo - Associação Metropolitana de Ciclistas do Grande Recife": {
+    "website": "http://www.ameciclo.org/",
+    "fb": "https://www.facebook.com/AMEciclo/?fref=ts"
+  },
+  "[un]tourism": {
+    "website": "http://untourism.net",
+    "fb": "https://www.facebook.com/untourism/?fref=ts"
+  },
+  "Associação de Ciclistas do Alto Iguaçu": {
+    "website": "http://www.cicloiguacu.org.br/",
+    "fb": "https://www.facebook.com/CiclistasCicloIguacu/"
+  },
+  "Instituto do Movimento Nacional pelo Direito ao transporte Público de Qualidade para Todos": {
+    "website": "http://www.mdt.org.br/",
+    "fb": "https://www.facebook.com/MDTnacional"
+  },
+  "Secretaria de Municipal de Mobilidade de Salvador": {
+    "website": "http://mobilidade.salvador.ba.gov.br/",
+    "fb": "https://www.facebook.com/pages/Prefeitura-de-Salvador/472097156139269"
+  },
+  "Instituto A Cidade Precisa de Você": {
+    "website": "http://www.acidadeprecisa.org/",
+    "fb": "https://www.facebook.com/acidadeprecisadevoce/?fref=ts"
+  },
+  "apē estudos em mobilidade": {
+    "website": "http://apemobilidade.org",
+    "fb": "https://www.facebook.com/apemobilidade/?fref=ts"
+  },
+  "Fatec Ipiranga": {
+    "website": "",
+    "fb": "https://www.facebook.com/Caminhos-do-Ipiranga-244239759251293/?fref=ts"
+  },
+  "Coletivo Não Só o Gato": {
+    "website": "http://www.naosoogato.com.br",
+    "fb": "https://www.facebook.com/NaoSoOGato/?fref=ts"
+  },
+  "Instituto Mobilidade Verde": {
+    "website": "http://www.mobilidadeverde.org",
+    "fb": "https://www.facebook.com/mobilidade.verde.1?fref=ts"
+  },
+  "Basurama Brasil": {
+    "website": "http://brasil.basurama.org",
+    "fb": "http://facebook.com/basuramabrasil"
+  },
+  "Ciclomobilidade (Associação de Ciclistas Urbanos de Maceió)": {
+    "website": "http://ciclomobilidade.org",
+    "fb": "http://facebook.com/ciclomobilidade"
+  },
+  "CIDADE AMBIENTE PROJETOS RESPONSÁVEIS LTDA": {
+    "website": "http://www.cidadeambiente.com.br",
+    "fb": ""
+  },
+  "Projeto A Pé": {
+    "website": "http://youtube.com/projetoape",
+    "fb": "http://facebook.com/oficialape"
+  },
+  "places for us": {
+    "website": "http://www.placesforus.com.br",
+    "fb": "https://www.facebook.com/placesforus/?fref=ts"
+  },
+  "Prefeitura Municipal São José dos Campos - ST - Scretaria de Transportes -Programa Calçada Segura": {
+    "website": "http://www.sjc.sp.gov.br/calcadasegura",
+    "fb": ""
+  },
+  "Via trolebus ": {
+    "website": "http://viatrolebus.com.br",
+    "fb": "http://Facebook.com/viatrolebus"
+  },
+  "cidades sem fronteiras": {
+    "website": "http://bit.ly/marianabarros",
+    "fb": "http://www.facebook.com/cidadessemfronteiras"
+  },
+  "Outra Cidade": {
+    "website": "http://outracidade.com.br",
+    "fb": "http://facebook.com/umaoutracidade"
+  },
+  "Colab.re": {
+    "website": "http://colab.re",
+    "fb": "http://facebook.com/colab.re"
+  },
+  "COMISSÃO ESPECÍFICA PERMANENTE DE CALÇADAS - CEPC": {
+    "website": "",
+    "fb": ""
+  },
+  "Centro de Criação de Imagem Popular": {
+    "website": "http://www.cecip.org.br",
+    "fb": "http://facebook.com/cecip"
+  },
+  "Blog Passeios Baratos em SP": {
+    "website": "http://passeiosbaratosemsp.com.br/",
+    "fb": "http://www.facebook.com/Passeiosbaratosemsp/"
+  },
+  "Micrópolis": {
+    "website": "http://micropolis.com.br",
+    "fb": "http://www.facebook.com/coletivomicropolis/?fref=ts"
+  },
+  "Scipopulis": {
+    "website": "http://www.scipopulis.com",
+    "fb": "https://www.facebook.com/appcoletivo"
+  },
+  "Freewalk POA": {
+    "website": "http://www.freewalkpoa.com",
+    "fb": "http://www.facebook.com/freewalkpoa"
+  },
+  "Greenpeace": {
+    "website": "http://www.greenpeace.org.br",
+    "fb": "http://Facebook.com/greenpeacebrasil"
+  },
+  "Corrida Amiga": {
+    "website": "http://www.corridaamiga.com.br",
+    "fb": "http://facebook.com/Corridaamiga"
+  },
+  "Expurgação Filmes": {
+    "website": "http://www.expurgacao.art.br",
+    "fb": "https://www.facebook.com/expurgacao/"
+  },
+  "Qualifica Calçada": {
+    "website": "",
+    "fb": "https://www.facebook.com/qualificacalcada/"
+  },
+  "Cidade é pra brincar": {
+    "website": "",
+    "fb": "http://www.facebook.com/cidadeeprabrincar/"
+  },
+  "Instituto de Energia e Meio Ambiente (IEMA)": {
+    "website": "http://www.energiaeambiente.org.br",
+    "fb": ""
+  },
+  "Vou Di Apé": {
+    "website": "",
+    "fb": "https://www.facebook.com/Vou-Di-Ap%C3%A9-1635681180093197/"
+  },
+  "Polo Planejamento": {
+    "website": "http://poloplanejamento.com",
+    "fb": ""
+  },
+  "Fundação Instituto de Pesquisa e Planejamento para o Desenvolvimento Sustentável de Joinville - IPPUJ": {
+    "website": "http://ippuj.joinville.sc.gov.br",
+    "fb": ""
+  },
+  "WalkingTour Brasil": {
+    "website": "http://wtbrasil.net",
+    "fb": "http://facebook.walkingtour.brasil"
+  },
+  "Beeline": {
+    "website": "http://www.beeline-app.com",
+    "fb": "http://facebook.com/beelineappbr"
+  },
+  "Rio Eu Amo Eu Cuido": {
+    "website": "http://www.rioeuamoeucuido.com.br",
+    "fb": "http://www.facebook.com/rioeuamoeucuido"
+  },
+  "ASSOCIAÇÃO BRASILEIRA DE PEDESTRES EM SÃO PAULO - PEDESTRE SÃO PAULO": {
+    "website": "http://www.pedestresp.org.br",
+    "fb": "https://www.facebook.com/Abraspe-231380667050287/?fref=ts"
+  },
+  "MUDA práticas ": {
+    "website": "http://www.mudapraticas.com.br",
+    "fb": "https://www.facebook.com/mudapraticas/?fref=ts"
+  },
+  "I Love São Paulo tours": {
+    "website": "https://www.google.com.br/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjDg9X_0ILOAhXDH5AKHS_4D4gQFghCMAA&url=https%3A%2F%2Fwww.facebook.com%2Filovesaopauloproject%2F&usg=AFQjCNGNKy2OObaAvo0p7MmCkgYO1NHUnQ&sig2=MHx4iYU_BTWX92g46ILqbw&bvm=bv.127521224,d.Y2I",
+    "fb": "https://www.google.com.br/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjDg9X_0ILOAhXDH5AKHS_4D4gQFghCMAA&url=https%3A%2F%2Fwww.facebook.com%2Filovesaopauloproject%2F&usg=AFQjCNGNKy2OObaAvo0p7MmCkgYO1NHUnQ&sig2=MHx4iYU_BTWX92g46ILqbw&bvm=bv.127521224,d.Y2I"
+  },
+  "aromeiazero": {
+    "website": "http://aromeiazero.org.br",
+    "fb": "http://fb.me/aromeiazero"
+  },
+  "Caminhadas Domingueiras": {
+    "website": "",
+    "fb": ""
+  },
+  "Observatório do Recife": {
+    "website": "http://www.observatoriodorecife.org.br/",
+    "fb": "http://www.facebook.com/observarecife/?fref=ts"
+  },
+  "Cidade Ativa": {
+    "website": "http://www.cidadeativa.org.br",
+    "fb": "http://www.facebook.com/cidade.ativa.cidade"
+  }
 }
 
 },{}],13:[function(require,module,exports){
@@ -25250,7 +25626,7 @@ const dialogPolyfill = require('dialog-polyfill');
 
 const aux = require('../auxiliary');
 
-const orgWebsites = require('../../data/org-websites.json');
+const orgFbWebsites = require('../../data/org-fb-websites.json');
 
 module.exports = function (app, options) {
   
@@ -25273,6 +25649,11 @@ module.exports = function (app, options) {
   function renderEntityData(entity) {
     aux.renderBindings(dialog, entity, {
       'Facebook da organização:': function (el, value, key) {
+        
+        var orgName = entity['Qual o nome da organização da qual faz parte?'];
+        
+        value = value || orgFbWebsites[orgName].fb;
+
         if (value) {
           el.innerHTML = '<a target="_blank" href="' + value + '">facebook</a>';
         } else {
@@ -25283,7 +25664,7 @@ module.exports = function (app, options) {
         
         var orgName = entity['Qual o nome da organização da qual faz parte?'];
       
-        value = value || orgWebsites[orgName];
+        value = value || orgFbWebsites[orgName].website;
         
         if (value) {
           el.innerHTML = '<a target="_blank" href="' + value + '">visitar site</a>';
@@ -25340,7 +25721,7 @@ module.exports = function (app, options) {
   }
 };
 
-},{"../../data/org-websites.json":12,"../auxiliary":18,"d3":2,"dialog-polyfill":3}],22:[function(require,module,exports){
+},{"../../data/org-fb-websites.json":12,"../auxiliary":18,"d3":2,"dialog-polyfill":3}],22:[function(require,module,exports){
 const d3 = require('d3');
 
 module.exports = function (app, options) {
@@ -25349,17 +25730,22 @@ module.exports = function (app, options) {
   const INNER_RADIUS = OUTER_RADIUS - ARC_WIDTH;
   const MAX_TEXT_WIDTH = 100;
   
-  // const GRAPH_HALF = OUTER_RADIUS + MAX_TEXT_WIDTH;
-  const GRAPH_HALF = window.innerHeight / 2;
   
-  const WINDOW_X_CENTER = window.innerWidth / 2;
-  const WINDOW_Y_CENTER = window.innerHeight / 2;
-
+  const MIN_HEIGHT = 600;
+  const MIN_WIDTH  = 1100;
+  
+  var HEIGHT = window.innerHeight > MIN_HEIGHT ? window.innerHeight : MIN_HEIGHT;
+  var WIDTH = window.innerWidth > MIN_WIDTH ? window.innerWidth : MIN_WIDTH;
+  
+  const GRAPH_HALF = HEIGHT / 2;
+  
+  const WINDOW_Y_CENTER = HEIGHT / 2;
+  const WINDOW_X_CENTER = WIDTH / 2;
+  
   app.svg = d3.select('body').append('svg')
     .attr('id', 'comoanda-viz')
-    // .attr('width', GRAPH_HALF * 2)
-    .attr('width', window.innerWidth)
-    .attr('height', window.innerHeight)
+    .attr('width', WIDTH)
+    .attr('height', HEIGHT);
 
   /**
    * The container of the graph.
