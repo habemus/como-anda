@@ -23783,360 +23783,360 @@ function hasOwnProperty(obj, prop) {
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"./support/isBuffer":8,"_process":6,"inherits":5}],10:[function(require,module,exports){
 module.exports=[
-    {
-        "name": "ACRE",
-        "code": "AC"
-    },
-    {
-        "name": "ALAGOAS",
-        "code": "AL"
-    },
-    {
-        "name": "AMAPÁ",
-        "code": "AP"
-    },
-    {
-        "name": "AMAZONAS",
-        "code": "AM"
-    },
-    {
-        "name": "BAHIA",
-        "code": "BA"
-    },
-    {
-        "name": "CEARÁ",
-        "code": "CE"
-    },
-    {
-        "name": "DISTRITO FEDERAL",
-        "code": "DF"
-    },
-    {
-        "name": "ESPIRITO SANTO",
-        "code": "ES"
-    },
-    {
-        "name": "GOIÁS",
-        "code": "GO"
-    },
-    {
-        "name": "MARANHÃO",
-        "code": "MA"
-    },
-    {
-        "name": "MATO GROSSO",
-        "code": "MT"
-    },
-    {
-        "name": "MATO GROSSO DO SUL",
-        "code": "MS"
-    },
-    {
-        "name": "MINAS GERAIS",
-        "code": "MG"
-    },
-    {
-        "name": "PARÁ",
-        "code": "PA"
-    },
-    {
-        "name": "PARAÍBA",
-        "code": "PB"
-    },
-    {
-        "name": "PARANÁ",
-        "code": "PR"
-    },
-    {
-        "name": "PERNAMBUCO",
-        "code": "PE"
-    },
-    {
-        "name": "PIAUÍ",
-        "code": "PI"
-    },
-    {
-        "name": "RIO DE JANEIRO",
-        "code": "RJ"
-    },
-    {
-        "name": "RIO GRANDE DO NORTE",
-        "code": "RN"
-    },
-    {
-        "name": "RIO GRANDE DO SUL",
-        "code": "RS"
-    },
-    {
-        "name": "RONDÔNIA",
-        "code": "RO"
-    },
-    {
-        "name": "RORAIMA",
-        "code": "RR"
-    },
-    {
-        "name": "SANTA CATARINA",
-        "code": "SC"
-    },
-    {
-        "name": "SÃO PAULO",
-        "code": "SP"
-    },
-    {
-        "name": "SERGIPE",
-        "code": "SE"
-    },
-    {
-        "name": "TOCANTINS",
-        "code": "TO"
-    },
-    {
-      "name": "--",
-      "code": "--"
-    }
+	{
+		"name": "ACRE",
+		"code": "AC"
+	},
+	{
+		"name": "ALAGOAS",
+		"code": "AL"
+	},
+	{
+		"name": "AMAPÁ",
+		"code": "AP"
+	},
+	{
+		"name": "AMAZONAS",
+		"code": "AM"
+	},
+	{
+		"name": "BAHIA",
+		"code": "BA"
+	},
+	{
+		"name": "CEARÁ",
+		"code": "CE"
+	},
+	{
+		"name": "DISTRITO FEDERAL",
+		"code": "DF"
+	},
+	{
+		"name": "ESPIRITO SANTO",
+		"code": "ES"
+	},
+	{
+		"name": "GOIÁS",
+		"code": "GO"
+	},
+	{
+		"name": "MARANHÃO",
+		"code": "MA"
+	},
+	{
+		"name": "MATO GROSSO",
+		"code": "MT"
+	},
+	{
+		"name": "MATO GROSSO DO SUL",
+		"code": "MS"
+	},
+	{
+		"name": "MINAS GERAIS",
+		"code": "MG"
+	},
+	{
+		"name": "PARÁ",
+		"code": "PA"
+	},
+	{
+		"name": "PARAÍBA",
+		"code": "PB"
+	},
+	{
+		"name": "PARANÁ",
+		"code": "PR"
+	},
+	{
+		"name": "PERNAMBUCO",
+		"code": "PE"
+	},
+	{
+		"name": "PIAUÍ",
+		"code": "PI"
+	},
+	{
+		"name": "RIO DE JANEIRO",
+		"code": "RJ"
+	},
+	{
+		"name": "RIO GRANDE DO NORTE",
+		"code": "RN"
+	},
+	{
+		"name": "RIO GRANDE DO SUL",
+		"code": "RS"
+	},
+	{
+		"name": "RONDÔNIA",
+		"code": "RO"
+	},
+	{
+		"name": "RORAIMA",
+		"code": "RR"
+	},
+	{
+		"name": "SANTA CATARINA",
+		"code": "SC"
+	},
+	{
+		"name": "SÃO PAULO",
+		"code": "SP"
+	},
+	{
+		"name": "SERGIPE",
+		"code": "SE"
+	},
+	{
+		"name": "TOCANTINS",
+		"code": "TO"
+	},
+	{
+	  "name": "--",
+	  "code": "--"
+	}
 ]
 
 },{}],11:[function(require,module,exports){
 module.exports=[
-    {
-        "label": "Formalização",
-        "question": "Como vocês estão formalizados?",
-        "options": [
-            "Organização Social (OS)",
-            "Movimento Social",
-            "Coletivo",
-            "Empresa",
-            "Associação",
-            {
-              "label": "Em processo",
-              "option": "Em processo de formalização",
-              "tooltip": "Em processo de formalização"
-            },
-            "Fundação",
-            "Não formalizado",
-            {
-              "label": "OSCIP",
-              "option": "Organização da Sociedade Civil de Interesse Público (OSCIP)",
-              "tooltip": "Organização da Sociedade Civil de Interesse Público"
-            },
-            "Instituto",
-            "Comissão",
-            "Outros",
-            "Orgão Público",
-            "Rede",
-            "Universidade / grupo de pesquisa"
-        ]
-    },
-    {
-        "label": "Foco",
-        "question": "Mobilidade a pé é o foco principal da sua organização?",
-        "options": [
-          {
-            "label": "Mobilidade a pé principalmente",
-            "option": "Sim",
-            "tooltip": "Mobilidade a pé é o foco principal"
-          },
-          {
-            "label": "Mobilidade a pé dentre outros temas",
-            "option": "Não, mas uma das principais iniciativas da organização trata do tema",
-            "tooltip": "A mobilidade a pé não é o foco principal, mas uma das principais iniciativas da organização trata do tema"
-          },
-          {
-            "label": "Outros temas",
-            "option": "Não, a mobilidade a pé é apenas um dos temas abordados, mas aparece sempre em um contexto mais amplo",
-            "tooltip": "A mobilidade a pé não é o foco principal, mas aparece sempre em um contexto mais amplo"
-          }
-        ]
-    },
-    {
-        "label": "Aspectos da mobilidade",
-        "question": "Com quais aspectos da mobilidade a pé sua organização trabalha ou como o tema está inserido na sua atuação?",
-        "options": [
-          {
-            "label": "Infraestrutura local",
-            "option": "Infraestrutura local [calçadas, cruzamentos, escadarias, passarelas, passagens subterrâneas, travessias, sinalização, mobiliário urbano]",
-            "tooltip": "Calçadas, cruzamentos, escadarias, passarelas, passagens subterrâneas, travessias, sinalização, mobiliário urbano"
-          },
-          {
-            "label": "Planejamento e desenho urbano",
-            "option": "Planejamento e desenho urbano [uso e ocupação do solo, infraestrutura de transporte, planejamento na escala do bairro/cidade]",
-            "tooltip": "Uso e ocupação do solo, infraestrutura de transporte, planejamento na escala do bairro/cidade"
-          },
-          {
-            "label": "Saúde e Qualidade de Vida",
-            "option": "Saúde e Qualidade de Vida [sedentarismo e doenças relacionadas, como obesidade, diabetes; problemas respiratórios; estresse e depressão]",
-            "tooltip": "Sedentarismo e doenças relacionadas, como obesidade, diabetes; problemas respiratórios; estresse e depressão"
-          },
-          {
-            "label": "Meio ambiente e sustentabilidade",
-            "option": "Meio ambiente e sustentabilidade [mudanças climáticas, energia, emissão de gases, poluição, economia sustentável]",
-            "tooltip": "Mudanças climáticas, energia, emissão de gases, poluição, economia sustentável"
-          },
-          {
-            "label": "Bicicleta (convívio)",
-            "option": "Bicicleta [convívio entre mobilidade cicloviária e mobilidade a pé]",
-            "tooltip": "Convívio entre mobilidade cicloviária e mobilidade a pé"
-          },
-          {
-            "label": "Economia",
-            "option": "Economia [impactos da mobilidade na economia; geração de emprego; análise de trade-off; fomento ao comércio local]",
-            "tooltip": "Impactos da mobilidade na economia; geração de emprego; análise de trade-off; fomento ao comércio local"
-          },
-          {
-            "label": "Microacessibilidade ao Transporte Público Coletivo",
-            "option": "Microacessibilidade ao Transporte Público Coletivo [conectividade, intermodalidade]",
-            "tooltip": "Conectividade, intermodalidade"
-          },
-          {
-            "label": "Segurança",
-            "option": "Segurança [pessoal, viária e acidentalidade vertical]",
-            "tooltip": "Pessoal, viária e acidentalidade vertical"
-          },
-          {
-            "label": "Tecnologia e Inovação",
-            "option": "Tecnologia e Inovação [aplicativos, rede e plataforma online, base de dados]",
-            "tooltip": "Aplicativos, rede e plataforma online, base de dados"
-          },
-          {
-            "label": "Arquitetura da edificação",
-            "option": "Arquitetura da edificação [interface entre espaço público e lote privado; projeto na infraestrutura para mobilidade a pé]",
-            "tooltip": "Interface entre espaço público e lote privado; projeto na infraestrutura para mobilidade a pé"
-          },
-          {
-            "label": "Outros",
-            "option": "Outros"
-          },
-          {
-            "label": "Bicicleta (incentivo)",
-            "option": "Bicicleta [incentivo ao uso da bicicleta em geral]",
-            "tooltip": "Incentivo ao uso da bicicleta em geral"
-          }
-        ]
-    },
-    {
-        "label": "Abordagem",
-        "question": "Qual a abordagem da sua organização sobre o tema da mobilidade a pé?",
-        "options": [
-            "Comunicação e Informação [produção e compartilhamento: sites, blogs, grupos de discussão virtual]",
-            "Educação e Cultura [disseminação, capacitação, intervenção artística, sensibilização]",
-            "Intervenção física no espaço [obra civil, intervenções temporárias, artísticas]",
-            "Legislação e Políticas Públicas [produção e revisão de leis, planos e programas relacionados à mobilidade a pé]",
-            "Mobilização [ativismo, participação, engajamento e controle social]",
-            "Pesquisa [diagnóstico, caracterização, indicadores]",
-            "Projetos e Planos [projetos de arquitetura, desenho urbano, planos de mobilidade, diretores]",
-            "Outros"
-        ]
-    },
-    {
-        "label": "Área de atuação",
-        "question": "Qual é a área de atuação da sua organização?",
-        "options": [
-            "Arquitetura e urbanismo",
-            "Saúde e qualidade de vida",
-            "Comunicação",
-            "Políticas públicas",
-            "Educação",
-            "Outros",
-            "Direito",
-            "Engenharia ",
-            "Meio ambiente"
-        ]
-    },
-    {
-        "label": "Dificuldades",
-        "question": "Quais são as principais dificuldades que sua organização encontra para trabalhar com o tema da mobilidade a pé?",
-        "options": [
-            "Ausência / escassez de recursos / financiamento",
-            "Acesso a informações",
-            "Capacitação da equipe",
-            "Outros",
-            "Burocracia / meios legais de atuar",
-            "Falta de colaboradores",
-            "Escassez de parcerias",
-            "Apoio político",
-            "Falta de planejamento estratégico",
-            "Escassez de voluntários",
-            "Interesse das lideranças da organização",
-            "Falta de conhecimento / clareza sobre o tema"
-        ]
-    },
-    {
-        "label": "Fontes de recurso",
-        "question": "Quais são as fontes de recurso da sua organização?",
-        "options": [
-            "Doação direta (Investimento social/filantrópico)",
-            "Prestação de serviço",
-            "Trabalho voluntário",
-            "Doação direta (membros associados)",
-            "Edital",
-            "Nenhuma fonte de financiamento",
-            "Financiamento coletivo (crowdfunding)",
-            "Patrocínio (investimento empresarial)",
-            "Venda de produtos",
-            "Outros",
-            "Leis de incentivo (ex. Lei de incentivo ao esporte)",
-            "Orçamento Público",
-            "Bolsa de fomento",
-            "Convênio (poder público)"
-        ]
-    },
-    {
-        "label": "Finalidade das parcerias",
-        "question": "A sua organização atua ou atuou nos últimos doze meses em parceria? Qual a finalidade?",
-        "options": [
-            "Apoio financeiro",
-            "Apoio institucional",
-            "Parceria para pesquisas",
-            "Parceria para ações",
-            "Parceria para aprendizagem, capacitação ou treinamento",
-            "Parceria para campanhas",
-            "Parceria para mobilização e sensibilização",
-            "Não possuímos ações em parceria",
-            "Apoio político",
-            "Outros"
-        ]
-    },
-    {
-        "label": "Fontes de informação",
-        "question": "Quais as fontes de informação que sua organização utiliza com mais frequência?",
-        "options": [
-            "Coleto meus próprios dados em campo",
-            "Dados municipais abertos",
-            "Pesquisa Origem e Destino",
-            {
-              "label": "Mídias sociais",
-              "option": "Mídias Sociais (Facebook, Twitter, Medium)",
-              "tooltip": "Facebook, Twitter, Medium"
-            },
-            "Jornais, Revistas, Sites, Blogs",
-            "Trabalhos acadêmicos",
-            "IBGE",
-            "Legislação",
-            "Outros"
-        ]
-    },
-    {
-        "label": "Escala de atuação",
-        "question": "Para qual(is) escala(s) as ações da sua organização estão direcionadas?",
-        "options": [
-            "Bairro / comunidade",
-            "Cidade",
-            "Nacional",
-            {
-              "label": "Regional",
-              "option": "Vários Estados / Regional",
-              "tooltip": "Vários estados"
-            },
-            "Estado",
-            "Internacional",
-            {
-              "label": "Regiões Metropolitanas",
-              "option": "Regiões Metropolitanas (várias cidades)",
-              "tooltip": "Várias cidades"
-            }
-        ]
-    }
+	{
+		"label": "Formalização",
+		"question": "Como vocês estão formalizados?",
+		"options": [
+			"Organização Social (OS)",
+			"Movimento Social",
+			"Coletivo",
+			"Empresa",
+			"Associação",
+			{
+			  "label": "Em processo",
+			  "option": "Em processo de formalização",
+			  "tooltip": "Em processo de formalização"
+			},
+			"Fundação",
+			"Não formalizado",
+			{
+			  "label": "OSCIP",
+			  "option": "Organização da Sociedade Civil de Interesse Público (OSCIP)",
+			  "tooltip": "Organização da Sociedade Civil de Interesse Público"
+			},
+			"Instituto",
+			"Comissão",
+			"Outros",
+			"Orgão Público",
+			"Rede",
+			"Universidade / grupo de pesquisa"
+		]
+	},
+	{
+		"label": "Foco",
+		"question": "Mobilidade a pé é o foco principal da sua organização?",
+		"options": [
+		  {
+		    "label": "Mobilidade a pé principalmente",
+		    "option": "Sim",
+		    "tooltip": "Mobilidade a pé é o foco principal"
+		  },
+		  {
+		    "label": "Mobilidade a pé dentre outros temas",
+		    "option": "Não, mas uma das principais iniciativas da organização trata do tema",
+		    "tooltip": "A mobilidade a pé não é o foco principal, mas uma das principais iniciativas da organização trata do tema"
+		  },
+		  {
+		    "label": "Outros temas",
+		    "option": "Não, a mobilidade a pé é apenas um dos temas abordados, mas aparece sempre em um contexto mais amplo",
+		    "tooltip": "A mobilidade a pé não é o foco principal, mas aparece sempre em um contexto mais amplo"
+		  }
+		]
+	},
+	{
+		"label": "Aspectos da mobilidade",
+		"question": "Com quais aspectos da mobilidade a pé sua organização trabalha ou como o tema está inserido na sua atuação?",
+		"options": [
+		  {
+		    "label": "Infraestrutura local",
+		    "option": "Infraestrutura local [calçadas, cruzamentos, escadarias, passarelas, passagens subterrâneas, travessias, sinalização, mobiliário urbano]",
+		    "tooltip": "Calçadas, cruzamentos, escadarias, passarelas, passagens subterrâneas, travessias, sinalização, mobiliário urbano"
+		  },
+		  {
+		    "label": "Planejamento e desenho urbano",
+		    "option": "Planejamento e desenho urbano [uso e ocupação do solo, infraestrutura de transporte, planejamento na escala do bairro/cidade]",
+		    "tooltip": "Uso e ocupação do solo, infraestrutura de transporte, planejamento na escala do bairro/cidade"
+		  },
+		  {
+		    "label": "Saúde e Qualidade de Vida",
+		    "option": "Saúde e Qualidade de Vida [sedentarismo e doenças relacionadas, como obesidade, diabetes; problemas respiratórios; estresse e depressão]",
+		    "tooltip": "Sedentarismo e doenças relacionadas, como obesidade, diabetes; problemas respiratórios; estresse e depressão"
+		  },
+		  {
+		    "label": "Meio ambiente e sustentabilidade",
+		    "option": "Meio ambiente e sustentabilidade [mudanças climáticas, energia, emissão de gases, poluição, economia sustentável]",
+		    "tooltip": "Mudanças climáticas, energia, emissão de gases, poluição, economia sustentável"
+		  },
+		  {
+		    "label": "Bicicleta (convívio)",
+		    "option": "Bicicleta [convívio entre mobilidade cicloviária e mobilidade a pé]",
+		    "tooltip": "Convívio entre mobilidade cicloviária e mobilidade a pé"
+		  },
+		  {
+		    "label": "Economia",
+		    "option": "Economia [impactos da mobilidade na economia; geração de emprego; análise de trade-off; fomento ao comércio local]",
+		    "tooltip": "Impactos da mobilidade na economia; geração de emprego; análise de trade-off; fomento ao comércio local"
+		  },
+		  {
+		    "label": "Microacessibilidade ao Transporte Público Coletivo",
+		    "option": "Microacessibilidade ao Transporte Público Coletivo [conectividade, intermodalidade]",
+		    "tooltip": "Conectividade, intermodalidade"
+		  },
+		  {
+		    "label": "Segurança",
+		    "option": "Segurança [pessoal, viária e acidentalidade vertical]",
+		    "tooltip": "Pessoal, viária e acidentalidade vertical"
+		  },
+		  {
+		    "label": "Tecnologia e Inovação",
+		    "option": "Tecnologia e Inovação [aplicativos, rede e plataforma online, base de dados]",
+		    "tooltip": "Aplicativos, rede e plataforma online, base de dados"
+		  },
+		  {
+		    "label": "Arquitetura da edificação",
+		    "option": "Arquitetura da edificação [interface entre espaço público e lote privado; projeto na infraestrutura para mobilidade a pé]",
+		    "tooltip": "Interface entre espaço público e lote privado; projeto na infraestrutura para mobilidade a pé"
+		  },
+		  {
+		    "label": "Outros",
+		    "option": "Outros"
+		  },
+		  {
+		    "label": "Bicicleta (incentivo)",
+		    "option": "Bicicleta [incentivo ao uso da bicicleta em geral]",
+		    "tooltip": "Incentivo ao uso da bicicleta em geral"
+		  }
+		]
+	},
+	{
+		"label": "Abordagem",
+		"question": "Qual a abordagem da sua organização sobre o tema da mobilidade a pé?",
+		"options": [
+			"Comunicação e Informação [produção e compartilhamento: sites, blogs, grupos de discussão virtual]",
+			"Educação e Cultura [disseminação, capacitação, intervenção artística, sensibilização]",
+			"Intervenção física no espaço [obra civil, intervenções temporárias, artísticas]",
+			"Legislação e Políticas Públicas [produção e revisão de leis, planos e programas relacionados à mobilidade a pé]",
+			"Mobilização [ativismo, participação, engajamento e controle social]",
+			"Pesquisa [diagnóstico, caracterização, indicadores]",
+			"Projetos e Planos [projetos de arquitetura, desenho urbano, planos de mobilidade, diretores]",
+			"Outros"
+		]
+	},
+	{
+		"label": "Área de atuação",
+		"question": "Qual é a área de atuação da sua organização?",
+		"options": [
+			"Arquitetura e urbanismo",
+			"Saúde e qualidade de vida",
+			"Comunicação",
+			"Políticas públicas",
+			"Educação",
+			"Outros",
+			"Direito",
+			"Engenharia ",
+			"Meio ambiente"
+		]
+	},
+	{
+		"label": "Dificuldades",
+		"question": "Quais são as principais dificuldades que sua organização encontra para trabalhar com o tema da mobilidade a pé?",
+		"options": [
+			"Ausência / escassez de recursos / financiamento",
+			"Acesso a informações",
+			"Capacitação da equipe",
+			"Outros",
+			"Burocracia / meios legais de atuar",
+			"Falta de colaboradores",
+			"Escassez de parcerias",
+			"Apoio político",
+			"Falta de planejamento estratégico",
+			"Escassez de voluntários",
+			"Interesse das lideranças da organização",
+			"Falta de conhecimento / clareza sobre o tema"
+		]
+	},
+	{
+		"label": "Fontes de recurso",
+		"question": "Quais são as fontes de recurso da sua organização?",
+		"options": [
+			"Doação direta (Investimento social/filantrópico)",
+			"Prestação de serviço",
+			"Trabalho voluntário",
+			"Doação direta (membros associados)",
+			"Edital",
+			"Nenhuma fonte de financiamento",
+			"Financiamento coletivo (crowdfunding)",
+			"Patrocínio (investimento empresarial)",
+			"Venda de produtos",
+			"Outros",
+			"Leis de incentivo (ex. Lei de incentivo ao esporte)",
+			"Orçamento Público",
+			"Bolsa de fomento",
+			"Convênio (poder público)"
+		]
+	},
+	{
+		"label": "Finalidade das parcerias",
+		"question": "A sua organização atua ou atuou nos últimos doze meses em parceria? Qual a finalidade?",
+		"options": [
+			"Apoio financeiro",
+			"Apoio institucional",
+			"Parceria para pesquisas",
+			"Parceria para ações",
+			"Parceria para aprendizagem, capacitação ou treinamento",
+			"Parceria para campanhas",
+			"Parceria para mobilização e sensibilização",
+			"Não possuímos ações em parceria",
+			"Apoio político",
+			"Outros"
+		]
+	},
+	{
+		"label": "Fontes de informação",
+		"question": "Quais as fontes de informação que sua organização utiliza com mais frequência?",
+		"options": [
+			"Coleto meus próprios dados em campo",
+			"Dados municipais abertos",
+			"Pesquisa Origem e Destino",
+			{
+			  "label": "Mídias sociais",
+			  "option": "Mídias Sociais (Facebook, Twitter, Medium)",
+			  "tooltip": "Facebook, Twitter, Medium"
+			},
+			"Jornais, Revistas, Sites, Blogs",
+			"Trabalhos acadêmicos",
+			"IBGE",
+			"Legislação",
+			"Outros"
+		]
+	},
+	{
+		"label": "Escala de atuação",
+		"question": "Para qual(is) escala(s) as ações da sua organização estão direcionadas?",
+		"options": [
+			"Bairro / comunidade",
+			"Cidade",
+			"Nacional",
+			{
+			  "label": "Regional",
+			  "option": "Vários Estados / Regional",
+			  "tooltip": "Vários estados"
+			},
+			"Estado",
+			"Internacional",
+			{
+			  "label": "Regiões Metropolitanas",
+			  "option": "Regiões Metropolitanas (várias cidades)",
+			  "tooltip": "Várias cidades"
+			}
+		]
+	}
 ]
 
 },{}],12:[function(require,module,exports){
@@ -24934,12 +24934,22 @@ module.exports = function createTypeformParser(sourceData, displayQuestions) {
         }
       });
       
+      /**
+       * Make sure organizations have a defined year
+       * If none is defined, set the year to the current year
+       */
+      if (!parsedAnswer['Quando sua organização surgiu?']) {
+        parsedAnswer['Quando sua organização surgiu?'] =
+          (new Date()).getFullYear();
+      }
+      
       
       // loop through display questions and ensure that
       // questions that have no answers have at least 'Não informado'
       // as an option
       displayQuestions.forEach(function (dq) {
-        if (parsedAnswer[dq.question].length === 0) {
+        if (!parsedAnswer[dq.question] ||
+            parsedAnswer[dq.question].length === 0) {
           parsedAnswer[dq.question] = [dq.question + '--Não informado'];
         }
       })
@@ -27651,6 +27661,21 @@ module.exports = function (app, options) {
 
   return {
     update: function (filteredEntities) {
+      
+      // helps debugging
+      // console.log(filteredEntities.length);
+      // console.log(options.entities.length);
+      
+      
+      // var out = options.entities.filter(function (ent) {
+      //   return !filteredEntities.some(function (fent) {
+      //     return ent['Qual o nome da organização da qual faz parte?'] === fent['Qual o nome da organização da qual faz parte?']
+      //   });
+      // });
+      
+      // out.forEach(function (e) {
+      //   console.log(e['Quando sua organização surgiu?']);
+      // });
       
       var percentage = (filteredEntities.length / options.entities.length) * 100;
       

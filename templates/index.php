@@ -5,7 +5,7 @@
     id="home"
     class='section'>
 
-    <header>
+    <header class="desktop">
       <h1 class='home-title'>como anda</h1>
       <div class='home-logo'>
         <img
@@ -16,6 +16,18 @@
         $frames = array( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 );
         $rndFrame = $frames[array_rand($frames)];
       ?>
+      <div class='home-character'>
+        <img
+          src='<?php echo get_bloginfo('template_directory'); ?>/assets/svg/ilustracoes/ilustracoes-home-<?php echo $rndFrame; ?>.svg' />
+      </div>
+    </header>
+
+    <header class="mobile">
+      <div class='home-logo'>
+        <img
+          class='svgimg'
+          data-src='<?php echo get_bloginfo('template_directory'); ?>/assets/svg/logo-comoanda-horizontal.svg' />
+      </div>
       <div class='home-character'>
         <img
           src='<?php echo get_bloginfo('template_directory'); ?>/assets/svg/ilustracoes/ilustracoes-home-<?php echo $rndFrame; ?>.svg' />
